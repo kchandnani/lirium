@@ -19,9 +19,9 @@ export default function Header() {
             <Image 
               src="/lirium-logo.png" 
               alt="Lirium logo" 
-              width={40} 
-              height={40} 
-              className="relative z-10 rounded-lg sm:rounded-2xl shadow-2xl sm:w-16 sm:h-16 md:w-20 md:h-20"
+              width={50} 
+              height={50} 
+              className="relative z-10 rounded-lg sm:rounded-2xl shadow-2xl sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28"
               priority
             />
           </div>
