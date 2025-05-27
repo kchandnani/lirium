@@ -16,13 +16,13 @@ export default function Contact() {
       <Layout>
         <main className="space-y-0">
           {/* Contact Hero Section */}
-          <section className="text-center py-20 px-4">
-            <div className="space-y-8 mb-12">
-              <h1 className="text-6xl md:text-7xl font-black text-white">
+          <section className="text-center py-12 sm:py-20 px-4">
+            <div className="space-y-6 sm:space-y-8 mb-8 sm:mb-12">
+              <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-white">
                 Get In Touch
               </h1>
               
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
                 Ready to scale your creative workflow? Have questions about our AI tools? 
                 We'd love to hear from you.
               </p>
@@ -30,18 +30,18 @@ export default function Contact() {
           </section>
 
           {/* Contact Form Section */}
-          <section className="py-12 px-4">
+          <section className="py-8 sm:py-12 px-4">
             <div className="max-w-2xl mx-auto">
-              <div className="bg-dark-800/50 backdrop-blur-sm rounded-3xl p-12 border border-gray-700/50 card-glow">
+              <div className="bg-dark-800/50 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-12 border border-gray-700/50 card-glow">
                 <div className="space-y-6">
-                  <h2 className="text-3xl font-bold text-white text-center">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white text-center">
                     Contact Form
                   </h2>
                   
                   {/* Success Message */}
                   {state.succeeded && (
-                    <div className="bg-green-500/20 border border-green-500/30 rounded-2xl p-6 text-center">
-                      <div className="text-4xl mb-2">✅</div>
+                    <div className="bg-green-500/20 border border-green-500/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center">
+                      <div className="text-3xl sm:text-4xl mb-2">✅</div>
                       <p className="text-green-300 font-semibold">Message sent successfully!</p>
                       <p className="text-green-400 text-sm mt-2">We'll get back to you within 24 hours.</p>
                     </div>
@@ -49,8 +49,8 @@ export default function Contact() {
                   
                   {/* Contact Form */}
                   {!state.succeeded && (
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                         {/* Name Field */}
                         <div>
                           <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
@@ -61,7 +61,7 @@ export default function Contact() {
                             id="name"
                             name="name"
                             required
-                            className="w-full px-4 py-3 bg-dark-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-colors"
+                            className="w-full px-3 sm:px-4 py-3 bg-dark-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-colors text-base"
                             placeholder="Your name"
                           />
                           <ValidationError 
@@ -82,7 +82,7 @@ export default function Contact() {
                             id="email"
                             name="email"
                             required
-                            className="w-full px-4 py-3 bg-dark-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-colors"
+                            className="w-full px-3 sm:px-4 py-3 bg-dark-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-colors text-base"
                             placeholder="your@email.com"
                           />
                           <ValidationError 
@@ -103,7 +103,7 @@ export default function Contact() {
                           type="text"
                           id="subject"
                           name="subject"
-                          className="w-full px-4 py-3 bg-dark-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-colors"
+                          className="w-full px-3 sm:px-4 py-3 bg-dark-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-colors text-base"
                           placeholder="What's this about?"
                         />
                         <ValidationError 
@@ -122,9 +122,9 @@ export default function Contact() {
                         <textarea
                           id="message"
                           name="message"
-                          rows={6}
+                          rows={5}
                           required
-                          className="w-full px-4 py-3 bg-dark-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-colors resize-vertical"
+                          className="w-full px-3 sm:px-4 py-3 bg-dark-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-colors resize-vertical text-base"
                           placeholder="Tell us about your project or question..."
                         />
                         <ValidationError 
@@ -139,7 +139,7 @@ export default function Contact() {
                       <button
                         type="submit"
                         disabled={state.submitting}
-                        className="w-full px-8 py-4 bg-primary-500 hover:bg-primary-600 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                        className="w-full px-6 sm:px-8 py-3 sm:py-4 bg-primary-500 hover:bg-primary-600 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2 text-base"
                       >
                         {state.submitting ? (
                           <>
@@ -157,14 +157,14 @@ export default function Contact() {
                   )}
                   
                   {/* Alternative contact info */}
-                  <div className="pt-8 border-t border-gray-700/50">
+                  <div className="pt-6 sm:pt-8 border-t border-gray-700/50">
                     <h3 className="text-lg font-semibold text-white mb-4 text-center">
                       Other Ways to Reach Us
                     </h3>
-                    <div className="space-y-3 text-gray-300">
+                    <div className="space-y-3 text-gray-300 text-sm sm:text-base">
                       <div className="flex items-center justify-center space-x-2">
                         <span>📧</span>
-                        <span>companylirium@gmail.com</span>
+                        <span className="break-all">companylirium@gmail.com</span>
                       </div>
                       <div className="flex items-center justify-center space-x-2">
                         <span>💬</span>
