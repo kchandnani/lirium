@@ -7,16 +7,16 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          50: '#f3f1ff',
-          100: '#ebe5ff',
-          200: '#d9ceff',
-          300: '#bea6ff',
-          400: '#9f75ff',
-          500: '#8b45ff',
-          600: '#7c2cff',
-          700: '#6b21ff',
-          800: '#5b1bd6',
-          900: '#4c1db0',
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
         },
         dark: {
           50: '#f8fafc',
@@ -31,6 +31,10 @@ module.exports = {
           900: '#0f172a',
           950: '#0a0a0a',
         }
+      },
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['"Roboto Mono"', 'ui-monospace', 'monospace'],
       },
       animation: {
         'gradient': 'gradient 15s ease infinite',

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,6 +20,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #0a0a0a;
   color: #ffffff;
+}
+
+code,
+pre {
+  font-family: 'Roboto Mono', monospace;
 }
 
 /* Header logo sizing */
@@ -48,7 +53,7 @@ body {
   }
   
   .glow-text {
-    text-shadow: 0 0 20px rgba(139, 69, 255, 0.3);
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
   }
   
   .card-glow {
@@ -58,8 +63,8 @@ body {
   }
   
   .card-glow:hover {
-    box-shadow: 0 0 0 1px rgba(139, 69, 255, 0.3), 
-                0 20px 25px -5px rgba(0, 0, 0, 0.2), 
+    box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.3),
+                0 20px 25px -5px rgba(0, 0, 0, 0.2),
                 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 }

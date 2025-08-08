@@ -9,10 +9,10 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen bg-dark-950 relative overflow-hidden">
-      {/* Background gradient effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/20 via-dark-950 to-dark-900/30"></div>
-      <div className="absolute top-1/4 left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-primary-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+      {/* Subtle background accents */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/10 via-dark-950 to-dark-900/10"></div>
+      <div className="absolute top-1/3 left-1/4 w-48 sm:w-72 h-48 sm:h-72 bg-primary-500/5 rounded-full blur-2xl"></div>
+      <div className="absolute bottom-1/3 right-1/4 w-48 sm:w-72 h-48 sm:h-72 bg-primary-300/5 rounded-full blur-2xl"></div>
       
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
