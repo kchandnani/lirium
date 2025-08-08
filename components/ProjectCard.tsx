@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 export interface Project {
   id: string;
   title: string;
@@ -6,6 +9,7 @@ export interface Project {
   statusLabel: string;
   statusColor: string;
   emoji: string;
+  image?: string;
   link?: string;
   technologies?: string[];
   features?: string[];
@@ -17,7 +21,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="group relative bg-dark-800/50 backdrop-blur-sm rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-700/50 card-glow transition-all duration-300 hover:border-primary-500/30 hover:bg-dark-800/70">
+    <div className="group relative bg-dark-800/50 backdrop-blur-sm rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-700/50 transition-all duration-300 hover:border-gray-600/70 hover:bg-dark-800/60 hover:shadow-lg">
       {/* Project emoji and status */}
       <div className="flex items-start justify-between mb-4 sm:mb-6">
         <div className="text-3xl sm:text-4xl">{project.emoji}</div>
@@ -26,8 +30,21 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </span>
       </div>
 
+      {/* Project image */}
+      {project.image && (
+        <div className="mb-4 sm:mb-6">
+          <Image
+            src={project.image}
+            alt={project.title}
+            width={600}
+            height={300}
+            className="w-full h-40 sm:h-48 object-cover rounded-lg"
+          />
+        </div>
+      )}
+
       {/* Project title */}
-      <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 group-hover:text-primary-300 transition-colors">
+      <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 group-hover:text-gray-100 transition-colors">
         {project.title}
       </h3>
 
@@ -58,8 +75,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
       )}
 
-      {/* Hover gradient effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-purple-500/5 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+      {project.link && (
+        <div className="mt-4 sm:mt-6">
+          <Link href={project.link} className="text-primary-400 hover:text-primary-300 text-sm font-medium">
+            Learn more →
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

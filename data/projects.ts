@@ -6,6 +6,7 @@ export interface Project {
   statusLabel: string;
   statusColor: string;
   emoji: string;
+  image?: string;
   link?: string;
   technologies?: string[];
   features?: string[];
@@ -20,6 +21,8 @@ export const projects: Project[] = [
     statusLabel: 'Work in Progress 🛠️',
     statusColor: 'bg-yellow-500/20 text-yellow-300 border border-yellow-500/30',
     emoji: '🎨',
+    image: '/lirium-logo.png',
+    link: '/case-study/art-tutor-ai',
     technologies: ['Next.js', 'OpenAI', 'Canvas API', 'Computer Vision'],
     features: [
       'Real-time art analysis',
@@ -36,10 +39,11 @@ export const projects: Project[] = [
     statusLabel: '⚠️ CLASSIFIED',
     statusColor: 'bg-red-500/20 text-red-300 border border-red-500/30',
     emoji: '🔒',
+    image: '/lirium-logo.png',
     features: [
       '██ ████ ██ ███ ████',
       '██ ██████ ██████ ████',
       '██ ██████████████ ████'
     ]
   }
-]; 
+];
