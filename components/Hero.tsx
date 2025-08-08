@@ -45,17 +45,20 @@ export default function Hero() {
         
         {/* Animated logo with effects - responsive sizing */}
         <div className="flex justify-center">
-          <div className="relative animate-float">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-purple-600 rounded-full blur-2xl opacity-40 animate-pulse scale-150"></div>
-            <Image 
-              src="/lirium-logo.png" 
-              alt="Lirium company logo" 
-              width={120} 
-              height={120} 
-              className="relative z-10 drop-shadow-2xl sm:w-[150px] sm:h-[150px]"
-              priority
-            />
-          </div>
+            <div className="relative animate-float">
+              <div
+                className="absolute inset-0 bg-gradient-to-r from-primary-600 to-purple-600 rounded-full blur-2xl opacity-40 animate-pulse scale-150"
+                aria-hidden="true"
+              ></div>
+              <Image
+                src="/lirium-logo.png"
+                alt="Lirium company logo"
+                width={120}
+                height={120}
+                className="relative z-10 drop-shadow-2xl sm:w-[150px] sm:h-[150px]"
+                priority
+              />
+            </div>
         </div>
       </div>
     </section>

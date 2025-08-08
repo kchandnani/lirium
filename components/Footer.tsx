@@ -18,16 +18,28 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider">Quick Links</h4>
             <div className="space-y-2">
-              <Link href="/" className="block text-gray-400 hover:text-primary-400 transition-colors text-sm">
+              <Link
+                href="/"
+                className="block text-gray-400 hover:text-primary-400 transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded"
+              >
                 Home
               </Link>
-              <a href="/#projects" className="block text-gray-400 hover:text-primary-400 transition-colors text-sm">
+              <a
+                href="/#projects"
+                className="block text-gray-400 hover:text-primary-400 transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded"
+              >
                 Projects
               </a>
-              <a href="/#about" className="block text-gray-400 hover:text-primary-400 transition-colors text-sm">
+              <a
+                href="/#about"
+                className="block text-gray-400 hover:text-primary-400 transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded"
+              >
                 About
               </a>
-              <Link href="/contact" className="block text-gray-400 hover:text-primary-400 transition-colors text-sm">
+              <Link
+                href="/contact"
+                className="block text-gray-400 hover:text-primary-400 transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded"
+              >
                 Contact
               </Link>
             </div>
@@ -37,12 +49,20 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider">Connect</h4>
             <div className="flex space-x-4">
-              <div className="w-8 h-8 bg-gray-700/50 rounded-lg flex items-center justify-center hover:bg-primary-500/20 transition-colors cursor-pointer">
-                <span className="text-gray-400 hover:text-primary-400 text-sm">🔗</span>
-              </div>
-              <div className="w-8 h-8 bg-gray-700/50 rounded-lg flex items-center justify-center hover:bg-primary-500/20 transition-colors cursor-pointer">
-                <span className="text-gray-400 hover:text-primary-400 text-sm">📧</span>
-              </div>
+              <a
+                href="#"
+                aria-label="External link"
+                className="w-8 h-8 bg-gray-700/50 rounded-lg flex items-center justify-center hover:bg-primary-500/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+              >
+                <span aria-hidden="true" className="text-gray-400 hover:text-primary-400 text-sm">🔗</span>
+              </a>
+              <a
+                href="#"
+                aria-label="Send email"
+                className="w-8 h-8 bg-gray-700/50 rounded-lg flex items-center justify-center hover:bg-primary-500/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+              >
+                <span aria-hidden="true" className="text-gray-400 hover:text-primary-400 text-sm">📧</span>
+              </a>
             </div>
           </div>
         </div>
