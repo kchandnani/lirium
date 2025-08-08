@@ -9,16 +9,16 @@ export default function About() {
             {/* Stats section - mobile optimized */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
               <div className="text-center space-y-2">
-                <div className="text-2xl sm:text-3xl font-black text-primary-400">1+</div>
-                <div className="text-gray-300 text-sm font-medium">Active Projects</div>
+                <div className="text-2xl sm:text-3xl font-black text-primary-400">200+</div>
+                <div className="text-gray-300 text-sm font-medium">Customers Served</div>
               </div>
               <div className="text-center space-y-2">
-                <div className="text-2xl sm:text-3xl font-black text-green-400">AI-First</div>
-                <div className="text-gray-300 text-sm font-medium">Approach</div>
+                <div className="text-2xl sm:text-3xl font-black text-green-400">99.9%</div>
+                <div className="text-gray-300 text-sm font-medium">Platform Uptime</div>
               </div>
               <div className="text-center space-y-2">
-                <div className="text-2xl sm:text-3xl font-black text-blue-400">∞</div>
-                <div className="text-gray-300 text-sm font-medium">Possibilities</div>
+                <div className="text-2xl sm:text-3xl font-black text-blue-400">3</div>
+                <div className="text-gray-300 text-sm font-medium">Core Products</div>
               </div>
             </div>
 
@@ -30,21 +30,18 @@ export default function About() {
               
               <div className="space-y-4 sm:space-y-6 max-w-3xl mx-auto">
                 <p className="text-lg sm:text-xl md:text-2xl text-gray-200 leading-relaxed font-medium">
-                  Lirium builds <span className="text-primary-400 font-bold">AI-first digital products</span> that enhance creative and everyday workflows.
-                </p>
-                
-                <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                  We focus on <span className="text-white font-semibold">simplicity</span>, <span className="text-white font-semibold">automation</span>, and <span className="text-white font-semibold">scale</span> — creating tools that grow with you and amplify your potential.
+                  Lirium delivers <span className="text-primary-400 font-bold">AI-powered platforms</span> for workflow automation, analytics, and digital creation.
                 </p>
 
-                {/* Call to action */}
-                <div className="pt-4 sm:pt-6">
-                  <div className="inline-flex items-center space-x-2 px-4 sm:px-6 py-2 sm:py-3 bg-primary-500/20 text-primary-300 rounded-full border border-primary-500/30 font-semibold text-sm sm:text-base">
-                    <span>🚀</span>
-                    <span className="hidden sm:inline">Building the Future, One Tool at a Time</span>
-                    <span className="sm:hidden">Building the Future</span>
-                  </div>
-                </div>
+                <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+                  Our products emphasize <span className="text-white font-semibold">simplicity</span>, <span className="text-white font-semibold">automation</span>, and <span className="text-white font-semibold">scalability</span>, enabling teams to launch quickly and grow confidently.
+                </p>
+
+                <ul className="text-left list-disc list-inside text-gray-300 space-y-2 pt-4 sm:pt-6">
+                  <li><span className="text-white font-semibold">AI-driven automation</span> removes repetitive work</li>
+                  <li><span className="text-white font-semibold">Seamless integrations</span> fit existing workflows</li>
+                  <li><span className="text-white font-semibold">Enterprise-grade reliability</span> backs every release</li>
+                </ul>
               </div>
             </div>
           </div>
