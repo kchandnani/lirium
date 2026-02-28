@@ -2,20 +2,34 @@ import Head from 'next/head';
 import { useForm, ValidationError } from '@formspree/react';
 import Layout from '../components/Layout';
 
+const SITE_URL = 'https://lirium.ai';
+
 export default function Contact() {
   const [state, handleSubmit] = useForm("mwpoglng");
 
   return (
     <>
       <Head>
-        <title>Contact Us - Lirium</title>
-        <meta name="description" content="Get in touch with the Lirium team. We'd love to hear from you about our AI-powered tools and creative solutions." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Contact Us | Lirium</title>
+        <meta name="description" content="Get in touch with Lirium to discuss your next AI-powered project. We build intelligent, scalable solutions for creative and everyday workflows." />
+
+        <link rel="canonical" href={`${SITE_URL}/contact`} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${SITE_URL}/contact`} />
+        <meta property="og:title" content="Contact Us | Lirium" />
+        <meta property="og:description" content="Get in touch with Lirium to discuss your next AI-powered project." />
+        <meta property="og:site_name" content="Lirium" />
+        <meta property="og:image" content={`${SITE_URL}/og-image.png`} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Us | Lirium" />
+        <meta name="twitter:description" content="Get in touch with Lirium to discuss your next AI-powered project." />
+        <meta name="twitter:image" content={`${SITE_URL}/og-image.png`} />
       </Head>
 
       <Layout>
         <main className="space-y-0">
-          {/* Contact Hero Section */}
           <section className="text-center py-12 sm:py-20 px-4">
             <div className="space-y-6 sm:space-y-8 mb-8 sm:mb-12">
               <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-white uppercase">
@@ -29,7 +43,6 @@ export default function Contact() {
             </div>
           </section>
 
-          {/* Contact Form Section */}
           <section className="py-8 sm:py-12 px-4">
             <div className="max-w-2xl mx-auto">
               <div className="bg-dark-800/50 backdrop-blur-sm rounded-2xl p-6 sm:p-12 border border-gray-700/50 card-glow">
@@ -38,7 +51,6 @@ export default function Contact() {
                     Contact Form
                   </h2>
 
-                  {/* Success Message */}
                   {state.succeeded && (
                     <div className="bg-emerald-500/20 border border-emerald-500/30 rounded-xl p-4 sm:p-6 text-center">
                       <p className="text-emerald-300 font-semibold">Message sent successfully!</p>
@@ -46,7 +58,6 @@ export default function Contact() {
                     </div>
                   )}
 
-                  {/* Contact Form */}
                   {!state.succeeded && (
                     <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
