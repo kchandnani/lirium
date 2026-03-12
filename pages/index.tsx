@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Lirium | AI-First Digital Products for Creative Workflows</title>
-        <meta name="description" content="Lirium builds intelligent, scalable digital products that enhance creative potential and orchestrate complex workflows. Artistry, automation, and AI-first systems that feel natural." />
+        <title>Lirium AI | Smart, AI-Powered Apps for Everyday Life</title>
+        <meta name="description" content="Lirium AI builds intelligent apps that simplify everyday tasks — from smarter grocery shopping with Etiqa Health to effortless watermark removal with Polario." />
 
         {/* Canonical */}
         <link rel="canonical" href={SITE_URL} />
@@ -20,19 +20,19 @@ export default function Home() {
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={SITE_URL} />
-        <meta property="og:title" content="Lirium | AI-First Digital Products" />
-        <meta property="og:description" content="Artistry, automation, and AI-first systems that feel natural. Lirium builds intelligent, scalable digital products that enhance creative potential." />
-        <meta property="og:site_name" content="Lirium" />
+        <meta property="og:title" content="Lirium AI | Smart, AI-Powered Apps" />
+        <meta property="og:description" content="Lirium AI builds intelligent apps that simplify everyday tasks — from smarter grocery shopping to effortless creative tools." />
+        <meta property="og:site_name" content="Lirium AI" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:image" content={`${SITE_URL}/og-image.png`} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Lirium - Artistry, automation, and AI-first systems that feel natural." />
+        <meta property="og:image:alt" content="Lirium AI - Smart, AI-Powered Apps for Everyday Life" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Lirium | AI-First Digital Products" />
-        <meta name="twitter:description" content="Artistry, automation, and AI-first systems that feel natural. Lirium builds intelligent, scalable digital products." />
+        <meta name="twitter:title" content="Lirium AI | Smart, AI-Powered Apps" />
+        <meta name="twitter:description" content="Lirium AI builds intelligent apps that simplify everyday tasks — from smarter grocery shopping to effortless creative tools." />
         <meta name="twitter:image" content={`${SITE_URL}/og-image.png`} />
 
         {/* Structured Data */}
@@ -45,28 +45,33 @@ export default function Home() {
                 {
                   '@type': 'Organization',
                   '@id': `${SITE_URL}/#organization`,
-                  name: 'Lirium',
+                  name: 'Lirium AI',
                   url: SITE_URL,
                   logo: `${SITE_URL}/lirium-logo.png`,
-                  description: 'Lirium builds AI-first digital products that enhance creative and everyday workflows.',
+                  description: 'Lirium AI builds intelligent apps that simplify everyday tasks.',
                   foundingDate: '2024',
-                  sameAs: [],
+                  contactPoint: {
+                    '@type': 'ContactPoint',
+                    email: 'companylirium@gmail.com',
+                    contactType: 'customer service',
+                  },
+                  sameAs: ['https://instagram.com/etiqahealth'],
                 },
                 {
                   '@type': 'WebSite',
                   '@id': `${SITE_URL}/#website`,
                   url: SITE_URL,
-                  name: 'Lirium',
+                  name: 'Lirium AI',
                   publisher: { '@id': `${SITE_URL}/#organization` },
                 },
                 {
                   '@type': 'WebPage',
                   '@id': `${SITE_URL}/#webpage`,
                   url: SITE_URL,
-                  name: 'Lirium | AI-First Digital Products for Creative Workflows',
+                  name: 'Lirium AI | Smart, AI-Powered Apps for Everyday Life',
                   isPartOf: { '@id': `${SITE_URL}/#website` },
                   about: { '@id': `${SITE_URL}/#organization` },
-                  description: 'Lirium builds intelligent, scalable digital products that enhance creative potential and orchestrate complex workflows.',
+                  description: 'Lirium AI builds intelligent apps that simplify everyday tasks.',
                 },
               ],
             }),

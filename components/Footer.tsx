@@ -4,17 +4,21 @@ export default function Footer() {
   return (
     <footer className="border-t border-gray-700/60 bg-dark-900/80 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6 py-12 sm:py-16">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 sm:gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
 
           {/* Brand */}
           <div className="col-span-2 md:col-span-1 space-y-3">
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider">Lirium</h4>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider">Lirium AI</h4>
             <p className="text-gray-500 text-xs leading-relaxed">
-              Building cool, intelligent things.
-              Our dedication to artistry, automation, and AI-first systems makes technology feel natural.
+              Building intelligent, AI-powered apps that simplify everyday tasks and creative workflows.
+            </p>
+            <p className="text-gray-500 text-xs">
+              <a href="mailto:companylirium@gmail.com" className="hover:text-primary-400 transition-colors">
+                companylirium@gmail.com
+              </a>
             </p>
             <p className="text-gray-600 text-xs">
-              &copy; {new Date().getFullYear()} Lirium. All rights reserved.
+              &copy; {new Date().getFullYear()} Lirium AI. All rights reserved.
             </p>
           </div>
 
@@ -26,11 +30,11 @@ export default function Footer() {
                 Home
               </Link>
               <a href="/#projects" className="block text-gray-400 hover:text-primary-400 transition-colors text-sm">
-                Projects
+                Our Apps
               </a>
-              <a href="/#about" className="block text-gray-400 hover:text-primary-400 transition-colors text-sm">
-                About
-              </a>
+              <Link href="/contact" className="block text-gray-400 hover:text-primary-400 transition-colors text-sm">
+                Contact
+              </Link>
             </div>
           </div>
 
@@ -38,12 +42,12 @@ export default function Footer() {
           <div className="space-y-3">
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider">Legal</h4>
             <div className="space-y-2">
-              <a href="#" className="block text-gray-400 hover:text-primary-400 transition-colors text-sm">
-                Privacy
-              </a>
-              <a href="#" className="block text-gray-400 hover:text-primary-400 transition-colors text-sm">
-                Terms
-              </a>
+              <Link href="/privacy" className="block text-gray-400 hover:text-primary-400 transition-colors text-sm">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="block text-gray-400 hover:text-primary-400 transition-colors text-sm">
+                Terms of Service
+              </Link>
             </div>
           </div>
 
@@ -51,33 +55,19 @@ export default function Footer() {
           <div className="space-y-3">
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider">Connect</h4>
             <div className="flex gap-2">
-              {['G', 'Y', 'in', 'X'].map((icon) => (
-                <a
-                  key={icon}
-                  href="#"
-                  className="w-8 h-8 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-primary-400 hover:border-primary-500/50 transition-colors text-xs font-bold"
-                >
-                  {icon}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Newsletter */}
-          <div className="col-span-2 md:col-span-1 space-y-3">
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider">Newsletter</h4>
-            <div className="flex">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 min-w-0 px-3 py-2 bg-dark-800 border border-gray-700 rounded-l-lg text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary-500/50"
-              />
-              <button className="px-3 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-r-lg transition-colors">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <a
+                href="https://instagram.com/etiqahealth"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-primary-400 hover:border-primary-500/50 transition-colors"
+                aria-label="Instagram"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
                 </svg>
-              </button>
+              </a>
             </div>
+            <p className="text-gray-500 text-xs">@etiqahealth</p>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ function Sitemap() {
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  const pages = ['', '/contact'];
+  const pages = ['', '/contact', '/privacy', '/terms'];
   const lastmod = new Date().toISOString().split('T')[0];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

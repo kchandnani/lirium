@@ -4,17 +4,19 @@ export default function Hero() {
       <div className="max-w-5xl mx-auto space-y-8 sm:space-y-10">
         {/* Main headline */}
         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.95] uppercase">
-          <span className="text-white">Artistry, Automation, and</span>
+          <span className="text-primary-400 glow-text">Lirium AI</span>
           <br />
-          <span className="text-white">AI-First Systems that feel</span>
+          <span className="text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl">Building Intelligent</span>
           <br />
-          <span className="text-primary-400 glow-text">Natural.</span>
+          <span className="text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl">Products That Feel</span>
+          <br />
+          <span className="text-primary-400 glow-text text-3xl sm:text-5xl md:text-6xl lg:text-7xl">Natural.</span>
         </h1>
 
         {/* Subtitle */}
         <p className="text-base sm:text-lg text-gray-400 max-w-2xl leading-relaxed">
-          Lirium builds intelligent, scalable digital products that enhance creative potential
-          and orchestrate complex workflows, making technology intuitive.
+          We design and build AI-powered apps that simplify everyday tasks — from smarter
+          grocery shopping to effortless creative tools. No complexity, just results.
         </p>
 
         {/* CTA Buttons */}
@@ -23,13 +25,13 @@ export default function Hero() {
             href="#projects"
             className="inline-flex items-center justify-center px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg transition-colors duration-200 text-sm sm:text-base"
           >
-            Discover Our Products
+            See Our Apps
           </a>
           <a
-            href="#about"
+            href="/contact"
             className="inline-flex items-center justify-center px-6 py-3 border border-gray-600 hover:border-primary-500/50 text-gray-300 hover:text-white font-semibold rounded-lg transition-colors duration-200 text-sm sm:text-base"
           >
-            Learn Our Process
+            Get in Touch
           </a>
         </div>
       </div>

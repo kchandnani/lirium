@@ -8,11 +8,11 @@ export default function About() {
           <div className="bg-dark-900/80 p-6 sm:p-8 flex items-center gap-4">
             <div className="w-10 h-10 rounded-lg bg-primary-500/20 flex items-center justify-center flex-shrink-0">
               <svg className="w-5 h-5 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
               </svg>
             </div>
             <div>
-              <div className="text-sm font-semibold text-white uppercase tracking-wider">Major Projects</div>
+              <div className="text-sm font-semibold text-white uppercase tracking-wider">Mobile-First Apps</div>
             </div>
           </div>
           <div className="bg-dark-900/80 p-6 sm:p-8 flex items-center gap-4">
@@ -22,7 +22,7 @@ export default function About() {
               </svg>
             </div>
             <div>
-              <div className="text-sm font-semibold text-white uppercase tracking-wider">AI-First Methodology</div>
+              <div className="text-sm font-semibold text-white uppercase tracking-wider">AI-Powered</div>
             </div>
           </div>
           <div className="bg-dark-900/80 p-6 sm:p-8 flex items-center gap-4">
@@ -32,7 +32,7 @@ export default function About() {
               </svg>
             </div>
             <div>
-              <div className="text-sm font-semibold text-white uppercase tracking-wider">Boundless Possibilities</div>
+              <div className="text-sm font-semibold text-white uppercase tracking-wider">Free &amp; Accessible</div>
             </div>
           </div>
         </div>
@@ -40,27 +40,27 @@ export default function About() {
         {/* Mission section */}
         <div className="space-y-10 sm:space-y-12">
           <div className="text-center space-y-6">
-            <p className="text-xs sm:text-sm font-semibold text-primary-400 uppercase tracking-widest">Our Shared Mission</p>
+            <p className="text-xs sm:text-sm font-semibold text-primary-400 uppercase tracking-widest">About Lirium AI</p>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-200 leading-relaxed max-w-3xl mx-auto">
-              Lirium builds <span className="text-white font-semibold">AI-first digital products</span> that enhance
-              creative and everyday workflows. We focus on
-              simplicity, automation, and networked scale.
+              Lirium AI builds <span className="text-white font-semibold">smart, accessible apps</span> that
+              use artificial intelligence to solve real problems. We believe powerful tools should be
+              simple, free of clutter, and available to everyone.
             </p>
           </div>
 
           {/* Three pillars */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12">
             <div className="text-center space-y-3">
-              <h3 className="text-base font-bold text-white">Simplicity:</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">Removing complexity</p>
+              <h3 className="text-base font-bold text-white">Simplicity</h3>
+              <p className="text-sm text-gray-400 leading-relaxed">Clean interfaces. No bloat. Tools that just work.</p>
             </div>
             <div className="text-center space-y-3">
-              <h3 className="text-base font-bold text-white">Automation:</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">Orchestrating workflows</p>
+              <h3 className="text-base font-bold text-white">Intelligence</h3>
+              <p className="text-sm text-gray-400 leading-relaxed">AI that adds real value — not gimmicks.</p>
             </div>
             <div className="text-center space-y-3">
-              <h3 className="text-base font-bold text-white">Scale:</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">Growing with your ambitions</p>
+              <h3 className="text-base font-bold text-white">Accessibility</h3>
+              <p className="text-sm text-gray-400 leading-relaxed">Free, ad-free tools available to everyone.</p>
             </div>
           </div>
         </div>
