@@ -18,6 +18,7 @@ export const projects: Project[] = [
     status: 'coming-soon',
     statusLabel: 'Coming Soon',
     gradient: 'from-emerald-500 via-teal-500 to-cyan-400',
+    link: 'https://etiqahealth.com',
   },
   {
     id: 'polario',

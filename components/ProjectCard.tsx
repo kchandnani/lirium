@@ -38,12 +38,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         <p className="text-sm text-gray-400 leading-relaxed">{project.description}</p>
 
-        {project.status === 'live' && project.link && (
+        {project.link && (
           <a
             href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center text-sm text-primary-400 hover:text-primary-300 font-medium transition-colors group/link"
           >
-            Try It Free
+            {project.status === 'live' ? 'Try It Free' : 'Learn More'}
             <svg className="w-4 h-4 ml-1 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

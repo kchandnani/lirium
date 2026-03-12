@@ -52,7 +52,7 @@ export default function Home() {
                   foundingDate: '2024',
                   contactPoint: {
                     '@type': 'ContactPoint',
-                    email: 'companylirium@gmail.com',
+                    email: 'team@lirium.ai',
                     contactType: 'customer service',
                   },
                   sameAs: ['https://instagram.com/etiqahealth'],

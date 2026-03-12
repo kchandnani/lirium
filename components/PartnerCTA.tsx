@@ -19,10 +19,10 @@ export default function PartnerCTA() {
               Contact Us
             </Link>
             <a
-              href="mailto:companylirium@gmail.com"
+              href="mailto:team@lirium.ai"
               className="inline-flex items-center justify-center px-6 sm:px-8 py-3 border border-gray-600 hover:border-primary-500/50 text-gray-300 hover:text-white font-semibold rounded-lg transition-colors duration-200 text-sm sm:text-base"
             >
-              companylirium@gmail.com
+              team@lirium.ai
             </a>
           </div>
         </div>

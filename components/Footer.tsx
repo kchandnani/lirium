@@ -13,8 +13,8 @@ export default function Footer() {
               Building intelligent, AI-powered apps that simplify everyday tasks and creative workflows.
             </p>
             <p className="text-gray-500 text-xs">
-              <a href="mailto:companylirium@gmail.com" className="hover:text-primary-400 transition-colors">
-                companylirium@gmail.com
+              <a href="mailto:team@lirium.ai" className="hover:text-primary-400 transition-colors">
+                team@lirium.ai
               </a>
             </p>
             <p className="text-gray-600 text-xs">

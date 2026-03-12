@@ -145,8 +145,8 @@ export default function Privacy() {
                 <ul className="list-none space-y-1 text-gray-400">
                   <li><span className="text-gray-300 font-medium">Company:</span> Lirium AI</li>
                   <li><span className="text-gray-300 font-medium">Email:</span>{' '}
-                    <a href="mailto:companylirium@gmail.com" className="text-primary-400 hover:text-primary-300 transition-colors">
-                      companylirium@gmail.com
+                    <a href="mailto:team@lirium.ai" className="text-primary-400 hover:text-primary-300 transition-colors">
+                      team@lirium.ai
                     </a>
                   </li>
                   <li><span className="text-gray-300 font-medium">Website:</span>{' '}

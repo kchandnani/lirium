@@ -142,7 +142,7 @@ export default function Contact() {
                       Other Ways to Reach Us
                     </h3>
                     <div className="space-y-3 text-gray-400 text-sm sm:text-base text-center">
-                      <p className="break-all">companylirium@gmail.com</p>
+                      <p className="break-all">team@lirium.ai</p>
                       <p className="text-gray-500 text-sm">We typically respond within 24 hours</p>
                     </div>
                   </div>
