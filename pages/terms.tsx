@@ -37,7 +37,7 @@ export default function Terms() {
                 <p>Lirium AI provides AI-powered applications including:</p>
                 <ul className="list-disc list-inside space-y-1 text-gray-400">
                   <li><span className="text-gray-300 font-medium">Etiqa Health</span> — A nutrition scanning app that provides health scores for grocery store products</li>
-                  <li><span className="text-gray-300 font-medium">Polario</span> — A free AI-powered watermark removal tool with no ads</li>
+                  <li><span className="text-gray-300 font-medium">Polario</span> — An AI-powered image editing tool that removes unwanted objects, text, and distractions from photos</li>
                 </ul>
                 <p>
                   We reserve the right to modify, suspend, or discontinue any service at any time without prior notice.

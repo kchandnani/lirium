@@ -32,7 +32,7 @@ export default function About() {
               </svg>
             </div>
             <div>
-              <div className="text-sm font-semibold text-white uppercase tracking-wider">Free &amp; Accessible</div>
+              <div className="text-sm font-semibold text-white uppercase tracking-wider">Built To Scale</div>
             </div>
           </div>
         </div>
@@ -42,9 +42,9 @@ export default function About() {
           <div className="text-center space-y-6">
             <p className="text-xs sm:text-sm font-semibold text-primary-400 uppercase tracking-widest">About Lirium AI</p>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-200 leading-relaxed max-w-3xl mx-auto">
-              Lirium AI builds <span className="text-white font-semibold">smart, accessible apps</span> that
-              use artificial intelligence to solve real problems. We believe powerful tools should be
-              simple, free of clutter, and available to everyone.
+              Lirium AI builds <span className="text-white font-semibold">powerful, practical apps</span> that
+              use artificial intelligence to solve real problems. We pair serious capability with
+              simple interfaces and fair pricing — so people get tools that actually scale with their lives.
             </p>
           </div>
 
@@ -59,8 +59,32 @@ export default function About() {
               <p className="text-sm text-gray-400 leading-relaxed">AI that adds real value — not gimmicks.</p>
             </div>
             <div className="text-center space-y-3">
-              <h3 className="text-base font-bold text-white">Accessibility</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">Free, ad-free tools available to everyone.</p>
+              <h3 className="text-base font-bold text-white">Fair Pricing</h3>
+              <p className="text-sm text-gray-400 leading-relaxed">Powerful AI tools at fair prices — no hidden costs, no dark patterns.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* About the company */}
+        <div className="bg-dark-900/60 border border-gray-700/50 rounded-2xl p-6 sm:p-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 items-start">
+            <div className="space-y-2">
+              <p className="text-xs font-semibold text-primary-400 uppercase tracking-widest">The Company</p>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">About Lirium</h3>
+            </div>
+            <div className="md:col-span-2 space-y-3 text-sm sm:text-base text-gray-400 leading-relaxed">
+              <p>
+                Lirium AI is an independent AI product studio building consumer software that
+                turns advanced models into tools people use every day.
+              </p>
+              <p>
+                The company is registered in <span className="text-gray-200 font-medium">Panama</span> and
+                operates a small, focused team across product, engineering, and design. We ship
+                under the Lirium brand and through dedicated product brands like Etiqa Health and Polario.
+              </p>
+              <p className="text-xs text-gray-500 pt-2">
+                Press &amp; investor inquiries: <a href="mailto:team@lirium.ai" className="text-primary-400 hover:text-primary-300 transition-colors">team@lirium.ai</a>
+              </p>
             </div>
           </div>
         </div>

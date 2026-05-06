@@ -15,16 +15,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <div className="absolute bottom-4 right-8 w-24 h-24 rounded-full bg-black/20 blur-xl"></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-white/10 blur-lg"></div>
         </div>
-        {/* Status badge */}
-        <div className="absolute top-3 left-3">
-          <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold ${
-            project.status === 'live'
-              ? 'bg-emerald-500/90 text-emerald-950'
-              : 'bg-amber-500/90 text-amber-950'
-          }`}>
-            {project.statusLabel}
-          </span>
-        </div>
       </div>
 
       {/* Content */}
@@ -38,14 +28,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         <p className="text-sm text-gray-400 leading-relaxed">{project.description}</p>
 
-        {project.link && (
+        {project.link && project.link !== '#' && (
           <a
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center text-sm text-primary-400 hover:text-primary-300 font-medium transition-colors group/link"
           >
-            {project.status === 'live' ? 'Try It Free' : 'Learn More'}
+            Learn More
             <svg className="w-4 h-4 ml-1 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

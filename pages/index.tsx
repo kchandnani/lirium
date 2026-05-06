@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Head>
         <title>Lirium AI | Smart, AI-Powered Apps for Everyday Life</title>
-        <meta name="description" content="Lirium AI builds intelligent apps that simplify everyday tasks — from smarter grocery shopping with Etiqa Health to effortless watermark removal with Polario." />
+        <meta name="description" content="Lirium AI builds intelligent apps that simplify everyday tasks — from smarter grocery shopping with Etiqa Health to AI-powered image editing with Polario." />
 
         {/* Canonical */}
         <link rel="canonical" href={SITE_URL} />
@@ -55,7 +55,6 @@ export default function Home() {
                     email: 'team@lirium.ai',
                     contactType: 'customer service',
                   },
-                  sameAs: ['https://instagram.com/etiqahealth'],
                 },
                 {
                   '@type': 'WebSite',

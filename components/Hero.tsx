@@ -6,17 +6,15 @@ export default function Hero() {
         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.95] uppercase">
           <span className="text-primary-400 glow-text">Lirium AI</span>
           <br />
-          <span className="text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl">Building Intelligent</span>
+          <span className="text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl">AI Built To</span>
           <br />
-          <span className="text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl">Products That Feel</span>
-          <br />
-          <span className="text-primary-400 glow-text text-3xl sm:text-5xl md:text-6xl lg:text-7xl">Natural.</span>
+          <span className="text-primary-400 glow-text text-3xl sm:text-5xl md:text-6xl lg:text-7xl">Scale Life.</span>
         </h1>
 
         {/* Subtitle */}
         <p className="text-base sm:text-lg text-gray-400 max-w-2xl leading-relaxed">
-          We design and build AI-powered apps that simplify everyday tasks — from smarter
-          grocery shopping to effortless creative tools. No complexity, just results.
+          We design and build AI products that help people do more — practical, powerful tools
+          for everyday life and creative work, priced fairly and crafted to feel effortless.
         </p>
 
         {/* CTA Buttons */}

@@ -23,8 +23,8 @@ export const projects: Project[] = [
   {
     id: 'polario',
     title: 'Polario',
-    subtitle: 'AI Watermark Remover',
-    description: 'Remove watermarks from images in seconds with state-of-the-art AI. Polario is completely free to use, with no ads and no catches — a clean, powerful tool for creators, designers, and anyone who values simplicity.',
+    subtitle: 'AI Image Editing Tool',
+    description: 'Remove unwanted objects, text, blemishes, and distractions from any photo in seconds. Polario uses state-of-the-art AI to clean up your images with one tap — built for creators, designers, and anyone who wants polished photos without the learning curve.',
     status: 'live',
     statusLabel: 'Live',
     gradient: 'from-violet-500 via-purple-500 to-fuchsia-400',
