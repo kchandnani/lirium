@@ -1,5 +1,6 @@
 // All site copy lives here so an ES locale can be added later without
-// touching components.
+// touching components. Headlines are split so one word can carry an
+// accent color.
 
 export const strings = {
   nav: {
@@ -9,76 +10,116 @@ export const strings = {
   },
   hero: {
     eyebrow: 'AI SYSTEMS STUDIO · MIAMI / PANAMÁ',
-    headline: 'AI systems built with Fortune 100 discipline.',
+    headline: {
+      pre: 'AI systems built with Fortune 100 ',
+      accent: 'discipline',
+      post: '.',
+    },
     subline:
-      'Lirium is an independent studio. For seven years its founder has designed governance, risk, and compliance platforms for Fortune 100 financial institutions. Lirium brings that engineering standard to companies that have outgrown spreadsheets — invoicing, inventory, client platforms, applied AI.',
-    cta: 'Start a conversation →',
+      'An independent studio bringing seven years of Fortune 100 governance-platform engineering to businesses that have outgrown spreadsheets.',
+    cta: 'Start a conversation',
     meta: ['PRACTICE EST. 2019', 'FORTUNE 100 CLIENTELE', 'ENGLISH / ESPAÑOL'],
   },
-  engagements: {
-    eyebrow: '01 — WHAT WE DO',
+  how: {
+    eyebrow: 'WHAT WE DO · HOW WE ENGAGE',
+    headline: { pre: 'From duct tape to ', accent: 'discipline', post: '.' },
     items: [
       {
         label: 'ADVISORY',
         title: 'Know what’s worth automating.',
-        body: 'A structured working session with founders and operators. We map where time and money leak, quantify what automation is actually worth, and leave you with a prioritized roadmap — whether or not you build with us.',
+        body: 'A structured working session with founders and operators. We map where time and money leak, and leave you with a prioritized roadmap — whether or not you build with us.',
       },
       {
         label: 'SYSTEMS',
         title: 'Purpose-built platforms.',
-        body: 'Invoicing, inventory, client portals, internal dashboards — custom systems engineered around how your operation actually runs, delivered production-ready. Not a prototype, not a template.',
+        body: 'Invoicing, inventory, client portals, internal dashboards — engineered around how your operation actually runs, delivered production-ready. Not a prototype, not a template.',
       },
       {
         label: 'AI OPERATIONS',
         title: 'Models, put to work.',
-        body: 'Document processing, customer response drafting, reporting that writes itself. Applied where it pays for itself, skipped where it doesn’t — we’ll tell you which is which.',
+        body: 'Document processing, customer response drafting, reporting that writes itself. Applied where it pays for itself, skipped where it doesn’t.',
+      },
+    ],
+    terms: [
+      {
+        k: 'DIRECT TO PRINCIPAL',
+        v: 'The person who scopes your system is the person who builds it.',
+      },
+      {
+        k: 'FIXED SCOPE, IN WRITING',
+        v: 'Deliverables, timeline, and cost agreed before work begins.',
+      },
+      {
+        k: 'YOUR DATA STAYS YOURS',
+        v: 'NDA by default. Never used to train models.',
+      },
+      {
+        k: 'BUILT TO HAND OVER',
+        v: 'Documentation, clean ownership, no lock-in.',
       },
     ],
   },
   work: {
-    eyebrow: '02 — SELECTED WORK',
+    eyebrow: 'SELECTED WORK',
+    headline: { pre: 'See the ', accent: 'work', post: '.' },
     items: [
       {
-        meta: '2019–PRESENT · GOVERNANCE, RISK & COMPLIANCE',
+        mock: 'grc',
+        meta: '2019–PRESENT',
         title: 'Enterprise practice',
-        body: 'Seven years designing and delivering GRC platforms for Fortune 100 financial services companies — systems that govern regulatory obligations, audit trails, and risk workflows at institutional scale. The client work is under NDA. The standard it demands is the one every Lirium engagement is held to.',
+        body: 'Seven years designing and delivering governance, risk, and compliance platforms for Fortune 100 financial services companies — systems that govern regulatory obligations, audit trails, and risk workflows at institutional scale. The client work is under NDA. The standard it demands is the one every Lirium engagement is held to.',
+        spec: [
+          { k: 'SECTOR', v: 'Fortune 100 financial services' },
+          { k: 'SCOPE', v: 'Governance, risk & compliance platforms' },
+          { k: 'SINCE', v: '2019, ongoing' },
+          { k: 'STATUS', v: 'Under NDA' },
+        ],
         link: null,
       },
       {
-        meta: '2025 · CONSUMER HEALTH · LIVE ON iOS + ANDROID',
+        mock: 'agent',
+        meta: '2026',
+        title: 'Night Shift',
+        body: 'The employee that never clocks out. A fully autonomous operator the studio built and runs on its own office hardware, working an agile cadence around the clock: a primary reasoning model owns planning and review, drives Claude Code for engineering, and hands scoped work to two lower-cost subagents. Capability where it matters, economics where it doesn’t.',
+        spec: [
+          { k: 'RUNS ON', v: 'Dedicated Apple silicon, in-office' },
+          { k: 'BRAIN', v: 'Frontier reasoning model' },
+          { k: 'HANDS', v: 'Claude Code + two scoped subagents' },
+          { k: 'CADENCE', v: 'Agile sprints, 24/7' },
+        ],
+        link: null,
+      },
+      {
+        mock: 'etiqa',
+        meta: '2025',
         title: 'Etiqa Health',
         body: 'A nutrition-intelligence app designed, engineered, and shipped end-to-end by the studio — product spec, AI scoring pipeline, mobile builds, and App Store and Google Play release. Live and in users’ hands today.',
+        spec: [
+          { k: 'PLATFORM', v: 'iOS + Android' },
+          { k: 'ROLE', v: 'Product spec → store release' },
+          { k: 'ENGINE', v: 'AI nutrition scoring pipeline' },
+          { k: 'STATUS', v: 'Live' },
+        ],
         link: { label: 'etiqahealth.com', href: 'https://etiqahealth.com' },
       },
-    ],
-  },
-  approach: {
-    eyebrow: '03 — HOW WE ENGAGE',
-    items: [
       {
-        title: 'Direct to principal.',
-        body: 'The person who scopes your system is the person who builds it. No account layer, no handoffs, no junior team learning on your budget.',
-      },
-      {
-        title: 'Fixed scope, in writing.',
-        body: 'Every engagement starts with a scope document — deliverables, timeline, and cost agreed before work begins. Changes are negotiated, not discovered on an invoice.',
-      },
-      {
-        title: 'Your data stays yours.',
-        body: 'Client work is under NDA by default. Data lives in your infrastructure or in dedicated environments, and is never used to train models.',
-      },
-      {
-        title: 'Built to hand over.',
-        body: 'Systems ship with documentation and clean ownership. You are never locked in to us — which is precisely why clients stay.',
+        mock: 'fntz',
+        meta: '2024',
+        title: 'FNTZ Football',
+        body: 'Every team, every league, one hub. Built as an internal tool, FNTZ consolidates live data from fantasy platforms and sports-data feeds — rosters, matchups, injury reports, betting lines — and layers analysis on top: injury-probability modeling, matchup projections, start–sit calls, waiver targets. Advice you can act on before kickoff, from one screen instead of six tabs.',
+        spec: [
+          { k: 'TYPE', v: 'Internal tool' },
+          { k: 'SOURCES', v: 'Fantasy platforms + sports-data APIs' },
+          { k: 'MODELS', v: 'Injury probability, matchup projections' },
+          { k: 'PATTERN', v: 'Many sources, one decision surface' },
+        ],
+        link: null,
       },
     ],
-  },
-  studio: {
-    eyebrow: '04 — STUDIO',
-    body: 'Lirium is run by a working enterprise consultant — the same person who scopes your project builds it. We are based in Miami, with roots and a working presence in Panama, and we operate in English and Spanish. We stay small on purpose: fewer projects, closer attention, systems we are willing to stand behind after launch.',
   },
   contact: {
-    eyebrow: '05 — CONTACT',
+    eyebrow: 'CONTACT',
+    headline: { pre: 'Start the ', accent: 'conversation', post: '.' },
     email: 'team@lirium.ai',
     blurb: 'One conversation is usually enough to know whether we’re the right fit.',
     location: 'Miami, FL · Ciudad de Panamá',

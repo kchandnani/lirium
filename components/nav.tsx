@@ -23,17 +23,20 @@ export function Nav() {
         aria-label="Main"
         className="mx-auto flex max-w-[1120px] items-baseline justify-between px-6 py-4"
       >
-        <a href="/#top" className="display text-[20px] font-semibold lowercase">
+        <a href="/#top" className="display text-[19px] lowercase">
           lirium
         </a>
-        <div className="flex gap-6">
-          <a href="/#work" className="mono-label text-steel hover:text-ink">
+        <div className="flex gap-7">
+          <a
+            href="/#work"
+            className="text-[14px] text-steel transition-colors duration-150 hover:text-ink"
+          >
             {strings.nav.work}
           </a>
-          <a href="/#studio" className="mono-label text-steel hover:text-ink">
-            {strings.nav.studio}
-          </a>
-          <a href="/#contact" className="mono-label text-steel hover:text-ink">
+          <a
+            href="/#contact"
+            className="text-[14px] text-steel transition-colors duration-150 hover:text-ink"
+          >
             {strings.nav.contact}
           </a>
         </div>

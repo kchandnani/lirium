@@ -14,7 +14,7 @@ export function LegalPage({
     <>
       <Nav />
       <main className="mx-auto max-w-[760px] px-6 pt-16 pb-24 md:pt-24">
-        <p className="mono-label text-steel">LEGAL</p>
+        <p className="eyebrow">LEGAL</p>
         <h1 className="display mt-4 text-[32px] md:text-[44px]">{title}</h1>
         <p className="mono-label mt-4 text-steel">Last updated: {updated}</p>
         <div className="legal-body mt-12">{children}</div>

@@ -1,23 +1,34 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #fbfbf9;
-  --ink: #16181d;
-  --steel: #6e747c;
-  --hairline: #e4e5e1;
+  --paper: #f2efe8;
+  --band: #e6e2d4;
+  --dark: #16140f;
+  --dark-line: rgb(242 239 232 / 0.12);
+  --dark-muted: #a49d8b;
+  --ink: #1b1914;
+  --steel: #6f6a5c;
+  --hairline: #d9d4c3;
   --cobalt: #2f3ab2;
+  --verdigris: #257c6f;
+  --amber: #a97b24;
   --iris: linear-gradient(90deg, #2f3ab2, #2c8c7d, #b8862f);
 }
 
 @theme inline {
   --color-paper: var(--paper);
+  --color-band: var(--band);
+  --color-dark: var(--dark);
+  --color-dark-line: var(--dark-line);
+  --color-dark-muted: var(--dark-muted);
   --color-ink: var(--ink);
   --color-steel: var(--steel);
   --color-hairline: var(--hairline);
   --color-cobalt: var(--cobalt);
+  --color-verdigris: var(--verdigris);
+  --color-amber: var(--amber);
   --font-sans: var(--font-archivo), system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, monospace;
-  --radius-2: 2px;
 }
 
 html {
@@ -43,29 +54,58 @@ body {
   outline-offset: 3px;
 }
 
-/* Utility label style: eyebrows, metadata, footer entity line */
+/* Big statements: tight grotesk, one accent word per headline */
+.display {
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+
+/* Tiny mono eyebrows and metadata */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
 .mono-label {
   font-family: var(--font-mono);
   font-size: 12px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-/* Headline style: Archivo Expanded */
-.display {
-  font-stretch: 125%;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
+/* Pill CTA */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 14px;
+  padding: 0.7rem 1.1rem;
+  border-radius: 3px;
+  transition: background-color 150ms ease;
+}
+.pill:hover {
+  background: var(--cobalt);
+}
+.pill-light {
+  background: var(--paper);
+  color: var(--ink);
+}
+.pill-light:hover {
+  background: #fff;
 }
 
 /* Legal pages: long-form prose without per-element classes */
 .legal-body h2 {
-  font-stretch: 125%;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.2;
-  font-size: 20px;
+  font-size: 21px;
   margin-top: 2.5rem;
 }
 .legal-body h3 {
