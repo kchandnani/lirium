@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #fbfbf9;
+  --ink: #16181d;
+  --steel: #6e747c;
+  --hairline: #e4e5e1;
+  --cobalt: #2f3ab2;
+  --iris: linear-gradient(90deg, #2f3ab2, #2c8c7d, #b8862f);
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-steel: var(--steel);
+  --color-hairline: var(--hairline);
+  --color-cobalt: var(--cobalt);
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+  --radius-2: 2px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--cobalt);
+  outline-offset: 3px;
+}
+
+/* Utility label style: eyebrows, metadata, footer entity line */
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Headline style: Archivo Expanded */
+.display {
+  font-stretch: 125%;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* Legal pages: long-form prose without per-element classes */
+.legal-body h2 {
+  font-stretch: 125%;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  font-size: 20px;
+  margin-top: 2.5rem;
+}
+.legal-body h3 {
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 1.5rem;
+}
+.legal-body p {
+  margin-top: 0.75rem;
+  color: var(--steel);
+  max-width: 70ch;
+}
+.legal-body ul {
+  margin-top: 0.75rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+  color: var(--steel);
+  max-width: 70ch;
+}
+.legal-body li {
+  margin-top: 0.35rem;
+}
+.legal-body strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.legal-body a {
+  color: var(--cobalt);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+/* The signature — used exactly once, under the wordmark in the hero */
+.iris-rule {
+  height: 2px;
+  background: var(--iris);
+  transform-origin: left;
+}
+
+/* Page-load moment */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-fade {
+    animation: hero-fade 500ms ease-out both;
+  }
+  .iris-draw {
+    animation: iris-draw 700ms ease-out 500ms both;
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 600ms ease-out, transform 600ms ease-out;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes iris-draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
