@@ -34,6 +34,12 @@ export function Nav() {
             {strings.nav.work}
           </a>
           <a
+            href="/blog"
+            className="text-[14px] text-steel transition-colors duration-150 hover:text-ink"
+          >
+            {strings.nav.blog}
+          </a>
+          <a
             href="/#contact"
             className="text-[14px] text-steel transition-colors duration-150 hover:text-ink"
           >

@@ -5,7 +5,7 @@
 export const strings = {
   nav: {
     work: 'Work',
-    studio: 'Studio',
+    blog: 'Blog',
     contact: 'Contact',
   },
   hero: {
@@ -80,11 +80,11 @@ export const strings = {
         mock: 'agent',
         meta: '2026',
         title: 'Night Shift',
-        body: 'The employee that never clocks out. A fully autonomous operator the studio built and runs on its own office hardware, working an agile cadence around the clock: a primary reasoning model owns planning and review, drives Claude Code for engineering, and hands scoped work to two lower-cost subagents. Capability where it matters, economics where it doesn’t.',
+        body: 'The employee that never clocks out. A fully autonomous operator the studio built and runs on its own infrastructure, working an agile cadence around the clock: serious reasoning owns planning and review, and scoped work is delegated to specialized agents where the economics make sense. Capability where it matters, economics where it doesn’t.',
         spec: [
-          { k: 'RUNS ON', v: 'Dedicated Apple silicon, in-office' },
-          { k: 'BRAIN', v: 'Frontier reasoning model' },
-          { k: 'HANDS', v: 'Claude Code + two scoped subagents' },
+          { k: 'RUNS ON', v: 'Dedicated in-office hardware' },
+          { k: 'OVERSIGHT', v: 'Review before anything ships' },
+          { k: 'PATTERN', v: 'Delegation to specialized agents' },
           { k: 'CADENCE', v: 'Agile sprints, 24/7' },
         ],
         link: null,

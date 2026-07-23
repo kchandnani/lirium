@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { posts } from '@/lib/posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -8,6 +9,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 1,
     },
+    {
+      url: 'https://lirium.ai/blog',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    ...posts.map((post) => ({
+      url: `https://lirium.ai/blog/${post.slug}`,
+      lastModified: new Date(`${post.date}T00:00:00Z`),
+      changeFrequency: 'yearly' as const,
+      priority: 0.6,
+    })),
     {
       url: 'https://lirium.ai/privacy',
       lastModified: new Date(),

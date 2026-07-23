@@ -130,10 +130,10 @@ export function GrcMock() {
 
 export function AgentMock() {
   const feed = [
-    ['#2f3ab2', 'Sprint backlog groomed — 6 tasks queued', 'Primary · 02:14', 'Done', 'ok'],
-    ['#257c6f', 'Invoice export built, tests passing', 'Claude Code · 02:16', 'Running', 'warn'],
-    ['#a97b24', 'Overnight inbox triaged, 3 flagged', 'Subagent A · 02:16', 'Done', 'ok'],
-    ['#a97b24', 'Stripe payouts reconciled vs ledger', 'Subagent B · 02:31', 'Done', 'ok'],
+    ['#2f3ab2', 'Sprint backlog groomed — 6 tasks queued', 'Planner · 02:14', 'Done', 'ok'],
+    ['#257c6f', 'Invoice export built, tests passing', 'Engineering · 02:16', 'Running', 'warn'],
+    ['#a97b24', 'Overnight inbox triaged, 3 flagged', 'Ops · 02:16', 'Done', 'ok'],
+    ['#a97b24', 'Payouts reconciled vs ledger', 'Ops · 02:31', 'Done', 'ok'],
   ] as const
   return (
     <Window title="Night Shift — Operations" right="UNATTENDED · 41 DAYS">
@@ -161,9 +161,9 @@ export function AgentMock() {
             Crew
           </p>
           {[
-            ['#2f3ab2', 'Primary', 'plans & reviews'],
-            ['#257c6f', 'Claude Code', 'engineering'],
-            ['#a97b24', 'Subagents ×2', 'scoped ops'],
+            ['#2f3ab2', 'Planner', 'plans & reviews'],
+            ['#257c6f', 'Engineering', 'builds & tests'],
+            ['#a97b24', 'Ops', 'scoped routine work'],
           ].map(([dot, name, role]) => (
             <div key={name} className="mt-2 flex items-start gap-1.5">
               <span
