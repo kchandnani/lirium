@@ -1,5 +1,3 @@
-const withMDX = require('@next/mdx')()
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -22,4 +20,4 @@ const nextConfig = {
   }
 }
 
-module.exports = withMDX(nextConfig) 
+module.exports = nextConfig 
