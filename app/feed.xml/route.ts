@@ -1,4 +1,4 @@
-import { posts } from '@/lib/posts'
+import { getAllPosts } from '@/lib/mdx-posts'
 
 export const dynamic = 'force-static'
 
@@ -10,6 +10,7 @@ function esc(s: string) {
 }
 
 export function GET() {
+  const posts = getAllPosts()
   const items = posts
     .map(
       (p) => `    <item>

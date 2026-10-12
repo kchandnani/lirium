@@ -1,7 +1,9 @@
 import type { MetadataRoute } from 'next'
-import { posts } from '@/lib/posts'
+import { getAllPosts } from '@/lib/mdx-posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const posts = getAllPosts()
+  
   return [
     {
       url: 'https://lirium.ai',

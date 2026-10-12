@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Nav } from '@/components/nav'
-import { formatDate, posts } from '@/lib/posts'
+import { formatDate, getAllPosts } from '@/lib/mdx-posts'
 
 export const metadata: Metadata = {
   title: 'Blog — Lirium',
@@ -11,6 +11,8 @@ export const metadata: Metadata = {
 }
 
 export default function Blog() {
+  const posts = getAllPosts()
+  
   return (
     <>
       <Nav />
@@ -21,7 +23,7 @@ export default function Blog() {
         </h1>
         <p className="mt-6 max-w-[58ch] text-[16px] text-steel">
           What we learn building systems for clients and shipping our own —
-          written down so you don’t have to learn it the expensive way.
+          written down so you don't have to learn it the expensive way.
         </p>
 
         <div className="mt-14">
