@@ -1,0 +1,91 @@
+---
+title: "Zapier vs. Make vs. n8n: what 5,000 automations a month actually costs"
+description: "We priced one 5-step workflow running 5,000 times a month on Zapier, Make and n8n. The bills range from about $14 to $283 a month."
+date: "2026-10-14"
+tags: ["AUTOMATION", "PRICING", "NO-CODE TOOLS"]
+slug: "zapier-make-n8n-cost-5000-automations"
+---
+
+Every automation platform publishes a price per month. None of them publishes the price of your workflow. Zapier bills by the task, Make by the credit, n8n by the execution, and those three units measure different things. Put the same job on all three and the bills land more than six times apart.
+
+So we priced one job on all three. Every published figure below links to its source, as we found it on October 12, 2026. The workload itself is illustrative, and we've labeled it that way.
+
+## The workload
+
+Illustrative: a business pulls in 5,000 leads a month through its website form. Each lead runs the same five-step workflow:
+
+1. **Trigger:** a new form submission arrives by webhook.
+2. **Action:** create or update the contact in HubSpot.
+3. **Action:** post the lead to a #sales channel in Slack.
+4. **Action:** send a welcome email from Gmail.
+5. **Action:** log a row in Google Sheets.
+
+That's one trigger and four actions, run 5,000 times. It's not an exotic setup. Zapier's own pricing page uses nearly this exact example to explain multi-step workflows: "a single email lead is automatically added to your CRM and notifies your team in Slack" ([Zapier](https://zapier.com/pricing)).
+
+## How each tool counts
+
+**Zapier counts tasks.** A task is each successful action step. Triggers don't count, and neither do Zapier's built-in tools like Formatter, Filter, Paths and Delay ([Zapier](https://zapier.com/pricing)). Our workflow uses 4 tasks per run, so 5,000 runs is **20,000 tasks**.
+
+**Make counts credits.** "Every time a module in a scenario performs an action, it consumes credits," and "most actions consume 1 credit." Make's list of what counts includes reading data "from an app or webhook," so the trigger costs a credit too. So do the built-in data transformers. Routers and error handlers are free ([Make](https://www.make.com/en/pricing)). Our workflow uses 5 credits per run, so 5,000 runs is **25,000 credits**.
+
+**n8n counts executions.** "An execution is a single run of your entire workflow. It doesn't matter how many steps are in the workflow or how much data it processes" ([n8n](https://n8n.io/pricing/)). 5,000 runs is **5,000 executions**.
+
+Same workflow, three numbers: 20,000, 25,000 and 5,000. That's why the "5,000 tasks" tier on Zapier is not a plan for 5,000 automations.
+
+## The monthly bill
+
+Zapier's Professional plan is sold in task tiers. The smallest tier that covers 20,000 tasks is 20,000, at **$189 a month billed annually or $283.50 billed monthly** ([Zapier](https://zapier.com/pricing)).
+
+Make sells credits in tiers too. 25,000 credits doesn't fit in the 20,000 tier, so the next one up is 40,000 credits. On the Core plan that's **$29 a month billed annually or $34.12 billed monthly**. The Pro plan at the same tier is $53 annually or $62.35 monthly ([Make](https://www.make.com/en/pricing)).
+
+n8n's cloud Starter plan includes 2,500 executions a month, which is too small for this workload. The Pro plan includes 10,000 executions at **€50 a month billed annually or €60 billed monthly** ([n8n](https://n8n.io/pricing/)). n8n bills cloud plans in euros, so we've left those numbers in euros.
+
+| Tool and plan | Units this workflow uses | Tier you'd buy | Billed annually | Billed monthly |
+|---|---|---|---|---|
+| Zapier Professional | 20,000 tasks | 20,000 tasks | $189/mo | $283.50/mo |
+| Make Core | 25,000 credits | 40,000 credits | $29/mo | $34.12/mo |
+| Make Pro | 25,000 credits | 40,000 credits | $53/mo | $62.35/mo |
+| n8n Cloud Pro | 5,000 executions | 10,000 executions | €50/mo | €60/mo |
+| n8n Community, self-hosted | 5,000 executions | No limit | $0 license + hosting | $0 license + hosting |
+
+Plan prices from [Zapier](https://zapier.com/pricing), [Make](https://www.make.com/en/pricing) and [n8n](https://n8n.io/pricing/). The unit counts are our math.
+
+On an annual plan, Zapier costs about 6.5 times what Make Core costs for the same work.
+
+## What a step does to the bill
+
+Keep 5,000 runs and change only the step count.
+
+| Workflow shape | Zapier Pro (annual) | Make Core (annual) | n8n Cloud Pro (annual) |
+|---|---|---|---|
+| Trigger + 2 actions | 10,000 tasks: $129 | 15,000 credits: $16 | 5,000 executions: €50 |
+| Trigger + 4 actions (ours) | 20,000 tasks: $189 | 25,000 credits: $29 | 5,000 executions: €50 |
+| Trigger + 7 actions | 35,000 tasks: $289 | 40,000 credits: $29 | 5,000 executions: €50 |
+
+Tier prices from [Zapier](https://zapier.com/pricing), [Make](https://www.make.com/en/pricing) and [n8n](https://n8n.io/pricing/). The shapes are illustrative.
+
+Zapier's bill climbs with every action you add. Make's climbs too, but in cheaper jumps, and a tier boundary can hide a few extra steps. n8n doesn't move at all. That's why n8n can say a single execution can do work "that would take 10,000 operations in other tools" ([n8n](https://n8n.io/pricing/)).
+
+There's one place where Zapier gets credit back. Its built-in tools are free, so a Formatter step that cleans up a phone number costs nothing. On Make, "transform data using the built-in tools" is on the list of things that use credits ([Make](https://www.make.com/en/pricing)).
+
+> Before you compare plans, count your steps. The plan name tells you almost nothing until you know what one run of your workflow costs in that tool's unit.
+
+## The overage trap
+
+The cheap move on Zapier would be to buy the 5,000-task tier and let pay-per-task cover the rest. It doesn't work. Even with pay-per-task turned on, "usage stops once it reaches 3× your task subscription" ([Zapier](https://zapier.com/pricing)). On a 5,000-task plan, that means you stop at 15,000 tasks. Our workflow needs 20,000, so at a steady pace your leads stop flowing around day 23. Overage tasks also cost more than plan tasks: 1.25 times the base rate on annual plans and 2.5 times on monthly plans ([Zapier](https://zapier.com/pricing)).
+
+Make stops your scenarios when credits run out. Incoming webhooks wait in a queue until you add more, and unused credits "expire at the end of the term" ([Make](https://www.make.com/en/pricing)). Size the tier for your busiest month, not your average one.
+
+## Self-hosting n8n
+
+n8n also publishes a free Community Edition on GitHub ([n8n](https://n8n.io/pricing/)). Without a license key, a self-hosted install "runs as the free Community edition" ([n8n docs](https://docs.n8n.io/hosting/)), and there's no execution meter. It's licensed under n8n's Sustainable Use License, which allows use "for your own internal business purposes" ([n8n license](https://github.com/n8n-io/n8n/blob/master/LICENSE.md)). Running your own lead flow is fine. Reselling n8n to clients is not.
+
+The real cost is the server. n8n's DigitalOcean guide says "a basic shared CPU plan is enough" for most usage levels ([n8n docs](https://docs.n8n.io/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-digital-ocean)). We'd pick the 2 GiB Basic Droplet at **$12 a month** over the $6 one with 1 GiB, and add weekly backups at 20% of the Droplet cost ([DigitalOcean](https://www.digitalocean.com/pricing/droplets)). That comes to **$14.40 a month**, and it doesn't change whether you run 5,000 executions or 50,000.
+
+That $14.40 doesn't include your time. n8n's own docs say self-hosting requires technical expertise and that maintenance is "your responsibility" ([n8n docs](https://docs.n8n.io/choose-how-to-use-n8n)). Someone has to apply updates, watch the disk and restore from a backup when the server falls over at 2 a.m. If nobody on your team can do that, the cheapest line in the table is the most expensive one in practice. (We ran the same kind of "price versus the hours behind it" math for [Intercom Fin](/blog/intercom-fin-break-even-math).)
+
+## Our call
+
+For this workload, Make Core is the cheapest hosted option at $29 a month, and it's the one we'd start most small businesses on. n8n Cloud Pro is the pick if your workflows are long or branch a lot, because its price doesn't care about steps. Zapier costs the most here, about $2,268 a year on an annual plan. It earns that only if you need one of its 9,000+ app connections ([Zapier](https://zapier.com/pricing)) that the others don't offer, or if your team already lives in it and switching would cost more than the gap. Self-hosted n8n wins on price, but only when someone owns the server.
+
+We build and maintain these workflows for small businesses on all three platforms. If you want your own workflow priced on each of them, send us the steps and your monthly volume: [team@lirium.ai](mailto:team@lirium.ai).
