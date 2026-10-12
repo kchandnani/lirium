@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { Nav } from '@/components/nav'
 import { formatDate, getPost, getAllPosts } from '@/lib/mdx-posts'
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import remarkGfm from 'remark-gfm'
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }))
@@ -69,6 +70,28 @@ const components = {
     </ul>
   ),
   li: ({ children }: { children: React.ReactNode }) => <li>{children}</li>,
+  table: ({ children }: { children: React.ReactNode }) => (
+    <div className="mt-8 overflow-x-auto">
+      <table className="min-w-full border-collapse text-[15px]">
+        {children}
+      </table>
+    </div>
+  ),
+  thead: ({ children }: { children: React.ReactNode }) => (
+    <thead className="border-b-2 border-hairline">{children}</thead>
+  ),
+  tbody: ({ children }: { children: React.ReactNode }) => <tbody>{children}</tbody>,
+  tr: ({ children }: { children: React.ReactNode }) => (
+    <tr className="border-b border-hairline">{children}</tr>
+  ),
+  th: ({ children }: { children: React.ReactNode }) => (
+    <th className="px-4 py-3 text-left font-mono text-[12px] tracking-[0.05em] uppercase text-steel">
+      {children}
+    </th>
+  ),
+  td: ({ children }: { children: React.ReactNode }) => (
+    <td className="px-4 py-3 text-[#4a463c]">{children}</td>
+  ),
 }
 
 export default async function PostPage({
@@ -109,7 +132,11 @@ export default async function PostPage({
         </p>
         <hr className="mt-8 border-hairline" />
         <article>
-          <MDXRemote source={post.content} components={components} />
+          <MDXRemote 
+            source={post.content} 
+            components={components}
+            options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+          />
         </article>
         <div className="mt-14 border-t border-hairline pt-8 md:flex md:items-center md:justify-between">
           <Link

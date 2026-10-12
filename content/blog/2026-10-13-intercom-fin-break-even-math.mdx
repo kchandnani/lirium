@@ -1,0 +1,80 @@
+---
+title: "Fin charges $0.99 per resolution. Here's the math for whether an AI support agent pays off"
+description: "A worked break-even for Intercom Fin: what $0.99 per outcome costs against a human's time per ticket, and where the math stops working."
+date: "2026-10-13"
+tags: ["AI AGENTS", "CUSTOMER SUPPORT", "PRICING"]
+slug: "intercom-fin-break-even-math"
+---
+
+Intercom prices its AI agent, Fin, at [$0.99 per outcome](https://www.intercom.com/pricing). It's a good price to start from because it's a unit cost. Most AI pricing makes you guess at credits or tokens. This one gives you a number per ticket, and you can put it next to what a person costs per ticket.
+
+So we did. Below is the break-even calculation we run with clients before anyone signs up for an AI support agent. The inputs we made up are labeled as illustrative, and every published figure is linked to its source. Plug in your own numbers and you'll know in ten minutes whether Fin, or any agent priced like it, makes sense for you.
+
+## What you're actually paying for
+
+Read the definition of "outcome" before you do any math. Intercom [counts one](https://www.intercom.com/pricing) when a customer confirms the issue is resolved, when "they don't ask for more help after Fin responds," or when Fin completes a configured workflow (a Procedure), "including handoffs." You're charged once per conversation, no matter how many questions Fin answers in it. If Fin just passes a conversation to your team without reaching an outcome, [you aren't charged](https://fin.ai/pricing).
+
+Two lines in that definition matter for the money:
+
+- **Silence counts as success.** A customer who gives up and closes the chat looks the same, on the bill, as one who got their answer.
+- **Some handoffs are billable.** If you build a Procedure that ends by handing the customer to a human, you pay $0.99 *and* your person still does the work.
+
+There's also a fee that's easy to miss. Sales-type outcomes are priced differently: a lead "qualification" [costs $9.99](https://fin.ai/pricing), not $0.99.
+
+The rest of the bill depends on how you buy it. If you run Fin inside Intercom's own helpdesk, the Essential plan is [$29 per seat per month](https://www.intercom.com/pricing) billed annually, with one full seat minimum. If you plug Fin into a helpdesk you already use (Intercom lists Salesforce, HubSpot, Freshworks, Zoho, Gorgias and others), there are [no seat costs](https://fin.ai/pricing), but there's a [50-outcome monthly minimum](https://fin.ai/pricing). That works out to a floor of $49.50 a month. The optional Pro add-on, which includes Intercom's analytics and its Operator agent, [starts at $100 a month](https://www.intercom.com/pricing).
+
+## What a human ticket costs
+
+The median customer service representative in the U.S. earned [$21.53 an hour in May 2025](https://www.bls.gov/ooh/office-and-administrative-support/customer-service-representatives.htm), according to the Bureau of Labor Statistics. In retail, the median is [$17.96](https://www.bls.gov/ooh/office-and-administrative-support/customer-service-representatives.htm).
+
+Wages aren't the full cost of an employee. In private industry, wages and salaries make up [70.0% of employer compensation costs](https://www.bls.gov/news.release/ecec.nr0.htm), and benefits make up the rest. Applying that economy-wide ratio to a support rep's wage is a rough estimate, but it's a fair one: $21.53 ÷ 0.70 comes to about **$30.76 an hour** loaded, or roughly **51 cents a minute**.
+
+That gives us the key number. At 51 cents a minute, $0.99 buys about **1.9 minutes** of a median support rep's time.
+
+| Hourly wage (BLS) | Loaded cost/hour (÷ 0.70) | Minutes of human time $0.99 buys |
+|---|---|---|
+| $15.27 (10th percentile) | $21.81 | 2.7 |
+| $17.96 (retail median) | $25.66 | 2.3 |
+| $21.53 (all-industry median) | $30.76 | 1.9 |
+| $30.57 (90th percentile) | $43.67 | 1.4 |
+
+Wage figures are from the [BLS Occupational Outlook Handbook](https://www.bls.gov/ooh/office-and-administrative-support/customer-service-representatives.htm). The loaded rates are our math.
+
+Here's the rule that falls out of the table. **Every time Fin resolves a ticket that would have taken your person more than two or three minutes, Fin is cheaper on a per-ticket basis.** If the ticket would have taken less time than that, a human was cheaper.
+
+## A worked example
+
+These inputs are illustrative. Say you get **1,000 conversations a month**, and the average one takes your person **6 minutes** once you count reading the message, looking up the order and writing the reply. That's 100 hours a month, or about $3,076 of loaded labor.
+
+Now pick a resolution rate. This is the input that decides everything, so we'll use two real ones. Intercom says Fin [averages 76% across 12,000+ customers](https://fin.ai/). That's the vendor grading itself, and an average across companies whose help docs are better than most. A customer quoted on Intercom's own pricing page, Robin's director of technical support, reports a [50% resolution rate](https://www.intercom.com/pricing). We'd plan around the lower number.
+
+- **At 50%:** 500 outcomes × $0.99 = $495. Fin takes 50 hours off your team, worth about $1,538. Net: roughly **$1,040 a month ahead**.
+- **At 76%:** 760 outcomes × $0.99 = $752. That's 76 hours saved, worth about $2,338. Net: roughly **$1,585 a month ahead**.
+
+Add a $29 Essential seat and the result barely changes. Even the $100 Pro add-on doesn't flip it. On paper, at this volume and handle time, the agent pays for itself several times over.
+
+> On paper, an AI agent pays for itself at almost any volume. In practice, it only pays if the hours it frees up turn into money you actually stop spending.
+
+## Where it stops paying off
+
+Our clients don't usually lose money on the per-ticket math. They lose it in these places:
+
+**Your easy tickets are already cheap.** The tickets Fin resolves most reliably, like "what are your hours" or "where's my order," are the ones a person answers in 90 seconds. At 51 cents a minute, that answer costs you about 77 cents. Fin charges 99. If most of your inbox is quick lookups, you're paying a little more per ticket in exchange for 24/7 coverage and instant replies. That trade can be worth making, but it's a trade, not a saving.
+
+**The hours don't leave the payroll.** Fifty hours a month freed up on paper doesn't save $1,538 if your one support person is salaried and still works 40 hours a week. The savings only become real when you stop hiring for coverage, cut overtime, drop an outsourced overnight service, or move that person onto work that brings in revenue. If none of those apply, the honest bill is $495 a month for faster replies.
+
+**Low volume runs into the minimum.** At an illustrative 100 conversations a month and 50% resolution, Fin bills 50 outcomes, which is exactly the $49.50 floor for the standalone product. It saves about five hours, spread a few minutes at a time across the month. That's hard to turn into money anyone stops spending.
+
+**Billable handoffs and quiet quitters.** Every Procedure that ends in a handoff costs $0.99 while your team still does the work. Every customer who gives up without saying anything shows up as an outcome. Neither one saves human time. If they make up a big share of your outcomes, your real resolution rate is lower than the dashboard says, and that's the number your break-even depends on.
+
+**Setup isn't free.** Fin can only answer from what you give it, meaning your help articles, policies and order data. If those don't exist yet, someone has to write them, and that time belongs in the math. Intercom's billing controls help here. You can set [alerts and hard limits on usage](https://fin.ai/pricing), and you should set them before launch.
+
+## How to run it on your own inbox
+
+You only need four inputs: monthly conversation volume, average minutes per ticket, your loaded hourly cost, and a resolution rate you'd stake money on. Fin comes out ahead when:
+
+**(resolution rate × volume × minutes per ticket × cost per minute) > (resolution rate × volume × $0.99) + seats + add-ons**
+
+Then add the question the formula can't answer: what will you do with the hours? (We wrote about where those hours hide in [the spreadsheet tax](/blog/the-spreadsheet-tax).) Intercom offers a [14-day free trial with unlimited Fin outcomes](https://fin.ai/pricing). That's long enough to measure your actual resolution rate on your own tickets before you plug it in.
+
+We build and price these systems for small businesses, sometimes with Fin and sometimes with a custom agent wired into the tools you already use. If you want the break-even for your own inbox, send us last month's ticket count: [team@lirium.ai](mailto:team@lirium.ai).
