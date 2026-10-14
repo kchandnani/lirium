@@ -9,18 +9,21 @@ Format: `- [ ] topic` for upcoming, `- [x] topic — published YYYY-MM-DD — <u
 - [x] Fin charges $0.99 per resolution. Here's the math for whether an AI support agent pays off — published 2026-10-13 — https://lirium.ai/blog/intercom-fin-break-even-math
 - [x] Zapier vs. Make vs. n8n: what 5,000 automations a month actually costs — published 2026-10-14 — https://lirium.ai/blog/zapier-make-n8n-cost-5000-automations
 - [x] The AI tools the FTC went after, and the 4 claims you should never believe from a vendor — published 2026-10-14 — https://lirium.ai/blog/ftc-ai-vendor-claims-red-flags
-- [ ] 58% of small businesses say they use AI. The Census says about 24%. Who's right?
-- [ ] What QuickBooks' new AI agents do (and don't do) for your books
+- [ ] Microsoft is turning on a Copilot spending meter for small businesses on Dec 1. Here's how to cap it
+- [ ] Using a chatbot with Colorado customers? New AI rules are open for comment until Oct 26
+- [ ] Running an AI agent just got about 90% cheaper. What that does to your automation budget
+- [ ] Meta's Muse can now send your QuickBooks invoices. Should you let it?
+- [ ] ChatGPT ads are open to small businesses, and HubSpot now plugs straight into them
 
 ## Additional Topics (6-15)
 
-- [ ] Text-message automation on Twilio: what an appointment-reminder agent really costs per month
-- [ ] 'AI isn't for my business': the #1 reason small firms skip AI, and how to test whether it's true
-- [ ] Your customers are the bottleneck: using AI agents to fix the #1 small business problem, reaching customers
-- [ ] 75% of owners cite rising costs. Where automation cuts real dollars, and where it doesn't
-- [ ] Usage-based AI pricing will surprise you: overages, caps, and pay-per-task traps
-- [ ] Self-host or cloud? When n8n's free Community Edition makes sense for a 10-person business
-- [ ] Which industries are actually using AI right now? A sector-by-sector benchmark
-- [ ] Does AI kill jobs at small businesses? What owners who adopted it report
-- [ ] Writing honest AI claims on your own website: an FTC-safe guide for small businesses
-- [ ] Fake reviews from AI tools: why that 'review generator' could get you in trouble
+- [ ] Claude Team now includes up to $500 a month in API credit. Build your first internal agent with it
+- [ ] Jobber Teammate and the rise of industry-specific agents for home service businesses
+- [ ] Only 20% of small businesses aren't using AI. Their top worry is accuracy, not cost
+- [ ] The AI gap on Main Street: businesses under $500K are falling behind. Where to start for under $150 a month
+- [ ] HubSpot's new Breeze Assistant: what the fall release changes for a 10-person sales team
+- [ ] Half of small businesses got a surprise AI bill. How to keep that from happening to you
+- [ ] The 'review tax': why AI is saving you time but eating 3+ hours of your week
+- [ ] QuickBooks now works inside ChatGPT: nine skills, and what to keep inside QuickBooks itself
+- [ ] Google's free Gemini just got weaker. Is it time to pay for an AI plan?
+- [ ] Census: about 1 in 4 businesses now use AI. Benchmark yourself by sector
