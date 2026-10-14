@@ -8,7 +8,7 @@ Format: `- [ ] topic` for upcoming, `- [x] topic — published YYYY-MM-DD — <u
 
 - [x] Fin charges $0.99 per resolution. Here's the math for whether an AI support agent pays off — published 2026-10-13 — https://lirium.ai/blog/intercom-fin-break-even-math
 - [x] Zapier vs. Make vs. n8n: what 5,000 automations a month actually costs — published 2026-10-14 — https://lirium.ai/blog/zapier-make-n8n-cost-5000-automations
-- [ ] The AI tools the FTC went after, and the 4 claims you should never believe from a vendor
+- [x] The AI tools the FTC went after, and the 4 claims you should never believe from a vendor — published 2026-10-14 — https://lirium.ai/blog/ftc-ai-vendor-claims-red-flags
 - [ ] 58% of small businesses say they use AI. The Census says about 24%. Who's right?
 - [ ] What QuickBooks' new AI agents do (and don't do) for your books
 
