@@ -9,7 +9,7 @@ Format: `- [ ] topic` for upcoming, `- [x] topic — published YYYY-MM-DD — <u
 - [x] Fin charges $0.99 per resolution. Here's the math for whether an AI support agent pays off — published 2026-10-13 — https://lirium.ai/blog/intercom-fin-break-even-math
 - [x] Zapier vs. Make vs. n8n: what 5,000 automations a month actually costs — published 2026-10-14 — https://lirium.ai/blog/zapier-make-n8n-cost-5000-automations
 - [x] The AI tools the FTC went after, and the 4 claims you should never believe from a vendor — published 2026-10-14 — https://lirium.ai/blog/ftc-ai-vendor-claims-red-flags
-- [ ] Microsoft is turning on a Copilot spending meter for small businesses on Dec 1. Here's how to cap it
+- [x] Microsoft is turning on a Copilot spending meter for small businesses on Dec 1. Here's how to cap it — published 2026-10-15 — https://lirium.ai/blog/microsoft-copilot-spending-meter-cap
 - [ ] Using a chatbot with Colorado customers? New AI rules are open for comment until Oct 26
 - [ ] Running an AI agent just got about 90% cheaper. What that does to your automation budget
 - [ ] Meta's Muse can now send your QuickBooks invoices. Should you let it?

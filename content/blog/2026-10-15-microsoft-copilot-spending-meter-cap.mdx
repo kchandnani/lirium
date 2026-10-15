@@ -1,0 +1,91 @@
+---
+title: "Microsoft is turning on a Copilot spending meter for small businesses on Dec 1. Here's how to cap it"
+description: "From Dec 1, new Copilot Business seats bought through resellers ship with a usage meter on. What it bills, what it can cost, and how to cap it."
+date: "2026-10-15"
+tags: ["MICROSOFT COPILOT", "PRICING", "SMALL BUSINESS"]
+slug: "microsoft-copilot-spending-meter-cap"
+---
+
+Starting December 1, new Microsoft 365 Copilot Business licenses sold through resellers come with a second bill attached. Microsoft is turning on pay-as-you-go usage billing by default for Copilot Business bought through its Cloud Solution Provider (CSP) reseller program. Nobody opts in. The meter is just there.
+
+We read the partner announcement, the admin docs and the pricing guide. Here's what the meter charges for, what it can cost a 10-person office, and how to turn it down.
+
+## What Microsoft announced
+
+Microsoft's October Partner Center announcement says "usage-based billing will be enabled by default for new Microsoft 365 Copilot Business licenses purchased in Cloud Solution Provider (CSP)," starting December 1, 2026. The date was originally November 2. The change covers "standalone offers and bundles" ([Microsoft](https://learn.microsoft.com/en-us/partner-center/announcements/2026-october)).
+
+The line that matters: "The default spending limit will be 4,000 Copilot Credits per user per month, which can be adjusted by admins." Microsoft's own example is that "a customer with 100 M365 Copilot Business users could consume up to 400,000 Copilot Credits per month" under that default ([Microsoft](https://learn.microsoft.com/en-us/partner-center/announcements/2026-october)).
+
+Two more details. CRN, citing Microsoft's partner FAQ, reports that the default also applies when you add Copilot Business seats to an existing subscription or upgrade to Copilot Business after December 1 ([CRN](https://www.crn.com/news/ai/2026/microsoft-delays-default-copilot-usage-based-billing-to-dec-1-adds-spending-cap-option)). And the rollout skips some countries at first, including Australia, Brazil, France, Germany and India. The U.S. isn't on that list ([Microsoft](https://learn.microsoft.com/en-us/partner-center/announcements/2026-october)).
+
+## What the meter bills for
+
+The Copilot you already pay for doesn't move to the meter. Microsoft's Copilot Credits Guide says there are "no incremental charges" for Copilot in chat, in apps like Word and Excel, or in included agents like Researcher and Analyst ([Microsoft](https://www.microsoft.com/licensing/guidance/Copilot-Credits)).
+
+The meter covers the newer agentic work. The announcement names Copilot Cowork, Work IQ APIs and GitHub Copilot Harness ([Microsoft](https://learn.microsoft.com/en-us/partner-center/announcements/2026-october)). Microsoft's admin docs list the services billed this way today: Cowork, advanced work in SharePoint and OneDrive, the Work IQ API, Copilot Managed Runtime, Teams Phone Agent and Code ([Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits)).
+
+Cowork is the one your staff will find first. Microsoft describes it as a system that plans and does multistep work: "sending emails, scheduling meetings, creating documents, posting in Teams, and managing files" ([Microsoft](https://www.microsoft.com/licensing/guidance/Copilot-Credits)).
+
+Credits per task aren't fixed. They depend on the models, runtime, context and tools a task needs. Microsoft's own planning estimate for building an app in Cowork runs from 250 to 450 credits for a simple one to 1,350 or more for a complex one ([Microsoft](https://www.microsoft.com/licensing/guidance/Copilot-Credits)).
+
+## What a credit costs
+
+Microsoft publishes a rate: "$0.01/Copilot Credit" on its pay-as-you-go meter, with all pricing in USD and "subject to change" ([Microsoft](https://www.microsoft.com/licensing/guidance/Copilot-Credits)). The only discount it lists is a one-year prepaid plan, starting at 5% off for 300,000 credits ([Microsoft](https://www.microsoft.com/licensing/guidance/Copilot-Credits)).
+
+Your reseller sends the bill, not Microsoft. CRN reports that these consumption charges flow through the CSP's invoices ([CRN](https://www.crn.com/news/ai/2026/microsoft-delays-default-copilot-usage-based-billing-to-dec-1-adds-spending-cap-option)). Treat the one-cent list rate as the number to check your reseller's quote against.
+
+At list price, the default cap works out to $40 per user per month. CRN puts Copilot Business plans at $18 to $32 per user per month ([CRN](https://www.crn.com/news/ai/2026/microsoft-delays-default-copilot-usage-based-billing-to-dec-1-adds-spending-cap-option)). So the meter's default ceiling is higher than the seat it rides on.
+
+## The math for a 10-person office
+
+Illustrative: 10 people on Copilot Business, bought after December 1, settings left at default.
+
+| Scenario | Credits per month | Cost at $0.01 per credit |
+|---|---|---|
+| Everyone hits the 4,000 default cap | 40,000 | $400 a month, $4,800 a year |
+| Two heavy users max out, eight never use metered features | 8,000 | $80 a month |
+| Admin cap at the 2,000 minimum for all 10 users | 20,000 max | $200 a month |
+| Metered features limited to two pilot users at 2,000 each | 4,000 max | $40 a month |
+
+Credit rate from [Microsoft](https://www.microsoft.com/licensing/guidance/Copilot-Credits). Default cap from [Microsoft](https://learn.microsoft.com/en-us/partner-center/announcements/2026-october). The 2,000 minimum is from [Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-manage-copilot-credits). Seat costs aren't included, and the usage scenarios are ours.
+
+The meter bills actual usage, so most months will land below the ceiling. But the ceiling is what you should budget against, because it's the one number you control.
+
+> The 4,000-credit default isn't a forecast of what your team needs. It's a number Microsoft picked, and until someone changes it, it's your AI budget.
+
+Surprise bills are already common. In a Pax8 survey, 49% of small and midsized businesses that paid for AI in the past year got at least one bill or usage charge higher than they expected. In the U.S. it was 57% ([Pax8](https://www.pax8nebula.com/asset/60fef162-013e-435d-9620-37ce44809870/Pax8-Pulse-Report-2026-Q3.pdf)). We've seen the same pattern with [Zapier's overage rules](/blog/zapier-make-n8n-cost-5000-automations) and [Intercom Fin's per-resolution pricing](/blog/intercom-fin-break-even-math). Meters are fine once you size them. Left alone, they get sized for you.
+
+## How an admin lowers the cap
+
+The controls live in the Microsoft 365 admin center under Copilot > Cost Management. Global administrators and Billing administrators can create policies and change billing methods. AI administrators and License administrators can edit spending policies, limits and alerts ([Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-copilot-credits-setup)).
+
+1. Sign in to the Microsoft 365 admin center and go to **Copilot > Cost Management**.
+2. Open the **Configuration** tab and select the spending policy. On a new Copilot Business purchase, that's the default policy created with the license ([CRN](https://www.crn.com/news/ai/2026/microsoft-delays-default-copilot-usage-based-billing-to-dec-1-adds-spending-cap-option)).
+3. In the policy flyout, edit **Spending limits**. Set a limited monthly budget for the policy and a monthly limit per user, so one person can't spend everyone's credits.
+4. Under **Scope**, switch from all users to a security group, such as the two people piloting Cowork.
+5. Under **Agents and services**, uncheck anything you don't want billed. Turn off **Auto-apply new services**, which is on by default and adds Microsoft's future metered services to the policy automatically.
+6. Under **Alerts**, set a threshold and the people who get the email.
+7. Select **Save changes**.
+
+Those steps come from [Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-manage-copilot-credits). When a user hits the limit, they lose access to metered services "for the rest of the month until credits reset on the first of the month" ([Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-manage-copilot-credits)). They can request more credits, and an admin decides ([Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits)).
+
+## Getting it to zero
+
+Here's the catch. Microsoft's admin docs say a policy must allow "at least 2,000 credits per user per month" ([Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-manage-copilot-credits)). So the lowest cap Microsoft documents in the admin center is $20 per covered user at list price. Zero isn't one of the documented settings.
+
+Zero comes from the reseller side. CRN, citing Microsoft's partner FAQ, reports that "partners can set the spending limit to zero to turn off usage-based billing," and that partners can edit spending policies in Partner Center after purchase ([CRN](https://www.crn.com/news/ai/2026/microsoft-delays-default-copilot-usage-based-billing-to-dec-1-adds-spending-cap-option)). We couldn't find that option in Microsoft's public admin docs, so get it confirmed in writing.
+
+Until then, scope is your best tool. Microsoft says admins must set up a billing policy before a user can use metered experiences ([Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/copilot/user-subscription-license-usage-based-billing)). Shrink the policy to a small group, and everyone outside it stays off the meter.
+
+## What to ask your reseller this quarter
+
+- Will these seats be provisioned before or after December 1, and will usage billing be on when they land?
+- What per-credit rate will you bill me, and how does it compare with Microsoft's $0.01 list price?
+- Can you set my spending limit to zero at purchase and confirm it in writing?
+- Which Azure subscription will the charges land on? CRN reports one is created automatically if you don't have one ([CRN](https://www.crn.com/news/ai/2026/microsoft-delays-default-copilot-usage-based-billing-to-dec-1-adds-spending-cap-option)).
+- Who approves credit requests from my staff, you or us?
+- If usage runs over what I expected, who pays? CRN reports the transacting partner is responsible to Microsoft for all charges, "including unexpected consumption" ([CRN](https://www.crn.com/news/ai/2026/microsoft-delays-default-copilot-usage-based-billing-to-dec-1-adds-spending-cap-option)). Ask how your contract passes that on to you.
+
+If your reseller can't answer these before you sign, wait until they can.
+
+We set up and audit Microsoft 365 and Copilot for small businesses, including spending policies like these. If you want a second look at a Copilot quote or your Cost Management settings, send it to us: [team@lirium.ai](mailto:team@lirium.ai).
