@@ -1,0 +1,62 @@
+---
+title: "Using a chatbot with Colorado customers? New AI rules are open for comment until Oct 26"
+description: "Colorado's Chatbot Safety Act and ADMT Act take effect Jan 1, 2027. What a small business with a website chatbot or AI hiring screen needs to do, and how to comment by Oct 26."
+date: "2026-10-16"
+tags: ["AI COMPLIANCE", "COLORADO", "SMALL BUSINESS"]
+slug: "colorado-chatbot-admt-rules-oct-26"
+---
+
+If you run a website chatbot that Colorado residents can talk to, or you use AI to screen job applicants, set rents, or decide who gets a loan, Colorado just put a clock on you. Two laws take effect January 1, 2027: the Chatbot Safety Act and the Automated Decision-Making Technology Act (ADMT Act). The Attorney General's office released an interim draft of the rules on October 6, and formal comments close October 26, 2026 at 11:59 p.m. Mountain time ([Colorado AG](https://coag.gov/ai/)).
+
+We read the AG's rulemaking page and the interim draft. Here's what matters for a small business, what to do before January, and how to put a comment on the record if the draft still leaves you guessing.
+
+## The two laws, in plain English
+
+The **Chatbot Safety Act** (HB 26-1263) covers conversational AI that is available to the public. Per the AG's summary, operators must estimate user age, "disclose that users are interacting with AI and not humans," protect teen users from sexually explicit content and simulated emotional dependence, put privacy and account tools in place for minors, build suicide and self-harm response protocols, and avoid presenting chatbot output as equivalent to licensed professional advice. Operators also submit an annual report to the Attorney General ([Colorado AG](https://coag.gov/ai/)).
+
+The **ADMT Act** (SB 26-189) covers automated systems that "materially influence" a consequential decision. The AG's page lists the core idea: protections when AI helps decide things like hiring, lending, housing, and similar high-stakes outcomes for Colorado residents, plus a right for consumers to request and correct inaccurate personal data used in that decision ([Colorado AG](https://coag.gov/ai/)).
+
+Both statutes take effect January 1, 2027. The interim draft rules also become effective that day ([interim draft](https://coag.gov/app/uploads/2026/10/2026.10.06-ADMT-Chatbot-Act-Rulemaking-Interim-Draft-Redline.pdf)).
+
+## If you only have a customer-facing chatbot
+
+If your site chatbot is closer to a support agent than a toy, treat disclosure as part of the product, not a footer. (We walked through AI support pricing separately in [Intercom Fin's break-even math](/blog/intercom-fin-break-even-math).) Start with disclosure. The draft rules say Operator notices to Users must be understandable, accessible, available in the languages you already use on your site, and shown through an interface people already use with your product. They also have to be straightforward and not misleading ([interim draft, Rule 3.2](https://coag.gov/app/uploads/2026/10/2026.10.06-ADMT-Chatbot-Act-Rulemaking-Interim-Draft-Redline.pdf)).
+
+The draft also clarifies who counts as "public." A conversational AI "Accessible to the General Public" includes free tools, gated sign-ups, subscriptions, and paywalled products. It does **not** include an internal-only workforce chatbot locked behind authenticated employee access that customers never see ([interim draft, Rule 2.2](https://coag.gov/app/uploads/2026/10/2026.10.06-ADMT-Chatbot-Act-Rulemaking-Interim-Draft-Redline.pdf)).
+
+Practical checklist for a site chatbot before January 1, 2027:
+
+1. Put a clear "you're talking to AI" notice where the chat starts, not buried in a footer.
+2. Decide how you will estimate age if minors can reach the bot.
+3. Document a suicide / self-harm response path (who gets alerted, what the bot says, when a human takes over).
+4. Ban pitches that sound like licensed legal, medical, or financial advice unless a licensed person is actually in the loop.
+5. Keep a folder for the annual AG report metrics so you are not inventing them in December 2027.
+
+This is not legal advice. It is a reading of what the AG's page and the interim draft already say out loud. The same caution applies when a vendor pitches an "AI lawyer" or compliance guarantee; see [the FTC cases we covered](/blog/ftc-ai-vendor-claims-red-flags).
+
+## If AI helps you hire, lend, or house people
+
+The ADMT side is about consequential decisions. The interim draft's employment example is blunt: if a hiring manager uses ADMT to score candidates, sees the scores, and picks the top score, that score is presumed to have "materially influenced" the hire. The company can try to rebut that presumption with evidence the human decided on other substantial information, but the presumption is the starting point ([interim draft, Rule 6](https://coag.gov/app/uploads/2026/10/2026.10.06-ADMT-Chatbot-Act-Rulemaking-Interim-Draft-Redline.pdf)).
+
+Lending and housing examples follow the same pattern. A credit union that denies everyone below an ADMT risk-score threshold is using Covered ADMT. A property manager that sorts tenants into "positive" and "negative" buckets with AI and then assigns the nicer units from that list is also in Covered ADMT territory. A spreadsheet that only sorts applicants by unit size and application date, with no ranking or judgment, is not ([interim draft, Rule 6.2](https://coag.gov/app/uploads/2026/10/2026.10.06-ADMT-Chatbot-Act-Rulemaking-Interim-Draft-Redline.pdf)).
+
+If a Covered ADMT helps produce an adverse outcome, the draft says the Deployer must send a written disclosure within thirty days. That disclosure has to describe the decision in plain language, explain the ADMT's role with specificity (not "we automated a review"), name principal reasons, and tell the person how to request more information and exercise correction and meaningful human review rights ([interim draft, Rule 7](https://coag.gov/app/uploads/2026/10/2026.10.06-ADMT-Chatbot-Act-Rulemaking-Interim-Draft-Redline.pdf)).
+
+A few Deployer moves that reduce surprise later:
+
+- Inventory every tool that ranks, scores, screens, or recommends people for jobs, credit, housing, insurance, or similar decisions involving Colorado residents.
+- Separate "organizing for a human" tools from "telling the human what to do" tools. The draft treats those differently.
+- Write the adverse-outcome email template now, while the comment period is still open, so gaps in the vendor's documentation show up before January.
+- Ask each vendor for the Developer documentation the draft expects Deployers to pass through (intended uses, known limits, data categories, monitoring instructions).
+
+## Why the Oct 26 comment window matters
+
+The laws are already signed. The fight right now is over how clear the rules are for people who have to follow them. The AG's office says it will consider written comments received by October 26, 2026 at 11:59 p.m. MST (or through the last day of the hearing if the hearing runs longer). There is a public hearing the same day at 10:00 a.m. in Denver, with a Zoom option if you register ([Colorado AG](https://coag.gov/ai/)).
+
+If you sell software into Colorado, or you deploy chatbots / hiring screens for Colorado customers, this is the cheap time to ask for clearer examples. Comment through the form on the AG page: [coag.gov/ai](https://coag.gov/ai/). Point at the exact rule section that is still fuzzy for your product (age estimation, disclosure placement, what counts as material influence for a reseller who only hosts the model, annual report metrics). Early comments get posted for other stakeholders to see.
+
+## What we'd do this week
+
+If we ran your stack, we'd spend one afternoon on three artifacts: a chatbot disclosure and crisis protocol, a one-page inventory of any ADMT that touches hiring / lending / housing, and a short comment if a rule section still doesn't match how your product actually works. January 1, 2027 is not far once you count vendor lead times.
+
+If you want a second set of eyes on whether your current chatbot or screening tool is in scope, send it to us: [team@lirium.ai](mailto:team@lirium.ai).
