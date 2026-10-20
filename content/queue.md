@@ -11,7 +11,7 @@ Format: `- [ ] topic` for upcoming, `- [x] topic — published YYYY-MM-DD — <u
 - [x] The AI tools the FTC went after, and the 4 claims you should never believe from a vendor — published 2026-10-14 — https://lirium.ai/blog/ftc-ai-vendor-claims-red-flags
 - [x] Microsoft is turning on a Copilot spending meter for small businesses on Dec 1. Here's how to cap it — published 2026-10-15 — https://lirium.ai/blog/microsoft-copilot-spending-meter-cap
 - [x] Using a chatbot with Colorado customers? New AI rules are open for comment until Oct 26 — published 2026-10-16 — https://lirium.ai/blog/colorado-chatbot-admt-rules-oct-26
-- [ ] Running an AI agent just got about 90% cheaper. What that does to your automation budget
+- [x] Running an AI agent just got about 90% cheaper. What that does to your automation budget — published 2026-10-20 — https://lirium.ai/blog/ai-agent-costs-90-percent-cheaper
 - [ ] Meta's Muse can now send your QuickBooks invoices. Should you let it?
 - [ ] ChatGPT ads are open to small businesses, and HubSpot now plugs straight into them
 

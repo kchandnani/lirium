@@ -1,0 +1,95 @@
+---
+title: "Running an AI agent just got about 90% cheaper. What that does to your automation budget"
+description: "Claude Haiku 5.5 and GPT-6.1 Sol cut AI model prices sharply. What a support or lead-triage agent now costs a month, and why cache pricing matters most."
+date: "2026-10-20"
+tags: ["AI COSTS", "AI AGENTS", "SMALL BUSINESS"]
+slug: "ai-agent-costs-90-percent-cheaper"
+---
+
+If someone quoted you a support or lead-triage agent this year, the model bill inside that quote is now out of date. Anthropic released Claude Haiku 5.5 on October 7 and says it is "priced 90% lower than Claude Haiku 4.5 for requests up to 100,000 tokens" ([Anthropic](https://www.anthropic.com/claude-haiku-5-5)). OpenAI released GPT-6.1 Sol on September 29 at DevDay ([TechCrunch](https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/)), with cached input at $0.10 per million tokens ([OpenAI](https://openai.com/index/introducing-gpt-6-1-sol/)).
+
+Here's what those numbers mean for one concrete agent, with math you can redo on a napkin.
+
+## Where "90% cheaper" is true, and where it isn't
+
+The 90% is real, but narrow. It is a per-token comparison between Haiku 5.5 and Haiku 4.5 on requests up to 100,000 tokens. Over 100,000 tokens, Anthropic says the cut is 50%. Its own blended figure is lower: "On average, it now costs around 75% less to run," partly because Haiku 5.5's new tokenizer "uses slightly more tokens per task" ([Anthropic](https://www.anthropic.com/claude-haiku-5-5)).
+
+GPT-6.1 Sol is a different kind of cut. OpenAI pitches it at "one-fifth of Astra's standard input and output token prices," and says its cached input is "50% less than GPT-6 Sol's cached input pricing" ([OpenAI](https://openai.com/index/introducing-gpt-6-1-sol/)). VentureBeat notes the uncached input and output rates are the same as GPT-6 Sol's ([VentureBeat](https://venturebeat.com/technology/openais-gpt-6-1-sol-offers-astra-like-performance-at-1-5th-price-a-new-ultrafast-tier-clocks-at-300-tokens-per-second)). So if you were already on Sol, the only line that dropped is the cached one. As you'll see, for an agent that is the line that counts.
+
+## The rates
+
+All prices per million tokens. Haiku 5.5 shows the rate for prompts up to 100,000 tokens.
+
+| Per 1M tokens | Haiku 5.5 | Haiku 4.5 | GPT-6.1 Sol |
+|---|---|---|---|
+| Input | $0.10 | $1.00 | $2.00 |
+| Cache write | $0.125 | $1.25 | not listed |
+| Cache read / cached input | $0.01 | $0.10 | $0.10 |
+| Output | $0.50 | $5.00 | $10.00 |
+
+Anthropic rates from [Anthropic](https://www.anthropic.com/claude-haiku-5-5). GPT-6.1 Sol rates from [OpenAI](https://openai.com/index/introducing-gpt-6-1-sol/). Over 100,000 tokens, Haiku 5.5 moves to $0.50 input, $2.50 output, $0.05 cache reads and $0.625 cache writes ([Anthropic](https://www.anthropic.com/claude-haiku-5-5)).
+
+## Why agents live on the cache line
+
+A chatbot answers once. An agent works in steps. It reads the customer's message, looks up the order, checks the policy, maybe asks a follow-up, then writes back. Each step is a separate model call, and each call resends everything the model needs: the system prompt, the tool definitions, your policies, and the whole conversation so far.
+
+Most of that is identical to the previous call. Prompt caching lets the provider bill those repeated tokens at the cache rate instead of the full input rate. On Haiku 5.5 that is a tenth of the input price. On GPT-6.1 Sol it is "95% less than standard input pricing" ([OpenAI](https://openai.com/index/introducing-gpt-6-1-sol/)).
+
+Anthropic makes the same argument about its own lineup. It halved Sonnet 5.5's cache reads to "$0.10 per million tokens rather than $0.20," and says that because cache reads "make up a large share of models' token consumption," Sonnet 5.5 gets about 20% cheaper on most agentic tasks ([Anthropic](https://www.anthropic.com/claude-haiku-5-5)). A cut to one line moving the whole bill by a fifth tells you where the volume is.
+
+> For an agent, the headline input price is the rate you pay on the small part of each call that is new. The cache price is the rate you pay on everything else.
+
+## The agent we priced
+
+Illustrative, and every number in this section is our assumption, not a vendor figure:
+
+- **Job:** a website support and lead-triage agent. It answers order and policy questions, qualifies new leads, and hands off to a human.
+- **Volume:** 2,000 conversations a month.
+- **Steps:** 8 model calls per conversation.
+- **Context per call:** 10,000 input tokens. 9,000 of them repeat from the previous call (system prompt, tools, policies, history). 1,000 are new (the customer's latest message or a tool result).
+- **Output per call:** 300 tokens.
+- **Caching:** the first call in each conversation writes the 9,000-token block to cache. The other 7 calls read it.
+
+Per conversation that is 9,000 cache-write tokens, 63,000 cache-read tokens (7 × 9,000), 8,000 fresh input tokens (8 × 1,000) and 2,400 output tokens (8 × 300). Times 2,000 conversations:
+
+- Cache writes: 18M tokens
+- Cache reads: 126M tokens
+- Fresh input: 16M tokens
+- Output: 4.8M tokens
+
+Every call is 10,000 tokens, well under Haiku 5.5's 100,000 threshold. OpenAI's page doesn't list a cache-write price, so we bill the first pass on GPT-6.1 Sol at the standard $2 input rate. That's our assumption: 34M full-price input tokens (16M + 18M) and 126M cached.
+
+## The monthly bill
+
+| Line | Haiku 4.5 | Haiku 5.5 | GPT-6.1 Sol |
+|---|---|---|---|
+| Cache writes (18M) | $22.50 | $2.25 | billed as input below |
+| Cache reads (126M) | $12.60 | $1.26 | $12.60 |
+| Fresh input (16M, or 34M on Sol) | $16.00 | $1.60 | $68.00 |
+| Output (4.8M) | $24.00 | $2.40 | $48.00 |
+| **Total per month** | **$75.10** | **$7.51** | **$128.60** |
+
+Rates from [Anthropic](https://www.anthropic.com/claude-haiku-5-5) and [OpenAI](https://openai.com/index/introducing-gpt-6-1-sol/). Volume and token counts are our assumptions.
+
+On this workload, Haiku 5.5 lands at exactly 10% of Haiku 4.5's bill, because every rate dropped by the same 90%. Anthropic's tokenizer caveat means the real token counts on 5.5 run a little higher, so treat $7.51 as a floor, not a promise. GPT-6.1 Sol costs about 17 times more than Haiku 5.5 here. It is also pitched as a much more capable model, close to OpenAI's flagship Astra on professional work ([OpenAI](https://openai.com/index/introducing-gpt-6-1-sol/)). Whether you need that for order lookups and lead scoring is a quality test, not a pricing one.
+
+## Turn the cache off and watch what happens
+
+Same agent, no caching. All 160M input tokens a month (2,000 × 8 × 10,000) bill at the full input rate.
+
+- **Haiku 5.5:** 160M × $0.10 = $16.00, plus $2.40 output = **$18.40**, up from $7.51.
+- **GPT-6.1 Sol:** 160M × $2.00 = $320.00, plus $48.00 output = **$368.00**, up from $128.60.
+
+Same model, same conversations, a bill two and a half to three times larger. On Sol, 126M cached tokens cost $12.60. The same tokens uncached would be $252. That gap is bigger than any headline cut in either announcement.
+
+Two practical catches. Anthropic's listed caching prices reflect a 5-minute cache lifetime ([Anthropic pricing](https://www.anthropic.com/pricing)), so a customer who goes quiet for ten minutes mid-conversation can cost you a fresh cache write. And caching only works on the repeated front of the prompt. If your builder puts today's date or the customer's name at the top of the system prompt, every call looks new and you pay full price for all of it.
+
+## What this does to your budget
+
+At these rates, the model is rarely the expensive part of a small-business agent. On our assumptions, 2,000 conversations cost under $10 a month on Haiku 5.5 and under $130 on GPT-6.1 Sol. Setup, integrations, monitoring and the human who handles escalations will cost more than that. That changes how you should read a quote.
+
+If a vendor charges per conversation or per resolution, compare that fee with the raw model cost above. We ran the per-resolution side of that math in [Intercom Fin's break-even math](/blog/intercom-fin-break-even-math). If you're building on an automation platform, task and operation pricing can outweigh the tokens; see [what 5,000 automations cost on Zapier, Make and n8n](/blog/zapier-make-n8n-cost-5000-automations).
+
+Then ask your builder three questions. Which model and which price tier, under or over 100,000 tokens? Is prompt caching on, and what share of input tokens are cache reads in the logs? And when the provider cuts prices, as both just did, does your rate go down too?
+
+If you have an agent quote or a monthly AI bill you want rechecked against these rates, send it to us: [team@lirium.ai](mailto:team@lirium.ai).
