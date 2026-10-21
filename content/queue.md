@@ -12,7 +12,7 @@ Format: `- [ ] topic` for upcoming, `- [x] topic — published YYYY-MM-DD — <u
 - [x] Microsoft is turning on a Copilot spending meter for small businesses on Dec 1. Here's how to cap it — published 2026-10-15 — https://lirium.ai/blog/microsoft-copilot-spending-meter-cap
 - [x] Using a chatbot with Colorado customers? New AI rules are open for comment until Oct 26 — published 2026-10-16 — https://lirium.ai/blog/colorado-chatbot-admt-rules-oct-26
 - [x] Running an AI agent just got about 90% cheaper. What that does to your automation budget — published 2026-10-20 — https://lirium.ai/blog/ai-agent-costs-90-percent-cheaper
-- [ ] Meta's Muse can now send your QuickBooks invoices. Should you let it?
+- [x] Meta's Muse can now send your QuickBooks invoices. Should you let it? — published 2026-10-21 — https://lirium.ai/blog/meta-muse-quickbooks-invoices
 - [ ] ChatGPT ads are open to small businesses, and HubSpot now plugs straight into them
 
 ## Additional Topics (6-15)
