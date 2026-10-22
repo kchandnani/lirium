@@ -13,7 +13,7 @@ Format: `- [ ] topic` for upcoming, `- [x] topic — published YYYY-MM-DD — <u
 - [x] Using a chatbot with Colorado customers? New AI rules are open for comment until Oct 26 — published 2026-10-16 — https://lirium.ai/blog/colorado-chatbot-admt-rules-oct-26
 - [x] Running an AI agent just got about 90% cheaper. What that does to your automation budget — published 2026-10-20 — https://lirium.ai/blog/ai-agent-costs-90-percent-cheaper
 - [x] Meta's Muse can now send your QuickBooks invoices. Should you let it? — published 2026-10-21 — https://lirium.ai/blog/meta-muse-quickbooks-invoices
-- [ ] ChatGPT ads are open to small businesses, and HubSpot now plugs straight into them
+- [x] ChatGPT ads are open to small businesses, and HubSpot now plugs straight into them — published 2026-10-22 — https://lirium.ai/blog/chatgpt-ads-hubspot-small-business
 
 ## Additional Topics (6-15)
 
