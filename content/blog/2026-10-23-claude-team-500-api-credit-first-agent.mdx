@@ -1,0 +1,79 @@
+---
+title: "Claude Team now includes $20 to $100 per seat in monthly API credit. Build your first internal agent with it"
+description: "Each Claude Team seat now brings $20 to $100 a month in API credit, pooled and capped at $500. What it covers, how far it goes, and a first agent to try."
+date: "2026-10-23"
+tags: ["CLAUDE", "ANTHROPIC", "AI AGENTS", "SMALL BUSINESS"]
+slug: "claude-team-500-api-credit-first-agent"
+---
+
+If your team pays for Claude Team, you now have a small API budget you didn't ask for: $20 a month for each Standard seat and $100 for each Premium seat, pooled and capped at $500. A five-person team on Standard seats gets $100, not $500. Anthropic announced it with the Haiku 5.5 launch on October 7, saying "Team subscribers will receive up to $500, pooled across their users," and that the credits "can be used on any of our models" ([Anthropic](https://www.anthropic.com/claude-haiku-5-5)).
+
+It's easy to ignore. Don't. It's enough money to prototype one internal agent without opening a new budget line, as long as you understand what "up to" means and where the credit stops.
+
+## What "up to $500" depends on
+
+Seat count and seat type. Anthropic's Help Center gives $20 a month per Standard seat and $100 per Premium seat, pooled into one balance "capped at $500" ([Claude Help Center](https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-and-team-plans)). Each monthly credit is based on the seats on your plan at the start of that billing month. Anthropic's example: three Standard seats and two Premium seats get $260, and adding one more Premium seat raises the next month to $360 ([Claude Docs](https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers)).
+
+So the math for a small team is simple. Team plans need at least two members ([Claude Help Center](https://support.claude.com/en/articles/9266767-what-is-the-team-plan)), which means the floor is $40. You reach the $500 cap at 25 Standard seats, five Premium seats, or a mix like three Premium plus ten Standard.
+
+For context, Standard seats cost $25 a month billed monthly or $20 billed annually, and Premium seats cost $125 or $100 ([Claude Help Center](https://support.claude.com/en/articles/9266767-what-is-the-team-plan)). A Standard seat on an annual plan now comes with as much API credit as it costs. That's a real change in what the plan is worth.
+
+## What it covers, and what it doesn't
+
+The credit works on the Claude Platform: the Messages API and Message Batches API, the Playground in the Claude Console, Claude Managed Agents, and the Claude Agent SDK ([Claude Help Center](https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-and-team-plans)).
+
+It does not cover interactive Claude Code, extra usage in Claude, Claude Code or Claude Cowork, or Claude on Amazon Bedrock, Google Cloud Vertex AI or Microsoft Foundry ([Claude Help Center](https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-and-team-plans)). If your developer builds the agent inside Claude Code, that session draws on their seat's limits, not this credit.
+
+The rules that matter for planning:
+
+- **It expires.** Unused credit expires at the end of each billing cycle and doesn't roll over. Annual plans get it monthly ([Claude Docs](https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers)).
+- **One owner claims it.** A Primary Owner or Owner links a single Console organization from Organization settings, then Billing, then API credits. You can't change that link yourself afterward ([Claude Help Center](https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-and-team-plans)).
+- **There's a wait.** New subscribers can claim after seven days on an eligible plan. Pro, Free and Enterprise plans aren't eligible ([Claude Docs](https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers)).
+- **No card needed.** You don't have to add a payment method to the Claude Platform. If the credit runs out and there's nothing else in the account, API requests stop until next month. Usage is never charged to your Claude plan ([Claude Help Center](https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-and-team-plans)).
+- **It's shared.** Every API key in the linked organization draws from the same balance ([Claude Docs](https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers)).
+
+## How many runs it buys
+
+We'll use quote drafting, because it's a task where a better model is worth paying for. Rates are Anthropic's published API prices per million tokens ([Claude Docs](https://platform.claude.com/docs/en/about-claude/pricing)). Sonnet 5.5: $2 input, $10 output, $2.50 for a five-minute cache write, $0.10 for a cache read.
+
+Our assumptions are illustrative, not measured. One quote takes six model calls: read the request, look up items, check the customer's history, draft, revise, format. Each call carries the same 12,000-token prefix: instructions, your price list and tool definitions. Across the run there are 8,000 tokens of new input (the request, tool results) and 3,000 tokens of output.
+
+With prompt caching, the first call writes the prefix and the next five read it:
+
+- Cache write: 12,000 × $2.50 per million = $0.030
+- Cache reads: 5 × 12,000 = 60,000 × $0.10 per million = $0.006
+- New input: 8,000 × $2 per million = $0.016
+- Output: 3,000 × $10 per million = $0.030
+- **Total: about $0.082 per quote (illustrative)**
+
+That's roughly 1,220 quotes on a five-seat team's $100, and about 6,100 on the full $500. Without caching, all 80,000 input tokens (six 12,000-token prefixes plus the 8,000 new) bill at $2 per million, so a quote costs about $0.19 and $100 buys about 526. Caching more than doubles the runs.
+
+One simplification to know about: we count each tool result once. Most agent loops re-send the whole conversation on every call. Under that pattern, the same quote comes to roughly $0.095 with caching (about 1,050 on $100) and $0.245 without (about 410). Caching still more than doubles the runs.
+
+The same run on Opus 5.5 ($4 input, $20 output, $5 write, $0.20 read) comes to about $0.164, or roughly 610 quotes on $100 ([Claude Docs](https://platform.claude.com/docs/en/about-claude/pricing)). On Haiku 5.5 it's under half a cent. For a narrower, high-volume job like support or lead triage, Haiku is usually the better fit, and we ran those numbers in [what running an agent costs now](/blog/ai-agent-costs-90-percent-cheaper).
+
+A shop sending 20 quotes a workday, about 440 a month, would spend around $36 on Sonnet 5.5 under these assumptions. For most small teams, tokens are not the constraint.
+
+> The credit pays for tokens. It doesn't pay for the part where someone decides what a good quote looks like.
+
+## A first build, step by step
+
+1. **Claim the credit.** The Owner links a Console organization from Organization settings, then Billing ([Claude Help Center](https://support.claude.com/en/articles/9267247-get-started-with-the-team-plan)).
+2. **Fence it off.** Create a workspace for the agent and set its spend limit, which is Anthropic's own advice for capping a project ([Claude Docs](https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers)). That keeps an experiment from eating the whole pool.
+3. **Prototype in the Playground.** Paste your instructions and price list, then run 30 real past quote requests through Sonnet 5.5. Compare its drafts to what you actually sent. Ten rounds of edits across 30 requests is 300 runs, about $25 at our illustrative $0.082 rate.
+4. **Move to the API with caching on.** Anthropic's recommended start is automatic caching, a single `cache_control` field on the request ([Claude Docs](https://platform.claude.com/docs/en/about-claude/pricing)). Anything that can wait, like an overnight pass over yesterday's requests, can go through the Message Batches API at 50% off ([Claude Docs](https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers)).
+5. **Draft, never send.** The agent writes the quote. A person approves it.
+
+If you'd rather not run your own loop, Claude Managed Agents gives you a hosted harness with tools, MCP servers and scheduled runs on a cron schedule. It's in beta ([Claude Docs](https://platform.claude.com/docs/en/managed-agents/overview)). Tokens bill at the normal rates plus $0.08 per session-hour of active runtime, and the Batch discount doesn't apply ([Claude Docs](https://platform.claude.com/docs/en/about-claude/pricing)).
+
+## What good looks like
+
+Anthropic's launch post includes HubSpot's test of Haiku 5.5 on simulated CRM tasks. HubSpot says it scored 92.8% averaged over three runs, and on a task identifying stale but ambiguous records it was fastest, with the highest hit rate and lowest false positive rate of the models tested ([Anthropic](https://www.anthropic.com/claude-haiku-5-5)). That's a vendor quote on a vendor page. But it's the right shape for a first agent: one narrow job, a fixed test set, scored over repeated runs. Build your 30 past quotes into that kind of test before you trust anything.
+
+## Where the credit runs out, or you need a developer
+
+The credit gets tight in a few places. Web search costs $10 per 1,000 searches on top of tokens. The browser use toolset adds about 6,600 input tokens per request before any screenshots. Haiku 5.5 prompts over 100,000 tokens bill at five times the shorter rate ([Claude Docs](https://platform.claude.com/docs/en/about-claude/pricing)). And a teammate testing with a key in the same organization spends from the same pool.
+
+The bigger limit isn't money. Playground prototyping needs no code. Pulling requests from your inbox, reading live prices from your system, and putting drafts somewhere a person will approve them does. So does keeping it running. If an agent becomes part of daily operations, put a card on the Console account. Otherwise the month the credit runs dry, requests stop.
+
+If you want help picking your first agent, or turning a Playground prototype into something your team uses every day, write to us: [team@lirium.ai](mailto:team@lirium.ai).
