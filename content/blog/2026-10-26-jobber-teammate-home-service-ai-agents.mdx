@@ -1,0 +1,73 @@
+---
+title: "Jobber Teammate is still waitlist-only. How to tell if a built-in agent will be enough for your service business"
+description: "Jobber Teammate drafts quotes and reschedules rain days inside Jobber. What is confirmed, what is not priced yet, and when you need a custom agent."
+date: "2026-10-26"
+tags: ["JOBBER", "AI AGENTS", "HOME SERVICES", "SMALL BUSINESS"]
+slug: "jobber-teammate-home-service-ai-agents"
+---
+
+Jobber Teammate is an AI agent that lives inside the software a lot of cleaning, landscaping, plumbing and HVAC shops already run their day on. Jobber says it sends a morning briefing, drafts quotes "to speed up reply rates," and handles recurring jobs like "rescheduling the day due to inclement weather or a sick employee" once you show it how ([Jobber via PR Newswire](https://www.prnewswire.com/news-releases/jobber-unveils-jobber-teammate-the-first-ai-agent-for-home-and-commercial-service-businesses-to-plan-act-and-learn-like-a-real-team-member-302886414.html)).
+
+Our take: for a shop whose admin mostly happens inside Jobber, a built-in agent like this will probably beat anything you'd build yourself. For a shop whose admin is spread across four tools, it won't. And right now you can't buy it at all.
+
+## What Teammate does, according to Jobber
+
+The September 23 launch release lists three pieces ([PR Newswire](https://www.prnewswire.com/news-releases/jobber-unveils-jobber-teammate-the-first-ai-agent-for-home-and-commercial-service-businesses-to-plan-act-and-learn-like-a-real-team-member-302886414.html)):
+
+- **Daily Digest.** A morning briefing with money collected, expected and outstanding, the day's scheduled jobs, and crew status.
+- **Action Board.** Work it has flagged and started on, such as draft quotes or marketing campaigns to fill gaps in the schedule, left for you to review.
+- **Customizable Routines.** You show it once how to handle a recurring situation, and it handles it that way after that.
+
+The design choice that matters is that it prepares the work and you approve it. Jobber's own product page says the same thing: Teammate "proactively prepares and takes on work" while "you stay in control" ([Jobber](https://www.getjobber.com/jobbernow/)).
+
+Jobber calls it "the first AI agent for home and commercial service businesses." That's Jobber's claim. Housecall Pro has been shipping what it calls an "AI Team" of "AI Teammates" with "no Beta program or waitlist," all included free except CSR AI, its paid 24/7 call answering add-on ([Housecall Pro Help Center](https://help.housecallpro.com/en/articles/9311875-ai-team-overview)). The products differ in scope, but the category isn't empty.
+
+## Beta, plans and price: what Jobber's own pages say
+
+**Status: early access only.** The release said Teammate "is in beta, with early access opening to Jobber customers" on launch day. In late September, a Jobber product team member told customers in Jobber's community forum that Teammate is "currently early-access only," with a waitlist, and that Jobber will "make an announcement when they are more broadly available" ([Jobber Community](https://community.getjobber.com/discussions/jobber-now-2026-qa/new-features/16914)). As of today, about a month after the September 23 launch, there's no Teammate help article and no standalone product page we could find.
+
+**Plans: not published.** Asked which packages the new features belong to, Jobber's team said support articles and "pricing info on our website" would come as features are released ([Jobber Community](https://community.getjobber.com/discussions/jobber-now-2026-qa/qs-from-denver-jobber-now-watch-party/16851)). Jobber's pricing page doesn't mention Teammate ([Jobber pricing](https://www.getjobber.com/pricing/)).
+
+**Price: not published.** What is published is what you pay for Jobber itself. Billed annually, Core is $29 a month, Connect $99 and Grow $149, each for one user. Plus is $399 for five users. Month to month with no commitment, those are $49, $139, $199 and $499. Extra users cost $29 a month each ([Jobber pricing](https://www.getjobber.com/pricing/)). Through October 30, new customers get promotional rates on top of that.
+
+Some of what Teammate promises already ships outside it. The pricing page lists auto-drafted quotes on Connect, Grow and Plus, but not Core ([Jobber pricing](https://www.getjobber.com/pricing/)). The "Draft for me" button only appears when a request has a property attached. Jobber offers to turn on automatic drafting after you've sent three quotes it drafted ([Jobber Help Center](https://help.getjobber.com/en/articles/automations/)). Jobber AI chat and voice are available on all plans ([Jobber Help Center](https://help.getjobber.com/en/articles/jobber-ai-voice-and-chat-beta/)).
+
+## Built-in agent vs. custom agent
+
+A built-in agent's advantage is context. Teammate already sees your clients, quotes, schedule, crews and payments. Nobody has to wire those up, keep the connection running, or fix it when an API version changes.
+
+A custom agent's advantage is reach. It can read your inbox, your supplier portal and your accounting file, and act across all of them. The cost is that someone has to build and maintain it.
+
+If you go the custom route, Jobber gives you two doors. The free option is the Jobber connector for Claude and ChatGPT, which works on every plan, including with free Claude and ChatGPT accounts. It can search clients, properties, requests, quotes, jobs and invoices. It can create requests, clients and properties, and create quotes but not edit them. It can't create or edit jobs or invoices, and it can't touch the schedule ([Jobber Help Center](https://help.getjobber.com/en/articles/connect-jobber-to-claude-and-chatgpt/)). So a Claude-based agent can't do Teammate's rain-day reschedule today.
+
+The second door is Jobber's GraphQL API. It's open to private integrations for a single account, with no app review unless you connect more than five paying accounts, and it supports webhooks so your agent can react to events instead of polling ([Jobber Developer Center](https://developer.getjobber.com/docs/)). That's a developer project, not a weekend setup. If you build that loop on Claude's API, Team seats now include monthly API credit that can cover early runs ([Claude Team API credit](/blog/claude-team-500-api-credit-first-agent)); what the tokens cost after that is a separate budget question we walked through in [what running an agent costs now](/blog/ai-agent-costs-90-percent-cheaper).
+
+One road is closed. Jobber says it blocks automated browser agents, including Claude's and ChatGPT's built-in browsers, from signing in like a person ([Jobber Help Center](https://help.getjobber.com/en/articles/connect-jobber-to-claude-and-chatgpt/)). If a vendor pitches an agent that "just logs into Jobber," ask how.
+
+> An agent built into one app can only fix problems that live inside that app. Most of a service owner's worst days start somewhere else.
+
+## A go / no-go test you can run this week
+
+1. **Join the waitlist, then ask two questions in writing.** Which plan will Teammate need after beta, and what will it cost? Until Jobber answers, any ROI math is guesswork.
+2. **Log two weeks of admin.** Write down every office task and how long it took. Tag each one "inside Jobber" or "touches another tool."
+3. **Do the share math.** Illustrative example, not data: an owner logs 8 admin hours a week. Quotes take 3, rescheduling 1.5, and checking the numbers each morning 1.5. That's 6 hours inside Jobber. Ordering from a distributor portal and reconciling payroll take 2 hours outside it. 6 ÷ 8 = 75% of admin time is work Teammate could plausibly touch.
+4. **Test quote drafting now.** If you're on Connect or above, run "Draft for me" on 10 recent requests and compare each draft to the quote you actually sent. Count the line items you had to change.
+5. **Write your rain-day rule in one paragraph.** If following it needs information Jobber doesn't hold, like a subcontractor's availability in a group text, the built-in agent can't act on it.
+
+Our rule of thumb, not a benchmark: if two-thirds or more of your admin hours sit inside Jobber and the drafts need light edits, wait for Teammate and skip the custom build. If less than half does, the built-in agent is a nice-to-have and the expensive problem is somewhere else.
+
+## Where the built-in agent stops being enough
+
+**Work that crosses tools.** Supplier orders, a separate phone system, an outside CRM, a payroll provider. Teammate's routines run inside Jobber. A custom agent with API access can bridge them.
+
+**Data Jobber doesn't have.** Equipment manuals, warranty terms, a pricing spreadsheet your estimator keeps on their laptop. If it isn't in Jobber, Teammate can't reason over it.
+
+**Beta limits.** Early access means features and terms can change. Don't let an agent you can't buy yet become the reason to delay fixing a quote backlog that's costing you jobs this month.
+
+**Unknown pricing.** If Teammate ends up on Plus only, a solo operator on Grow would go from $149 to $399 a month billed annually, before any extra users ([Jobber pricing](https://www.getjobber.com/pricing/)). We don't know that it will. It's the scenario to check before you plan around it.
+
+**Lock-in.** An agent that learns your preferences inside one vendor's product stays with that vendor. Write your routines down somewhere you own.
+
+The comparison across vendors points the same way. ServiceTitan's Atlas is available to all ServiceTitan customers, but its accounting, marketing and contact-center agents are still in private preview for select accounts ([ServiceTitan Help](https://help.servicetitan.com/docs/atlas)). Vertical agents are arriving fastest for the work that already lives in the vertical software.
+
+If you want help mapping your admin hours, or building the agent for the work Jobber doesn't touch, write to us: [team@lirium.ai](mailto:team@lirium.ai).

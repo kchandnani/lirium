@@ -18,7 +18,7 @@ Format: `- [ ] topic` for upcoming, `- [x] topic — published YYYY-MM-DD — <u
 ## Additional Topics (6-15)
 
 - [x] Claude Team now includes up to $500 a month in API credit. Build your first internal agent with it — published 2026-10-23 — https://lirium.ai/blog/claude-team-500-api-credit-first-agent
-- [ ] Jobber Teammate and the rise of industry-specific agents for home service businesses
+- [x] Jobber Teammate and the rise of industry-specific agents for home service businesses — published 2026-10-26 — https://lirium.ai/blog/jobber-teammate-home-service-ai-agents
 - [ ] Only 20% of small businesses aren't using AI. Their top worry is accuracy, not cost
 - [ ] The AI gap on Main Street: businesses under $500K are falling behind. Where to start for under $150 a month
 - [ ] HubSpot's new Breeze Assistant: what the fall release changes for a 10-person sales team
