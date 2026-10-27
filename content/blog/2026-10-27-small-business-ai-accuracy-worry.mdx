@@ -1,0 +1,73 @@
+---
+title: "73% of small business owners worry AI will get it wrong. Here's who should check its work"
+description: "Only 20% of owners don't use AI. Top worries: accuracy (73%) and privacy (72%), not cost. What to review and what's safe to automate."
+date: "2026-10-27"
+tags: ["SMALL BUSINESS", "AI ADOPTION", "AI ACCURACY", "HUMAN IN THE LOOP"]
+slug: "small-business-ai-accuracy-worry"
+---
+
+Most small business owners already use AI. Their biggest worries are accuracy and privacy, not cost. In Small Business Majority's Q3 2026 Voice of Main Street poll, only 20% of owners said they aren't using AI, down from 36% in the first quarter. Asked what worries them, 73% named "accuracy or reliability of AI outputs" and 72% named data privacy. Cost or unpredictable pricing came in at 39% ([Small Business Majority](https://smallbusinessmajority.org/sites/default/files/research-reports/2026-Q3-Voice-of-Main-Street-Report.pdf)).
+
+One honest caveat before we lean on those numbers. The poll surveyed 222 owners in Small Business Majority's own network between August 6 and September 8, with a margin of error of plus or minus 6 points ([Small Business Majority](https://smallbusinessmajority.org/sites/default/files/research-reports/2026-Q3-Voice-of-Main-Street-Report.pdf)). So accuracy and privacy are effectively tied for first, and the exact figures could move a few points either way. The gap between those worries and "what does it cost" at 39% is far too big to be noise, though.
+
+Our take: owners are worried about the right things. The fix isn't a better model. It's deciding, before you turn anything on, which outputs a person checks, who that person is, and what they look at.
+
+## What "human in the loop" means in a 6-person shop
+
+It doesn't mean a policy binder. It means three decisions you can write on one page:
+
+- **Which outputs leave the building.** A quote, an invoice, a payment reminder, a reply to a customer. Anything a customer, a supplier or the government will see.
+- **Who signs off on each one.** By name, not by role. "Whoever's around" is how drafts go out unread.
+- **What they check.** Three or four specific things, not "looks fine."
+
+The vendors are already telling you to do this. Intuit's announcement of its QuickBooks AI agents for Canadian businesses carries a plain disclaimer: "We recommend you review all outputs carefully" ([Intuit](https://investors.intuit.com/news-events/press-releases/detail/1282/intuits-all-in-one-platform-introduces-a-virtual-team-of-ai-agents-to-help-canadian-businesses-increase-efficiency-and-growth)). When the company selling the agent puts that in writing, you should take it literally.
+
+## Sort your tasks into three buckets
+
+We use a simple test. If the AI gets it wrong, who finds out first, you or your customer?
+
+**Full auto: you find out first, and a mistake costs minutes.** Summarizing yesterday's emails. Tagging incoming requests by job type. Pulling a list of overdue invoices. Answering "how did we do last month" from your own books. If the answer is off, you notice before anyone else does.
+
+**Draft and approve: your customer would find out first.** Quotes, invoices, payment reminders, and any message that goes out under your name. The AI writes, a person sends.
+
+**Keep it out for now: a mistake is expensive or hard to undo.** Payroll changes, pay rates, tax filings, anything that moves money on its own. Intuit drew a similar line when it connected QuickBooks to Meta's Muse agent. It calls payroll, closing books and filing taxes "compliance-heavy" work that customers do directly in QuickBooks ([Intuit](https://www.intuit.com/blog/innovative-thinking/tech-innovation/intuit-quickbooks-joins-muse-for-small-business/)).
+
+## The checks, tool by tool
+
+Here's what that looks like in tools small businesses already run.
+
+**Quotes in Jobber.** Jobber's "Draft for me" button builds a quote from the request, your templates and your past quotes, then leaves it for you to review and send. Jobber only offers to turn on fully automatic drafting after you've sent at least three quotes made with the button ([Jobber Help Center](https://help.getjobber.com/en/articles/automations/)). Even then, the automation creates drafts, not sent quotes. That's a sensible default. Our check: line items against the request, quantities, and any discount. The person who would have written the quote approves it.
+
+**Invoices from email in ChatGPT.** The QuickBooks plugin in ChatGPT can turn an estimate in a Gmail thread into a QuickBooks invoice, and Intuit says you get "the opportunity to review and make changes before anything is sent." Pay changes made through the plugin also need your confirmation before they hit QuickBooks Payroll ([QuickBooks](https://quickbooks.intuit.com/r/news/quickbooks-plugin-chatgpt/)). Our check: customer record, total, and whether the email thread had a later revision the AI missed.
+
+**Sends from Meta's Muse.** Muse asks before sending messages or sharing data with a connected app, and lets you "allow an action once, always allow it, or deny it" ([Meta](https://ai.meta.com/muse/)). That third option is where review quietly disappears. We covered the invoicing risks in detail in [our Muse and QuickBooks post](/blog/meta-muse-quickbooks-invoices). The short version: leave customer-facing sends on "allow once" until you've gone a month without fixing a draft.
+
+**A custom agent on Claude or ChatGPT.** If you build your own, put the approval step in the build, not in a habit. The agent drafts into a queue, a named person approves, and the agent logs what it sent. Never give it a send permission "just for testing."
+
+**Privacy, the other 72%.** Before you connect anything, write down which accounts each tool can read. A quote-drafting agent needs your price list and the request. It doesn't need your payroll file. Fewer connections means fewer places your data lives.
+
+## A real example of review doing its job
+
+The best argument for checking AI output comes from an FTC case. In its 2025 complaint against Air AI, the FTC described a customer who spent months building a test voice agent to sell to a builder. The agent hung up on people moments after they answered, struggled "to accurately transcribe even basic consumer information," and "simply made-up answers when it was asked questions for which he had not supplied responses." He concluded he couldn't present it to the buyer ([FTC complaint](https://search.ftc.gov/system/files/ftc_gov/pdf/AiraiComplaint.pdf)).
+
+Those are allegations, and the case settled without a trial ([FTC stipulated order](https://search.ftc.gov/system/files/ftc_gov/pdf/AirAi-Order_1.pdf)). But look at what kept the damage contained. He tested the agent himself before showing it to anyone, and the made-up answers turned up in his testing, not in front of the builder's customers. We walk through the rest of that case, and the vendor claims to watch for, in [our FTC red flags post](/blog/ftc-ai-vendor-claims-red-flags).
+
+> If the AI writes something your customer will read, a person reads it first. Every exception to that rule should be one you chose on purpose.
+
+## Review costs time. Budget for it
+
+Reviewing isn't free, and it's fair to ask whether it eats the savings. Pax8's Q3 2026 SMB AI Pulse Report found 55% of decision-makers spend three or more hours a week "reviewing, editing, or fact-checking AI-generated work." Among U.S. respondents it was 68% ([Pax8](https://www.pax8nebula.com/asset/60fef162-013e-435d-9620-37ce44809870/Pax8-Pulse-Report-2026-Q3.pdf)). That's a vendor survey of companies with 5 to 499 employees, so it skews larger than a lot of our readers.
+
+Here's how to think about it. This is illustrative math, not data. Say you send 20 quotes a week, and writing one from scratch takes 12 minutes. That's 240 minutes. If checking an AI draft takes 3 minutes, review costs 60 minutes and you save 180, or 3 hours a week. If your drafts need so many fixes that checking takes 10 minutes each, you're at 200 minutes and you've saved 40. Same tool, very different result.
+
+So track one number: how many drafts you had to change, out of how many. If that count isn't falling after a month, the problem is the setup, usually missing price lists or templates. More review won't fix it.
+
+## What we'd set up this week
+
+1. List every AI tool anyone on your team uses, including free ones on personal accounts.
+2. Put each task in a bucket: full auto, draft and approve, or keep it out.
+3. Name one approver per draft-and-approve task, with three things to check.
+4. Turn off every "always allow" on customer-facing sends.
+5. Count fixes for four weeks, then decide what earns more autonomy.
+
+If you want help sorting your tasks into those buckets, or building an agent with approval built in, write to us: [team@lirium.ai](mailto:team@lirium.ai).
