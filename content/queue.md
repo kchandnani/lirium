@@ -21,7 +21,7 @@ Format: `- [ ] topic` for upcoming, `- [x] topic — published YYYY-MM-DD — <u
 - [x] Jobber Teammate and the rise of industry-specific agents for home service businesses — published 2026-10-26 — https://lirium.ai/blog/jobber-teammate-home-service-ai-agents
 - [x] Only 20% of small businesses aren't using AI. Their top worry is accuracy, not cost — published 2026-10-27 — https://lirium.ai/blog/small-business-ai-accuracy-worry
 - [x] The AI gap on Main Street: businesses under $500K are falling behind. Where to start for under $150 a month — published 2026-10-28 — https://lirium.ai/blog/small-business-ai-gap-under-150-month
-- [ ] HubSpot's new Breeze Assistant: what the fall release changes for a 10-person sales team
+- [x] HubSpot's new Breeze Assistant: what the fall release changes for a 10-person sales team — published 2026-10-29 — https://lirium.ai/blog/hubspot-breeze-assistant-10-person-sales-team
 - [ ] Half of small businesses got a surprise AI bill. How to keep that from happening to you
 - [ ] The 'review tax': why AI is saving you time but eating 3+ hours of your week
 - [ ] QuickBooks now works inside ChatGPT: nine skills, and what to keep inside QuickBooks itself
