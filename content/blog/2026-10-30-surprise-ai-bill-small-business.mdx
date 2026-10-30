@@ -1,0 +1,83 @@
+---
+title: "Nearly half of small businesses that pay for AI got a surprise bill. How to keep it from happening to you"
+description: "49% of SMBs that paid for AI got a bill higher than expected. How each AI meter bills, and where to set hard caps in Zapier, HubSpot and Copilot."
+date: "2026-10-30"
+tags: ["SMALL BUSINESS", "AI PRICING", "BUDGETING"]
+slug: "surprise-ai-bill-small-business"
+---
+
+Pax8 surveyed 1,150 small and mid-sized business leaders in four countries. Among businesses that paid for AI in the past year, 49% "received at least one bill or usage charge that was higher than expected." In the U.S., it's 57% ([Pax8 SMB AI Pulse Report, Q3 2026](https://www.pax8nebula.com/asset/60fef162-013e-435d-9620-37ce44809870/Pax8-Pulse-Report-2026-Q3.pdf)).
+
+Read the base. That's 49% of AI purchasers, not 49% of all small businesses. The sample covers companies with 5 to 499 employees, 400 of them in the U.S., though Pax8 doesn't say how many of those 400 paid for AI ([Pax8](https://www.pax8nebula.com/asset/60fef162-013e-435d-9620-37ce44809870/Pax8-Pulse-Report-2026-Q3.pdf)). The report is also written for the IT resellers Pax8 works with. Its closing section is titled "The Channel Opportunity."
+
+Pax8's explanation is pricing. Many pay through several models at once: U.S. respondents report usage-based pricing (46%), fixed subscriptions (41%) and per-seat pricing (40%) in roughly equal measure, and "usage-based charges are the hardest to forecast" ([Pax8](https://www.pax8nebula.com/asset/60fef162-013e-435d-9620-37ce44809870/Pax8-Pulse-Report-2026-Q3.pdf)).
+
+Our take: metered AI is fine to buy. Buying it without a cap is the mistake. Every meter below has a cap, and several ship with the spending side switched on.
+
+## How each meter bills
+
+**Zapier: tasks.** Zapier charges a task "only when a Zap successfully completes an action for you." Filter and Formatter steps are free, and AI steps can use more than one task ([Zapier pricing](https://zapier.com/pricing)). Over your limit, pay-per-task billing kicks in. It's "enabled by default if you joined Zapier after January 2024," and usage stops at 3 times your plan's task limit ([Zapier Help](https://help.zapier.com/hc/en-us/articles/15279018245901-How-pay-per-task-billing-works-in-Zapier)). Overage is billed at "a higher per-task rate," but Zapier doesn't publish the multiplier ([Zapier pricing](https://zapier.com/pricing)).
+
+**n8n: executions.** "An execution is a single run of your entire workflow," regardless of step count. Starter is €20 a month billed annually and Pro is €50 (prices shown in euros) ([n8n pricing](https://n8n.io/pricing/)). Starter includes 2,500 monthly executions and the Pro-1 tier 10,000 ([n8n Help Center](https://support.n8n.io/article/can-you-reset-my-executions)). Manual test runs and sub-workflows don't count ([n8n Docs](https://docs.n8n.io/build/understand-workflows/understand-executions)). n8n lists overage fees on Starter and Pro as "Capped" ([n8n pricing](https://n8n.io/pricing/)). The catch runs the other way: at the limit, executions "fail immediately with an error" and don't re-run on their own ([n8n Help Center](https://support.n8n.io/article/can-you-reset-my-executions)).
+
+**Make: credits.** "Most actions consume 1 credit," and some AI features may use more. Run out and "your scenarios won't continue to run, until credits are added again" ([Make pricing](https://www.make.com/en/pricing)). Unless you've turned on auto-purchasing, which buys 10,000 credits at a time, up to your plan's monthly credit count. All extra credits carry "a 25% additional cost" ([Make Help](https://help.make.com/extra-credits)).
+
+**Microsoft Copilot: Copilot Credits.** The Copilot Studio pay-as-you-go meter is "$0.01/Copilot Credit," billed in arrears ([Microsoft](https://www.microsoft.com/licensing/guidance/Microsoft-Copilot-Studio)). A generative answer costs 2 credits, an agent action 5 ([Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management)). From December 1, 2026, new Microsoft 365 Copilot Business licenses bought through resellers in Microsoft's CSP program ship with usage billing on and a default limit of "4,000 Copilot Credits per user per month" ([Microsoft](https://learn.microsoft.com/en-us/partner-center/announcements/2026-october)). At the $0.01 list rate, that's up to 4,000 × $0.01 = $40 per user a month. We covered that change [here](/blog/microsoft-copilot-spending-meter-cap).
+
+**HubSpot: HubSpot Credits.** Professional hubs include 3,000 credits a month (5,000 for Data Hub). Included credits are "not additive across products," so two hubs get the higher single allotment, not the sum, and unused credits don't roll over. Extra credits cost $0.010 each on pay-as-you-go, or $10 per 1,000-credit capacity pack ([HubSpot catalog](https://legal.hubspot.com/hubspot-product-and-services-catalog)). That pack sounds like a top-up. It raises your limit "for the remainder of your commitment term."
+
+**API tokens.** You pay per token, in and out. Anthropic lists Claude Sonnet 5 at $2 per million input tokens and $10 per million output ([Anthropic](https://platform.claude.com/docs/en/about-claude/pricing)). New OpenAI API accounts are prepaid, and auto-reload "is turned on by default during setup" ([OpenAI Help](https://help.openai.com/en/articles/8264644-setting-up-and-managing-prepaid-api-billing)).
+
+## A real bill
+
+In February, a stolen Google Gemini API key ran up $82,314.44 in 48 hours for a three-developer company in Mexico that usually spends $180 a month. The developer said Google support cited its shared responsibility model ([The Register](https://www.theregister.com/security/2026/03/03/dev-stunned-by-82k-gemini-api-key-bill-after-theft/4925029)).
+
+A later Register story is the part to read twice. Isuru Fonseka, a developer in Australia, had signed up for a tier with a $250 spending cap. After a hacker took control of his account, his bill hit $17,000 in minutes, because Google "automatically upgraded his $250 spending tier." Google reversed his bill. It kept the policy ([The Register](https://www.theregister.com/devops/2026/05/15/google-reimburses-register-sources-who-were-victims-of-api-fraud/5241429)).
+
+A usage tier is a ceiling the vendor can raise. Find the setting that stops traffic.
+
+> An alert tells you the meter is running. Only a hard cap stops it.
+
+## Where to set the caps
+
+- **Zapier:** Billing and usage, Billing settings, then switch off Per-task billing. Only the account owner can on Professional and Team plans, and usage already accrued still lands on the next invoice ([Zapier Help](https://help.zapier.com/hc/en-us/articles/15279018245901-How-pay-per-task-billing-works-in-Zapier)).
+- **n8n:** Nothing to turn off on Starter or Pro. Watch production execution counts in Insights so a busy month doesn't end in failed runs nobody saw ([n8n pricing](https://n8n.io/pricing/)).
+- **Make:** Org, the Subscription tab under My Plan, then disable "Enable credits auto-purchasing" ([Make Help](https://help.make.com/extra-credits)).
+- **Microsoft:** In the Microsoft 365 admin center, Copilot, Cost management, set organization and user spending limits ([Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits)). For Copilot Studio agents, set a monthly agent limit with "Stop usage" in the Power Platform admin center. Azure budgets and alerts "send notifications but don't stop Copilot Studio consumption" ([Microsoft Learn](https://learn.microsoft.com/en-us/power-platform/admin/manage-usage-github-copilot-harness)).
+- **HubSpot:** Account & Billing, HubSpot Credits tab. Set Maximum monthly credits and Feature credit limits. If you bought extra credits before Sept. 16, 2026, auto-upgrade is your default; switch to pay-as-you-go under Overage setting ([HubSpot Knowledge Base](https://knowledge.hubspot.com/account-management/understand-hubspot-credits-and-billing)). Our [Breeze post](/blog/hubspot-breeze-assistant-10-person-sales-team) shows how fast credits go.
+- **OpenAI:** Organization limits, Edit spend limit, then turn on "Enforce a hard limit." A spend alert alone lets traffic continue ([OpenAI](https://developers.openai.com/api/docs/guides/spend-limits)). Turn auto-reload off or give it a monthly reload limit ([OpenAI Help](https://help.openai.com/en/articles/8264644-setting-up-and-managing-prepaid-api-billing)).
+- **Anthropic:** Billing page, Spend limits, set a limit below your tier's cap ([Anthropic](https://platform.claude.com/docs/en/api/rate-limits)). To stop automatic top-ups: Manage auto-reload, Turn off ([Claude Help Center](https://support.claude.com/en/articles/8977456-how-do-i-pay-for-my-claude-api-usage)).
+
+## The checklist
+
+**Before you buy:**
+
+1. Name the unit and count how many one run of your workflow uses.
+2. Ask what happens at the limit: stop, fail or bill. Get the overage rate in writing.
+3. Ask whether overage or auto-reload is on by default.
+4. Ask whether an extra purchase locks in for the term, as HubSpot's packs do.
+
+**Every month:**
+
+1. Set the hard cap first, then the alerts.
+2. Name one person as billing contact in every tool.
+3. Check usage in week two, not on invoice day.
+4. Keep API keys out of public web pages and shared code.
+
+## Illustrative math: the Zapier ceiling
+
+Illustrative, from list prices plus one assumption. Zapier Pro with 2,000 tasks is $73.50 billed monthly, or $49 a month billed annually ([Zapier pricing](https://zapier.com/pricing)). Monthly base rate: $73.50 ÷ 2,000 = $0.03675 a task. Assume overage at 1.25× that: $0.0459375 a task. The 3× ceiling allows 6,000 tasks, or 4,000 extra: 4,000 × $0.0459375 = $183.75 on top of the plan.
+
+Annual: $49 ÷ 2,000 = $0.0245, × 1.25 = $0.030625, and the same 4,000 tasks cost $122.50. Your real rate is in Billing settings. Our [5,000 automations comparison](/blog/zapier-make-n8n-cost-5000-automations) runs costs at volume.
+
+## When outcome pricing is safer
+
+Pax8 found 69% "would be more likely to expand AI if outcome-based pricing, where they pay for results rather than usage, were available and costs were similar" ([Pax8](https://www.pax8nebula.com/asset/60fef162-013e-435d-9620-37ce44809870/Pax8-Pulse-Report-2026-Q3.pdf)). Mind the last clause.
+
+Intercom's Fin is the cleanest example, at "$0.99 per outcome" ([Intercom](https://www.intercom.com/pricing)). An outcome is a resolution, where the customer confirms or "does not request more help after Fin answers," or a Procedure handoff you configured. A customer who leaves unhappy without asking for help is an assumed resolution and is billed; a frustration escalation isn't ([Fin Help Center](https://fin.ai/help/en/articles/13975800-fin-pricing-outcomes)). The base plan is $49 a month with 50 included. Illustrative: 100 outcomes = $49 + (50 × $0.99) = $49 + $49.50 = $98.50. Fin's help page puts the same example at $99.50, which doesn't add up.
+
+Fin has a hard limit under Settings, Subscription, Usage, though it "can't go below your contracted minimum" ([Intercom Help](https://www.intercom.com/help/en/articles/8991894-how-to-see-and-manage-your-usage)).
+
+Outcome pricing is the safer deal when one outcome replaces work you'd pay a person for and your ticket history predicts volume. It's worse when the bill fills up with handoffs your team would have taken anyway. Our [Fin break-even post](/blog/intercom-fin-break-even-math) runs those numbers.
+
+Want help finding every meter you're paying for and capping it? Write to us: [team@lirium.ai](mailto:team@lirium.ai).
