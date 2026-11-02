@@ -23,7 +23,7 @@ Format: `- [ ] topic` for upcoming, `- [x] topic — published YYYY-MM-DD — <u
 - [x] The AI gap on Main Street: businesses under $500K are falling behind. Where to start for under $150 a month — published 2026-10-28 — https://lirium.ai/blog/small-business-ai-gap-under-150-month
 - [x] HubSpot's new Breeze Assistant: what the fall release changes for a 10-person sales team — published 2026-10-29 — https://lirium.ai/blog/hubspot-breeze-assistant-10-person-sales-team
 - [x] Half of small businesses got a surprise AI bill. How to keep that from happening to you — published 2026-10-30 — https://lirium.ai/blog/surprise-ai-bill-small-business
-- [ ] The 'review tax': why AI is saving you time but eating 3+ hours of your week
+- [x] The 'review tax': why AI is saving you time but eating 3+ hours of your week — published 2026-11-02 — https://lirium.ai/blog/ai-review-tax-small-business
 - [ ] QuickBooks now works inside ChatGPT: nine skills, and what to keep inside QuickBooks itself
 - [ ] Google's free Gemini just got weaker. Is it time to pay for an AI plan?
 - [ ] Census: about 1 in 4 businesses now use AI. Benchmark yourself by sector

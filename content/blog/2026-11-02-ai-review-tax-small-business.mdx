@@ -1,0 +1,86 @@
+---
+title: "55% of decision-makers spend 3+ hours a week checking AI's work. How to measure your review tax and cut it"
+description: "Pax8: 55% of decision-makers spend 3+ hours a week checking AI work. A two-week log to measure yours, and how to make AI flag exceptions instead."
+date: "2026-11-02"
+tags: ["SMALL BUSINESS", "AI ADOPTION", "PRODUCTIVITY"]
+slug: "ai-review-tax-small-business"
+---
+
+Pax8 gave one section of its Q3 2026 small business survey a blunt name, "The Review Tax." The phrase is Pax8's, not ours. The number under it earns the title. "Fifty-five percent of decision-makers personally spend three or more hours a week reviewing, editing, or fact-checking AI-generated work, and 7% spend ten hours or more" ([Pax8 SMB AI Pulse Report, Q3 2026](https://www.pax8nebula.com/asset/60fef162-013e-435d-9620-37ce44809870/Pax8-Pulse-Report-2026-Q3.pdf)).
+
+Check the base before you borrow the number. Pax8 surveyed 1,150 owners, executives, functional leaders and managers involved in technology decisions at companies with 5 to 499 employees, across the U.S. (n=400), the U.K., Germany and Sweden. "Several questions were asked only of businesses that use, build, or pay for AI," and the report doesn't flag which ones ([Pax8](https://www.pax8nebula.com/asset/60fef162-013e-435d-9620-37ce44809870/Pax8-Pulse-Report-2026-Q3.pdf)). So we can't tell whether the 55% is all respondents or only AI users. Read it as decision-makers at firms of up to 499 people, not five-person shops alone.
+
+Our [accuracy post](/blog/small-business-ai-accuracy-worry) covered who should sign off on AI drafts. This one is about the clock. Our take: review time is a cost line, and most owners have never measured it. Measure it for two weeks, then change what you ask AI to do.
+
+## Workday found the same leak
+
+Pax8 isn't alone. Workday's "Beyond Productivity" study says 37% "of time saved by AI is being offset by time spent on rework," and puts the damage at 1.5 "weeks' worth of time spent fixing AI outputs per employee per year" ([Workday](https://www.workday.com/en-us/artificial-intelligence/research/beyond-productivity-ai-value.html)). Its press release rounds the first figure to "nearly 40%" ([Workday newsroom](https://newsroom.workday.com/2026-01-14-New-Workday-Research-Companies-Are-Leaving-AI-Gains-on-the-Table)).
+
+Different crowd, though, and much bigger companies. Hanover Research fielded it for Workday in November 2025 among 3,200 full-time employees at organizations with $100M+ in annual revenue, all "active users of AI technology" ([Workday newsroom](https://newsroom.workday.com/2026-01-14-New-Workday-Research-Companies-Are-Leaving-AI-Gains-on-the-Table)). None of it describes a small business. Both are vendor surveys. Both point the same way.
+
+## Measure your own review hours
+
+You don't need software for this. You need a shared spreadsheet and two honest weeks. Everyone who touches AI output logs one row per item:
+
+- **Date and tool.** ChatGPT, Copilot, the helpdesk bot, whatever produced it.
+- **Task.** Customer reply, quote, social post, meeting summary.
+- **Review minutes.** Start when you open the output, stop when it's sent, filed or deleted.
+- **What you changed.** Nothing, light edits, or a rewrite.
+- **Would a mistake have reached a customer?** Yes or no.
+
+At the end, add up the minutes and divide by two for a weekly number. Then sort by task. Any task where review takes as long as doing the work yourself goes on the chopping block. Any task with zero rewrites in two weeks is a candidate for less checking.
+
+Log the review that feels like work too. Re-reading a summary because you don't trust it counts.
+
+> Count the minutes you spend checking AI before you count the minutes it saves.
+
+## Illustrative math: what three hours costs
+
+Illustrative, using a public wage. The 2025 median pay for top executives is $52.30 an hour ([BLS](https://www.bls.gov/ooh/management/top-executives.htm)). Our assumption: 50 working weeks a year.
+
+- Three hours a week: 3 × $52.30 = $156.90. Over a year: $156.90 × 50 = $7,845.
+- Ten hours a week, the low end of Pax8's 7% group: 10 × $52.30 = $523. Over a year: $523 × 50 = $26,150.
+
+Your rate will differ. Use what an hour of your time is worth to the business, not what you pay yourself.
+
+## Ask AI to flag, not to draft
+
+Here's the part of Pax8's report we'd underline. Asked which capability they'd find most valuable in an always-active AI assistant, "33% chose continuous monitoring of inboxes, chats, and tickets to flag what needs attention." Proactive drafting came second at 26%, catching missed follow-ups at 21% and removing low-value noise at 15% ([Pax8](https://www.pax8nebula.com/asset/60fef162-013e-435d-9620-37ce44809870/Pax8-Pulse-Report-2026-Q3.pdf)).
+
+Monitoring tops the global list by seven points, but 33% is a plurality, not a majority, and it's a wish list, not proof that flagging saves time. It doesn't top every market either. In Germany, "proactive drafting (34%) outranks continuous monitoring" ([Pax8](https://www.pax8nebula.com/asset/60fef162-013e-435d-9620-37ce44809870/Pax8-Pulse-Report-2026-Q3.pdf)).
+
+The logic is simple. A drafting tool hands you everything to proofread. A flagging tool hands you the exceptions. Hypothetical numbers to show the difference: say 150 customer emails a week.
+
+- **Draft everything:** 150 drafts × 1 minute of review = 150 minutes.
+- **Flag the exceptions:** AI tags all 150 and flags 25 (refunds, angry customers, anything it's unsure about). You spend 3 minutes on each: 25 × 3 = 75 minutes. Spot-check 10 unflagged emails at 1 minute each: 10 minutes. Total: 85 minutes.
+
+That's 65 minutes back a week in this example. The spot-check matters, because a flagger can miss things too.
+
+## A real example: Zendesk intelligent triage
+
+Zendesk's intelligent triage classifies new tickets by topic, sentiment and language. Sentiment runs from Very Positive to Very Negative, and "each field has an associated confidence field indicating how likely the classification is accurate." Zendesk says the sentiment model is calibrated so "a ticket isn't assigned a negative sentiment just because a customer has an issue." You set it up in Admin Center: AI, pick Topic, Sentiment or Language, then Manage Settings ([Zendesk Help](https://support.zendesk.com/hc/en-us/articles/4550640560538-Automatically-classifying-tickets-with-intelligent-triage)).
+
+The catch is in the plan rules. Classifications come with Suite and Support Professional plans and above. Using them in workflows, such as "using a topic in a routing trigger," requires the Copilot add-on ([Zendesk Help](https://support.zendesk.com/hc/en-us/articles/10745493624730-Announcing-Copilot-intelligent-triage-for-Professional-plans-and-above)). Zendesk's Copilot overview claims triage saves "30-60 seconds on each request" ([Zendesk Help](https://support.zendesk.com/hc/en-us/articles/5524125586330-About-Zendesk-Copilot)). That's the vendor's number, not ours.
+
+Suite Professional is $115 per agent a month paid yearly, or $149 monthly. Copilot is $50 per agent a month paid yearly and can be added to Professional and higher ([Zendesk pricing](https://www.zendesk.com/pricing/)). For three agents on annual billing: 3 × ($115 + $50) = 3 × $165 = $495 a month, or $495 × 12 = $5,940 a year.
+
+## Find the AI nobody approved
+
+Pax8 found that 35% of AI-engaged businesses "discovered shadow AI, meaning tools, workflows, or agents operating without official approval, in the past six months alone." In the U.S. it was 42%. Pax8 also notes that "the businesses spending the most hours reviewing AI output are often the same ones that later discover shadow AI" ([Pax8](https://www.pax8nebula.com/asset/60fef162-013e-435d-9620-37ce44809870/Pax8-Pulse-Report-2026-Q3.pdf)). Your review log can't count tools you don't know exist. Spend an afternoon on four places:
+
+1. **Google Workspace.** Admin console, Security, Access and data control, API controls, Manage App Access, then View list under Accessed apps. It shows each app's user count and which Google services it requested, and you can download the list as a CSV ([Google Workspace Admin Help](https://support.google.com/a/answer/7281227?hl=en)).
+2. **Microsoft 365.** In the Microsoft Entra admin center, go to Entra ID, Enterprise apps, All applications. Filter Application Type to Enterprise Applications to see non-Microsoft apps ([Microsoft Learn](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/view-applications-portal)).
+3. **Card and expense statements.** Search six months of statements and expense reports for AI vendor names and small recurring charges. Personal cards that get reimbursed count.
+4. **Browser extensions.** If you manage Chrome, check Devices, Chrome, Reports, Apps & extensions usage. Reporting has to be on ([Chrome Enterprise Help](https://support.google.com/chrome/a/answer/9902456?hl=en)). If you don't, have each person open More, Extensions, Manage extensions and send you the list ([Chrome Web Store Help](https://support.google.com/chrome_webstore/answer/2664769?hl=en)). Watch for AI writers and note-takers that can "read and change all your data on websites you visit."
+
+For each find, decide: approve it, replace it with a tool you already pay for, or remove it. Approved tools go into the review log. Our [surprise AI bill post](/blog/surprise-ai-bill-small-business) covers capping what they spend.
+
+## What we'd do this month
+
+1. Run the two-week review log, starting Monday.
+2. Do the shadow AI sweep in week one so the log covers every tool.
+3. Price your weekly review minutes at your hourly rate.
+4. Pick the inbox or queue with the most review time and switch it from drafting to flagging, with a weekly spot-check.
+5. Run the log again a month later and compare.
+
+Want help setting up the log, or an AI that flags exceptions instead of writing more drafts? Write to us: [team@lirium.ai](mailto:team@lirium.ai).
