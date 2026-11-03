@@ -1,0 +1,94 @@
+---
+title: "QuickBooks now works inside ChatGPT. What its nine skills are safe for, and what stays in QuickBooks"
+description: "Intuit's QuickBooks plugin for ChatGPT adds nine skills. Which tasks are safe in chat, which stay in QuickBooks, and what to check on an AI invoice."
+date: "2026-11-03"
+tags: ["SMALL BUSINESS", "ACCOUNTING", "CHATGPT"]
+slug: "quickbooks-chatgpt-plugin-what-to-keep-in-quickbooks"
+---
+
+Intuit's pitch for its ChatGPT plugin starts with a question every owner asks at the start of the month: how am I doing? The answer now comes from a chat window. Intuit says the plugin "brings together all 50+ QuickBooks tools, enhanced by nine new skills," covering reports, invoices, payroll and lending ([QuickBooks](https://quickbooks.intuit.com/r/news/quickbooks-plugin-chatgpt/)). Intuit doesn't show a publish date on that page, and we couldn't confirm one elsewhere, so we won't guess.
+
+Our [Muse post](/blog/meta-muse-quickbooks-invoices) covered letting an agent send invoices. This one is narrower. Nine skills, two piles: what's fine to do in chat, and what belongs in QuickBooks.
+
+## Who can use it
+
+It's for QuickBooks Online in the US. Intuit's help article: "You need an active QuickBooks Online subscription and a ChatGPT account to connect the two. This feature is currently available to QuickBooks Online customers in the US" ([QuickBooks Help](https://quickbooks.intuit.com/learn-support/en-us/help-article/mobile-and-apps/connect-quickbooks-online-chatgpt/L0RDe9RPd_US_en_US)). Nothing there about QuickBooks Desktop. QuickBooks Free is out too: Intuit's pricing page says third-party integrations are "not currently available with QuickBooks Free" ([QuickBooks pricing](https://quickbooks.intuit.com/pricing/)).
+
+On the ChatGPT side, OpenAI's pricing page marks Plugins "Yes" on Free, Go, Plus and Pro ([ChatGPT pricing](https://chatgpt.com/pricing/)). OpenAI also says "Availability depends on the plugin, your plan, and workspace settings" ([OpenAI](https://openai.com/business/plugins/quickbooks/)), and plugins are on by default for Business subscribers but off by default on Enterprise until an admin turns them on ([ChatGPT](https://chatgpt.com/features/plugins/)).
+
+Neither company lists a separate price for the plugin. You pay for QuickBooks. Online list prices run $38 a month for Simple Start, $85 for Essentials, $140 for Plus and $340 for Advanced ([QuickBooks pricing](https://quickbooks.intuit.com/pricing/)). Those are list prices. When we checked, the page also showed half-price promotional rates for the first three months. The payroll skills read QuickBooks Payroll data, so they assume you run payroll there. The cheapest bundle we found, Workforce Payroll plus Simple Start, is $88 a month plus $6.50 per employee ([QuickBooks payroll pricing](https://quickbooks.intuit.com/payroll/pricing/)). For five employees: $88 + (5 × $6.50) = $88 + $32.50 = $120.50 a month at list.
+
+## The nine skills
+
+Intuit's names, from its announcement ([QuickBooks](https://quickbooks.intuit.com/r/news/quickbooks-plugin-chatgpt/)):
+
+1. Business health snapshot
+2. Industry benchmark
+3. Invoice analysis
+4. Invoice creation
+5. Analyze payroll costs
+6. Payroll employee onboarding
+7. Set base pay
+8. Payroll help
+9. Lending
+
+OpenAI's listing uses internal labels for some, like "chase-overdue-invoices" and "email-to-estimate-invoice" ([OpenAI](https://openai.com/business/plugins/quickbooks/)). The labels tell you more than the marketing names do. "Invoice analysis" sounds read-only. Its closest match in Intuit's published skills, the one it ships for Claude, also sends payment reminders, "only after explicit user confirmation" ([Intuit on GitHub](https://github.com/intuit/quickbooks-claude-plugin/blob/main/skills/chase-overdue-invoices/SKILL.md)).
+
+## Pile one: safe to do in chat
+
+Read-only questions. Intuit's own skill list marks Business Health Check, Industry Benchmark, payroll cost analysis and Payroll help as "Read-only" ([Intuit on GitHub](https://github.com/intuit/quickbooks-claude-plugin/blob/main/README.md)). Ask who owes you, why payroll jumped, how your margin compares with peers. Worst case, you get a wrong answer and check it against a report. Nothing in the books moves.
+
+Drafts you review and confirm. Invoices, estimates and reminders, as long as you read every field before saying yes. Lending lands in this pile too. It explains options and the next step happens in QuickBooks.
+
+## Pile two: belongs in QuickBooks
+
+Intuit puts it plainly: QuickBooks "remains your system of record for your business finances" ([QuickBooks](https://quickbooks.intuit.com/r/news/quickbooks-plugin-chatgpt/)). We'd take that literally.
+
+**Posting.** Journal entries, bill payments, anything that hits the ledger without a document a customer sees first.
+
+**Payroll changes.** Set base pay can give a raise from chat. Intuit's line: "You'll review and confirm any change before it's made in QuickBooks Payroll" ([QuickBooks](https://quickbooks.intuit.com/r/news/quickbooks-plugin-chatgpt/)). That's a real safeguard. But a raise usually comes with an effective date, and Intuit's own skill says if "a requested field cannot be saved here, such as an effective date, say it will not be applied" ([Intuit on GitHub](https://github.com/intuit/quickbooks-claude-plugin/blob/main/skills/set-base-pay/SKILL.md)). Onboarding sends you back anyway: the skill won't take SSNs or bank details in chat and points you to "the guided QuickBooks Payroll setup flow" ([Intuit on GitHub](https://github.com/intuit/quickbooks-claude-plugin/blob/main/skills/payroll-employee-onboarding/SKILL.md)).
+
+**Reconciliation.** None of the nine skills does it. Match bank lines in QuickBooks.
+
+**Anything you'd need an audit trail for.** If your accountant, a lender or the IRS could ask who changed it and why, make the change where QuickBooks records it.
+
+Our rule of thumb:
+
+> Ask in chat. Draft in chat. Commit in QuickBooks.
+
+If the result changes a number someone else relies on, open QuickBooks before you say yes.
+
+## Worked example: an invoice from a Gmail thread
+
+Intuit says invoice creation will "use the latest information from the email thread to generate an invoice that syncs with QuickBooks" ([QuickBooks](https://quickbooks.intuit.com/r/news/quickbooks-plugin-chatgpt/)). Two things in the fine print.
+
+First, Gmail. Intuit's ChatGPT announcement frames the skill around "your Gmail conversations." The version Intuit publishes for Claude says use whatever email connector is installed, "never require Gmail specifically," and lets you paste the thread instead ([Intuit on GitHub](https://github.com/intuit/quickbooks-claude-plugin/blob/main/skills/email-to-estimate-invoice/SKILL.md)). We couldn't find an Intuit or OpenAI page that says which email connections the ChatGPT version needs, so plan on connecting your email account, or pasting.
+
+Second, order of operations. In that published skill, the invoice is created in QuickBooks first, then shown as "Draft created - not sent yet." Your approval gates the send, not the record ([Intuit on GitHub](https://github.com/intuit/quickbooks-claude-plugin/blob/main/skills/email-to-estimate-invoice/SKILL.md)). If it's wrong, fix or delete it in QuickBooks. Don't just walk away from the chat.
+
+Here's the error Intuit itself guards against, using its own documented example. The skill warns that "`amount` means unit rate, not line total" and uses 14.5 hours at $210 an hour. The right line: 14.5 × $210 = $3,045. Put the $3,045 total in the rate field by mistake and QuickBooks multiplies again: 14.5 × $3,045 = $44,152.50. Intuit's file gives a second example: "$4,631 becomes ~$45,738" ([Intuit on GitHub](https://github.com/intuit/quickbooks-claude-plugin/blob/main/skills/email-to-estimate-invoice/SKILL.md)). That's the vendor writing a guardrail for one specific, expensive mistake.
+
+Hypothetical, to make the checklist concrete: a landscaper's client emails a quote approval, then two days later asks to drop the mulch. You ask ChatGPT to invoice it. Before you confirm, check eight things:
+
+1. **Customer.** The right QuickBooks record, not a similarly named one.
+2. **Line items.** Mulch gone. Nothing added that the thread didn't mention.
+3. **Rates.** Unit price, not line total, per Intuit's warning above.
+4. **Quantities.** Hours, square feet, visits, matched to the thread.
+5. **Terms.** Intuit's skill prefers "omitting `payment_term` so the company default applies," so confirm your default is what you promised this client.
+6. **Tax.** The skill won't set taxability unless the thread states it, so new items fall back to your company default ([Intuit on GitHub](https://github.com/intuit/quickbooks-claude-plugin/blob/main/skills/email-to-estimate-invoice/SKILL.md)). Check it.
+7. **Due date.** Matches the terms, and any date the client agreed to.
+8. **Source message.** Which email in the thread it pulled from. "Latest information" should mean the mulch email. Ask ChatGPT to quote the message it used.
+
+Time the check for a few invoices. Our [review tax post](/blog/ai-review-tax-small-business) shows how to price that review time.
+
+## Real example: Intuit's own demo
+
+We couldn't find a named customer using the plugin in Intuit, OpenAI or press coverage. The closest documented use is Intuit and OpenAI's on-demand webinar, which walks a demo company called "Sam's Business" through installation, benchmarking, "Invoice Collection Actions" and "Invoice Automation" ([OpenAI webinar](https://webinar.openai.com/on-demand/e04957a9-6675-4973-8b89-08bfbf2a8da3)). It's a demo, not a customer.
+
+## Data, permissions, and the off switch
+
+Intuit says your data "stays within our Intuit systems and is never used to train foundation models," and that "every action remains reviewable and human-verified" ([Intuit](https://www.intuit.com/blog/news-social/quickbooks-expands-into-claude-and-chatgpt-with-new-sales-invoicing-payroll-and-lending-features/)). Those are Intuit's claims. OpenAI says nothing shared through plugins on Business, Enterprise and Edu is used to train models by default ([ChatGPT](https://chatgpt.com/features/plugins/)). For Plus and Pro, the same page says only that users "can manage data-use preferences in their settings." It says nothing on Free or Go, so check your data controls before you connect your books.
+
+To disconnect: Settings, Plugins, select the plugin, then Disconnect. OpenAI notes that doing so "does not automatically delete existing or archived conversations" ([OpenAI Help](https://help.openai.com/en/articles/20001494-connecting-and-managing-app-accounts-in-chatgpt)). Your financial answers stay in your chat history until you delete them.
+
+Want help deciding which QuickBooks tasks to move into chat, and setting up the checks for the rest? Write to us: [team@lirium.ai](mailto:team@lirium.ai).
