@@ -25,5 +25,5 @@ Format: `- [ ] topic` for upcoming, `- [x] topic — published YYYY-MM-DD — <u
 - [x] Half of small businesses got a surprise AI bill. How to keep that from happening to you — published 2026-10-30 — https://lirium.ai/blog/surprise-ai-bill-small-business
 - [x] The 'review tax': why AI is saving you time but eating 3+ hours of your week — published 2026-11-02 — https://lirium.ai/blog/ai-review-tax-small-business
 - [x] QuickBooks now works inside ChatGPT: nine skills, and what to keep inside QuickBooks itself — published 2026-11-03 — https://lirium.ai/blog/quickbooks-chatgpt-plugin-what-to-keep-in-quickbooks
-- [ ] Google's free Gemini just got weaker. Is it time to pay for an AI plan?
+- [x] Google's free Gemini just got weaker. Is it time to pay for an AI plan? — published 2026-11-05 — https://lirium.ai/blog/google-gemini-free-weaker-pay-for-ai-plan
 - [ ] Census: about 1 in 4 businesses now use AI. Benchmark yourself by sector
