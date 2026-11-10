@@ -1,0 +1,83 @@
+---
+title: "Enabled ChatGPT Enterprise dots start billing Nov 18. Set the rules before the preview ends"
+description: "On ChatGPT Enterprise, billing begins Nov 18 for all enabled dots, and OpenAI lists no price. Set rules, apps and access before the preview ends."
+date: "2026-11-10"
+tags: ["SMALL BUSINESS", "CHATGPT", "PRICING"]
+slug: "chatgpt-dots-billing-nov-18-rules"
+---
+
+On Nov. 18, two things happen to eligible ChatGPT Enterprise workspaces on the same day. Dots, OpenAI's always-on agents, "become available by default unless your admin opts out," and billing begins for every enabled dot ([OpenAI Help Center](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot)). OpenAI hasn't published what that bill is.
+
+That leaves eight days from today (Nov. 18 minus Nov. 10 = 8 days) for owners and admins to decide who gets a dot, what it can touch, and what it must ask about first.
+
+## First, check which plan you're on
+
+The Nov. 18 date doesn't apply to everyone with a dot.
+
+**Enterprise, Edu and Healthcare.** OpenAI calls dots "generally available" to eligible workspaces on these plans, with an admin preview "from November 4 through November 18, 2026." During the preview, members can use dots only if the admin turns on access for their role ([OpenAI Help Center](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot)). OpenAI's Nov. 4 release notes say owners and admins can "enable access or opt out before dots become available by default on November 18" ([OpenAI release notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes)).
+
+**Pro and Business Premium.** Different deal. OpenAI's Sept. 29 launch post says "Your first dot is included in your Pro or Business Premium plan at no extra cost," along with "an allowance for deeper work, with extended limits for the first month after launch" ([OpenAI](https://openai.com/index/introducing-dots/)). OpenAI doesn't put a number on that allowance, in tasks or dollars, and doesn't say what replaces the extended limits. The Help Center limits Pro to users 18 and older outside the EEA, Switzerland and the UK, and Business Premium to supported regions, subject to workspace eligibility ([OpenAI Help Center](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot)).
+
+**Plain Business, Plus and Free.** Neither page lists them for dots.
+
+One wrinkle: the preview covers Enterprise, Edu and Healthcare, but the pricing paragraph names only "eligible ChatGPT Enterprise workspaces." Edu and Healthcare admins should ask their account team how billing applies.
+
+## The billing rule, word for word
+
+Here's the pricing section in full ([OpenAI Help Center](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot)):
+
+> For eligible ChatGPT Enterprise workspaces, you can pay for your use of dots through flat rates mapped to the type of work you want your dot to achieve, or scaled consumption. Dots are free to preview from November 4 through November 18, 2026. Starting November 18, billing begins for all enabled dots. Work a dot delegates to ChatGPT Work or Codex threads is billed separately at the standard rates.
+
+What it gives you: two pricing models, a free window, a start date and a second meter. What it leaves out: any dollar figure, rate or cap. OpenAI's admin guide sends readers to a "Dots pricing" article in the Help Center ([OpenAI admin guide](https://learn.chatgpt.com/docs/enterprise/dots-admin-guide)). A search of help.openai.com today turned up no such article. We won't guess. Get the number from your account rep, in writing, before Nov. 18.
+
+Note the overlap: "through November 18" and "Starting November 18" both claim the same day. We'd treat Nov. 17 as the last day you can count on being free.
+
+## What "enabled" actually means
+
+Two definitions keep this from being a seat tax. "Enabled dots are dots that are not paused," and turning on access "does not automatically create dots for members. Members create their own dot through onboarding" ([OpenAI Help Center](https://help.openai.com/en/articles/20001554-managing-dots-in-chatgpt-workspaces)). Each member can create one personal dot ([OpenAI Help Center](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot)).
+
+So the bill follows dots someone created and nobody paused, not headcount. That's less dramatic than "the free trial becomes a bill," and slipperier, because the people creating dots aren't the people reading invoices.
+
+You have levers. An admin pause stops billing for that dot. Removing every Use dots grant from a member disables the dot and stops its billing. Owner deletion also pauses billing ([OpenAI Help Center](https://help.openai.com/en/articles/20001554-managing-dots-in-chatgpt-workspaces)).
+
+Hypothetical, for illustration only: 4 people built dots during the preview and 1 of them paused theirs. Enabled dots on Nov. 18: 4 minus 1 = 3. Those 3 bill at a rate OpenAI hasn't published, plus whatever Work or Codex tasks they kick off at standard rates. That second meter is the kind of line item our [surprise AI bill post](/blog/surprise-ai-bill-small-business) warns about.
+
+## Walkthrough: the admin settings, by their real names
+
+OpenAI's path for Enterprise, Edu and Healthcare ([OpenAI Help Center](https://help.openai.com/en/articles/20001554-managing-dots-in-chatgpt-workspaces)):
+
+1. Open Workspace settings > Permissions & roles.
+2. Select Permissions, then Workspace default.
+3. Open Workspace capabilities and find Use dots.
+
+There are four dots permissions: Use dots; Add dots to Slack and Microsoft Teams; Allow local computer access; and Use custom rules for dots. The last two are "Off by default for Enterprise."
+
+For a pilot, OpenAI's admin guide says to keep the workspace default off and grant access through a custom role ([OpenAI admin guide](https://learn.chatgpt.com/docs/enterprise/dots-admin-guide)). Roles stack, so check every one: "A role that grants access can still allow the member to use dots even if another role has the permission turned off" ([OpenAI Help Center](https://help.openai.com/en/articles/20001554-managing-dots-in-chatgpt-workspaces)).
+
+Dots also need your security admin to check Admin Console > Agent Security > Global > Requirements. Allowed approval policies must include on-request, and Allowed approval reviewers must include auto-review ([OpenAI Help Center](https://help.openai.com/en/articles/20001554-managing-dots-in-chatgpt-workspaces)).
+
+## In Enterprise, custom rules start off, and off isn't the safe setting
+
+In Enterprise, members can't write rules until an admin enables Use custom rules for dots. With it off, "Default action rules still apply," and OpenAI adds that "disabling custom rules does not make every action require approval" ([OpenAI Help Center](https://help.openai.com/en/articles/20001554-managing-dots-in-chatgpt-workspaces)). Off means OpenAI's defaults, not lockdown.
+
+Once it's on, members set rules on mobile under Customize > Custom rules. You describe the action, then pick one of four behaviors: Take action without asking, Take action if pre-approved, Ask before taking action, or Hand off to you ([OpenAI Help Center](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot)). OpenAI says rules cover what a dot "can share, purchase, or access." There's no prebuilt "ask before sending, paying or sharing" switch. You write those yourself. We'd start with three: anything sent outside the company gets Ask before taking action, any purchase gets Hand off to you, and sharing a file externally gets Ask before taking action.
+
+Some guardrails sit above your rules. According to OpenAI, changing a password or transferring money requires you to take over, and purchases with a card saved on a merchant site require your approval, "which may be given in advance when it specifically covers the purchase" ([OpenAI Help Center](https://help.openai.com/en/articles/20001529-dots-privacy-security-and-safety-faqs)). OpenAI's own fine print: "Your dot can make mistakes, including when following your rules." Budget for checking time, as in our [review tax post](/blog/ai-review-tax-small-business).
+
+## Apps: the dot inherits what you already connected
+
+OpenAI says "Enabling dots does not grant access to every app or website," but "Supported app connections that a member already uses in ChatGPT may be available to their dot" ([OpenAI Help Center](https://help.openai.com/en/articles/20001554-managing-dots-in-chatgpt-workspaces)). Three layers decide what it can do: Plugin controls (which apps and actions), App permissions (when an action needs approval) and the connected service's own authorization. Cloud browser use, Cloud network access, Cloud computer use and Use password manager are separate switches.
+
+The catch is proactive research. A dot reviews connected apps in the background and forms memories from them, and "Enterprise workspace admins cannot turn off proactive research separately" ([OpenAI Help Center](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot)). OpenAI says those research tools are read-only ([OpenAI](https://openai.com/index/introducing-dots/)). Disconnecting an app doesn't delete what the dot already learned. Your app list is the real privacy control. Trim it before Nov. 18.
+
+## The example OpenAI picked
+
+OpenAI's launch post offers one outside anecdote: "an early tester's dot noticed he'd forgotten to invoice a publication, prepared the invoice, and sent it after his approval" ([OpenAI](https://openai.com/index/introducing-dots/)). That's OpenAI's story about an unnamed tester, with no numbers attached. The phrase that matters is "after his approval." That's the behavior an Ask before taking action rule enforces.
+
+## If you're on Business Premium
+
+OpenAI's admin article says its settings apply to Enterprise, Edu and Healthcare ([OpenAI Help Center](https://help.openai.com/en/articles/20001554-managing-dots-in-chatgpt-workspaces)). It doesn't document Business Premium equivalents, and OpenAI publishes no Nov. 18 billing rule for that plan. Set up the member-side Custom rules screen the day your dot arrives.
+
+For Enterprise admins, the list fits on a sticky note: opt out or limit access to a pilot role, get the rate in writing, turn on custom rules and write three, prune connected apps, then check Admin Console > Dots, which shows each dot's creator, status and saved cost tier ([OpenAI admin guide](https://learn.chatgpt.com/docs/enterprise/dots-admin-guide); [OpenAI Help Center](https://help.openai.com/en/articles/20001554-managing-dots-in-chatgpt-workspaces)).
+
+Want a second set of eyes on your dots settings before Nov. 18? Write to us: [team@lirium.ai](mailto:team@lirium.ai).
