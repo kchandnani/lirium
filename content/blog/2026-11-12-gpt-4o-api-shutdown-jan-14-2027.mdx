@@ -1,0 +1,71 @@
+---
+title: "OpenAI will shut off GPT-4o, 4o mini, 4.1 and 4.1 mini snapshots in its API on Jan. 14. Check your automations"
+description: "OpenAI shuts off GPT-4o and GPT-4.1 API snapshots on Jan. 14, 2027. Find the model string in your automations and test the fix on real tickets."
+date: "2026-11-12"
+tags: ["SMALL BUSINESS", "AI COSTS", "AUTOMATION"]
+slug: "gpt-4o-api-shutdown-jan-14-2027"
+---
+
+OpenAI has put a date on the models a lot of small business automations were built on. On Jan. 14, 2027, five dated snapshots of GPT-4o, GPT-4o mini, GPT-4.1 and GPT-4.1 mini come out of the API, and OpenAI names `gpt-6-luna` as the replacement for all four ([OpenAI deprecations](https://platform.openai.com/docs/deprecations)).
+
+That's 63 days from today. Nov. 12 to Nov. 30 is 18 days, December is 31, and January runs 14 more, so 18 + 31 + 14 = 63. Subtract the holidays and the honest number is smaller.
+
+If a freelancer, a Zap or a Make scenario built your quote bot, inbox triage or support replies in the last two years, there's a decent chance one of these four names is sitting in a settings field nobody has opened since launch.
+
+## What OpenAI actually listed
+
+The entry is dated Oct. 14, 2026. OpenAI says it "notified developers using certain GPT-4 series models of their deprecation and removal from the API on January 14, 2027" ([OpenAI deprecations](https://platform.openai.com/docs/deprecations)). The table names four families and five dated snapshots: GPT-4o (`gpt-4o-2024-08-06`, `gpt-4o-2024-11-20`), GPT-4o mini (`gpt-4o-mini-2024-07-18`), GPT-4.1 (`gpt-4.1-2025-04-14`) and GPT-4.1 mini (`gpt-4.1-mini-2025-04-14`). Then comes the line for anyone who paid to train a custom model:
+
+> Fine-tuned versions of these models follow the same shutdown schedule as their underlying base models.
+
+There's no like-for-like rebuild, either. The `gpt-6-luna` model page lists fine-tuning as "Not supported" ([OpenAI](https://platform.openai.com/docs/models/gpt-6-luna)), and OpenAI's pricing page says "Fine-tuning is closed to new users" ([OpenAI pricing](https://platform.openai.com/docs/pricing)).
+
+Two details the headline skips. The entry lists the bare names by family, not as strings, but OpenAI's model pages mark `gpt-4o`, `gpt-4o-mini`, `gpt-4.1` and `gpt-4.1-mini` as "Deprecated," and each one's default snapshot is on the Jan. 14 list ([GPT-4o](https://platform.openai.com/docs/models/gpt-4o), [GPT-4o mini](https://platform.openai.com/docs/models/gpt-4o-mini), [GPT-4.1](https://platform.openai.com/docs/models/gpt-4.1), [GPT-4.1 mini](https://platform.openai.com/docs/models/gpt-4.1-mini)). Treat an unpinned `gpt-4o` as affected. And `gpt-4o-2024-05-13` isn't on the list because it's already gone, shut down Oct. 23, 2026 ([OpenAI deprecations](https://platform.openai.com/docs/deprecations)). If something still calls it, it has been failing for 20 days.
+
+The page covers the API only. It says nothing about ChatGPT or Azure OpenAI, and OpenAI's pricing page notes that its models on Microsoft Azure "are billed through those services" ([OpenAI pricing](https://platform.openai.com/docs/pricing)). If you run on Azure, check Microsoft's schedule instead of assuming this date.
+
+## This is not the Dec. 11 deadline
+
+Different cutoff, different product. Custom GPTs inside ChatGPT "are scheduled to retire on Dec 11, 2026," with Feb. 11, 2027 for FedRAMP workspaces and approved Enterprise deferrals ([OpenAI Help Center](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq)). That's GPTs built in the ChatGPT app moving to plugins. Jan. 14 is about code and automations calling the API.
+
+To keep things interesting, Dec. 11 is also an API date. Older `gpt-5`, `gpt-5-mini`, `gpt-5-nano`, `gpt-5-pro`, `o3` and `o3-pro` snapshots shut down that day ([OpenAI deprecations](https://platform.openai.com/docs/deprecations)). If someone "upgraded" your flow to `gpt-5-mini` last year, that's the earlier fire.
+
+## Where the model string lives
+
+**Zapier.** In a ChatGPT (OpenAI) step, Zapier's help docs tell you to "click the Model field to expand the dropdown menu" ([Zapier](https://help.zapier.com/hc/en-us/articles/27472126237453-ChatGPT-OpenAI-error-invalid-image-or-invalid-image-format)). Its action comparison page, last updated April 6, 2026, still lists "GPT-4o GPT 4.1 GPT 4o mini" among the Conversation action's supported models ([Zapier](https://help.zapier.com/hc/en-us/articles/34534135938317-Choosing-the-right-ChatGPT-OpenAI-action-to-send-messages)). If you use AI by Zapier without your own key, you pick from the same kind of dropdown and pay in tasks: GPT-4o costs 5 tasks a step and GPT-6 Luna costs 1, per Zapier's September 2026 list, which still includes all four affected models ([Zapier](https://zapier.com/blog/automate-chatgpt/)). As of Nov. 12, we found no Zapier notice about Jan. 14, so open the step and change it yourself.
+
+**Make.** In the OpenAI (ChatGPT, Whisper) app, the Generate a completion module's Model field says "Select or map the model you want to use" ([Make](https://apps.make.com/YGEjzzoHuH8WBQJegVBSx)). "Map" is the trap. The model name can come from an earlier module, like a spreadsheet cell, so check the source too. Make's setup page still suggests switching to "a non-reasoning model (GPT-4o, or GPT-4.1)" if organization verification blocks reasoning models ([Make](https://apps.make.com/openai-gpt-3)). That's advice with an expiration date.
+
+**n8n.** In the OpenAI node, the Text resource offers Generate a Chat Completion and Generate a Model Response, each with a Model parameter. For the first, n8n's docs still say "try `gpt-4o` if you need high intelligence or `gpt-4o-mini` if you need the fastest speed and lowest cost" ([n8n Docs](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations)). Plenty of workflows were built by people who followed that line.
+
+**Custom code.** Search the code and environment variables for `gpt-4o` and `gpt-4.1`. OpenAI's List models endpoint returns a `shutdown_date` field for exactly this ([OpenAI deprecations](https://platform.openai.com/docs/deprecations)), and Make's Make an API call module can query `/v1/models` without any code ([Make](https://apps.make.com/YGEjzzoHuH8WBQJegVBSx)).
+
+## Defaults and aliases won't save you
+
+A bare alias isn't a hedge. `gpt-4o` points to the default snapshot `gpt-4o-2024-08-06` ([OpenAI](https://platform.openai.com/docs/models/gpt-4o)), which is on the list. The last cleanup is the precedent: when `gpt-4-0613` shut down Oct. 23, the `gpt-4` alias was listed right beside it ([OpenAI deprecations](https://platform.openai.com/docs/deprecations)).
+
+When a tool picks the model for you, the vendor decides when it changes, and vendor docs lag. Zapier's comparison page still lists `babbage-002`, `davinci-002` and `gpt-3.5-turbo-instruct` for Send Prompt ([Zapier](https://help.zapier.com/hc/en-us/articles/34534135938317-Choosing-the-right-ChatGPT-OpenAI-action-to-send-messages)). OpenAI shut all three down Sept. 28, 2026 ([OpenAI deprecations](https://platform.openai.com/docs/deprecations)). When the Assistants API went, Zapier's notice was blunt: "On August 26, 2026, Zaps using these actions will stop working" ([Zapier](https://help.zapier.com/hc/en-us/articles/44865998484365-Important-update-ChatGPT-users-OpenAI-Assistants-API-deprecation)).
+
+Our favorite detail: when OpenAI retired two GPT-4 snapshots on March 26, 2026, its recommended replacement was `gpt-5` or `gpt-4.1` ([OpenAI deprecations](https://platform.openai.com/docs/deprecations)). The replacement now needs a replacement.
+
+## Test Luna on real tickets, not a demo prompt
+
+Pull 20 to 50 real tickets, quote requests or emails from the last month. Run them through your current model and `gpt-6-luna` side by side, and have whoever normally checks the output grade both without knowing which is which. Do it before the holidays eat December.
+
+Watch the settings. Luna is a reasoning model with `medium` as its default effort, and in Chat Completions it supports function calling only with reasoning effort set to `none` ([OpenAI](https://platform.openai.com/docs/models/gpt-6-luna)). Make says the same thing: None is "Required to use Tools (functions) with GPT-5.6 and GPT-6 Sol or Luna models" ([Make](https://apps.make.com/YGEjzzoHuH8WBQJegVBSx)). And reasoning tokens are "billed as output tokens" ([OpenAI reasoning guide](https://developers.openai.com/api/docs/guides/reasoning)), which changes the cost math.
+
+## The cost math
+
+This is a hypothetical workload, and the math is illustrative: a support reply flow handling 2,000 tickets a month at 1,500 input tokens and 300 output tokens per ticket. Prices are standard list rates per million tokens from [OpenAI's pricing page](https://platform.openai.com/docs/pricing).
+
+- `gpt-4o` at $2.50 in, $10.00 out: (1,500 × $2.50 + 300 × $10.00) ÷ 1,000,000 = $0.00675 a run. Times 2,000 is $13.50 a month.
+- `gpt-4.1` at $2.00 and $8.00: (1,500 × $2.00 + 300 × $8.00) ÷ 1,000,000 = $0.0054 a run, or $10.80 a month.
+- `gpt-4.1-mini` at $0.40 and $1.60: (1,500 × $0.40 + 300 × $1.60) ÷ 1,000,000 = $0.00108 a run, or $2.16 a month.
+- `gpt-4o-mini` at $0.15 and $0.60: (1,500 × $0.15 + 300 × $0.60) ÷ 1,000,000 = $0.000405 a run, or $0.81 a month.
+- `gpt-6-luna` at $0.10 and $0.50, excluding reasoning tokens: (1,500 × $0.10 + 300 × $0.50) ÷ 1,000,000 = $0.0003 a run, or $0.60 a month.
+
+Coming from GPT-4o, that's ($13.50 minus $0.60) ÷ $13.50 = 95.6% cheaper on paper. Coming from GPT-4o mini, the edge is thin, and reasoning can erase it. Luna's input costs $0.00015 a run. To stay under GPT-4o mini's $0.000405, output can cost at most $0.000255, which at $0.50 per million is 510 tokens. Take out the 300 visible tokens and you have 210 reasoning tokens to spare. OpenAI says reasoning models "may generate anywhere from a few hundred to tens of thousands of reasoning tokens" ([OpenAI reasoning guide](https://developers.openai.com/api/docs/guides/reasoning)). Log the real count during your test, then try effort `none`.
+
+At this volume the bill isn't the risk. A flow that quietly errors on Jan. 14 is. If usage pricing has burned you before, our [surprise AI bill guide](/blog/surprise-ai-bill-small-business) covers caps. Zapier tasks are a separate meter, which we priced out in [what 5,000 automations cost](/blog/zapier-make-n8n-cost-5000-automations).
+
+Not sure which model your flows call? Send us the Zap, scenario or workflow and we'll find the strings: [team@lirium.ai](mailto:team@lirium.ai).
