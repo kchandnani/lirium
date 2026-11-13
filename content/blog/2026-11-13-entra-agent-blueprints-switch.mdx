@@ -1,0 +1,59 @@
+---
+title: "Microsoft started a Nov. 4 rollout that lets default Entra users create agent blueprints. Decide who should before your staff do"
+description: "Since Nov. 4, Microsoft has been rolling out a default that lets Entra users create agent blueprints. Two settings to decide, and a checklist."
+date: "2026-11-13"
+tags: ["SMALL BUSINESS", "AI SECURITY", "MICROSOFT 365"]
+slug: "entra-agent-blueprints-switch"
+---
+
+Microsoft changed who gets to build AI agents in your company, and the default answer is now "pretty much anyone." Starting Nov. 4, 2026, default users in Microsoft Entra can create agent blueprints unless an admin sets "Users can create agent blueprints" to No ([MC1506733](https://mc.merill.net/message/MC1506733)). Microsoft's rollout runs from early November and is expected to finish by late November ([MC1506733](https://mc.merill.net/message/MC1506733)), so if your tenant hasn't flipped yet, it's close.
+
+Shadow agents used to take some effort. Now they're the factory setting.
+
+If you run on Microsoft 365, now is the time to make two decisions: who may create agent blueprints, and who may upload Copilot agents that can take actions. Both default to open. Neither takes more than a few minutes to change.
+
+## What Microsoft actually announced
+
+The notice is MC1506733, published Oct. 13, 2026 ([MC1506733](https://mc.merill.net/message/MC1506733)). We're citing mc.merill.net, a public archive of Microsoft 365 Message Center notices, because the official Message Center sits behind an admin login.
+
+Microsoft says the change means "users without built-in or custom Entra roles will be able to create new agent blueprints in their organization." That's your bookkeeper, your sales rep and your summer intern. Microsoft's own documentation already describes it as the default: "By default, users in your organization can create agent identity blueprints" ([Microsoft Learn](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/delegate-app-roles)).
+
+A blueprint is the template that agent identities get created from. Microsoft says each agent built from one gets "its own identity, credentials, and permissions" ([Microsoft Learn](https://learn.microsoft.com/en-us/entra/agent-id/agent-blueprint)). Here's the detail that matters. Whoever creates a blueprint automatically becomes its owner, and owners "can create agent identities for that blueprint without a Microsoft Entra Agent ID role" ([Microsoft Learn](https://learn.microsoft.com/en-us/entra/agent-id/create-blueprint)). Creating one starts a chain.
+
+Read the fine print on what the switch won't do. Setting it to No doesn't change or remove existing blueprints, doesn't change who can create agent identities from existing blueprints, and doesn't block an app or an agent from creating identities ([MC1506733](https://mc.merill.net/message/MC1506733)). It closes the front door. It doesn't sweep the house.
+
+## The second door: agents with actions
+
+The other setting arrived a few weeks earlier. Under MC1472007, Microsoft gave admins a control over who can upload advanced Copilot agents and plugins. Starting Oct. 25, 2026, those uploads are "enabled by default unless the admin has selected no users or specific users or groups" ([MC1472007](https://mc.merill.net/message/MC1472007)).
+
+Microsoft defines an advanced package as one that uses "a Declarative Agent with actions or an MCP server." Agents with instructions only count as basic, and basic uploads stay allowed no matter what you pick ([Microsoft Learn](https://learn.microsoft.com/en-us/copilot/manage/configure-copilot-advanced-package-uploads)). The setting covers packages your own people upload. It doesn't cover agents built by Microsoft or third parties, and it applies only to packages uploaded after the control became available ([MC1472007](https://mc.merill.net/message/MC1472007)).
+
+The difference between basic and advanced is the difference between an agent that answers questions and one that does things. Microsoft is blunt about the second kind in its agent registry documentation:
+
+> MCP implementations are susceptible to risks, such as attacks, cascading failures, and loss of human oversight.
+
+That line comes from Microsoft's own [agent registry page](https://learn.microsoft.com/en-us/microsoft-agent-365/admin/agent-registry-overview). The vendor selling the agents is telling you to vet the plumbing.
+
+## Why a small business should care
+
+This isn't theoretical. In June 2025, NIST's National Vulnerability Database published CVE-2025-32711, described as "Ai command injection in M365 Copilot allows an unauthorized attacker to disclose information over a network" ([NVD](https://nvd.nist.gov/vuln/detail/CVE-2025-32711)). That was Copilot itself. Our read: an agent a staffer wires to your inbox or your accounting system has more ways to go wrong, and nobody in IT may know it exists.
+
+There's a money angle too. Microsoft told partners on Nov. 3 that usage-based billing will be on by default for new Microsoft 365 Copilot Business subscriptions bought through Cloud Solution Providers, with rollout planned for January through March 2027, later than it first announced ([Microsoft Partner Center](https://learn.microsoft.com/en-us/partner-center/announcements/2026-november)). Microsoft also says a new purchase turns the meter on by default for existing Copilot Business licenses in the same tenant. The default limit is 4,000 Copilot Credits per user per month, and Microsoft's own example is that 100 Microsoft 365 Copilot Business users could consume up to 400,000 Copilot Credits a month ([Microsoft Partner Center](https://learn.microsoft.com/en-us/partner-center/announcements/2026-november)). Agents nobody approved are a fine way to find that ceiling. We covered caps in our [Copilot spending meter guide](/blog/microsoft-copilot-spending-meter-cap) and our [surprise AI bill guide](/blog/surprise-ai-bill-small-business).
+
+## The checklist
+
+Hand this to whoever holds admin rights, whether that's you, a part time IT person or your MSP.
+
+**1. Change the blueprint setting.** Microsoft's steps: sign in to the Microsoft Entra admin center as at least a Cloud Application Administrator, browse to Entra ID > Users > User settings, and under Default user role permissions set Users can create agent blueprints to No ([Microsoft Learn](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/delegate-app-roles)). It's a separate setting from Users can register applications, so review both ([MC1506733](https://mc.merill.net/message/MC1506733)).
+
+**2. Change the upload setting.** In the Microsoft 365 admin center, go to Copilot > Settings > All settings > Advanced package uploads, choose All users, No users, or Specific users or groups, and select Save. You need the AI Admin role ([Microsoft Learn](https://learn.microsoft.com/en-us/copilot/manage/configure-copilot-advanced-package-uploads)).
+
+**3. Decide who is allowed.** With the blueprint switch at No, admins and people assigned the Agent ID Developer role can still create blueprints ([Microsoft Learn](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/delegate-app-roles)). Agent ID Administrator can too, and Microsoft says that role is required to add a secret or certificate credential ([Microsoft Learn](https://learn.microsoft.com/en-us/entra/agent-id/create-blueprint)). For a 15 person firm (a hypothetical), we'd name one or two builders, put them in a group, and use that same group for advanced uploads. Your admin stays the only Agent ID Administrator.
+
+**4. Check what already exists.** The switch doesn't touch what's there, so look. In the Entra admin center, Entra ID > Agents > Agent blueprints lists every blueprint principal, with a count of linked agent identities ([Microsoft Learn](https://learn.microsoft.com/en-us/entra/agent-id/manage-agent-blueprint)). Open a blueprint and its linked identities list to see owners. Entra ID > Agents > Agent identities has a Created On column you can filter by "Last N days" ([Microsoft Learn](https://learn.microsoft.com/en-us/entra/agent-id/agent-lists)). Then open the Microsoft 365 admin center, go to Agents > All Agents > Registry, check the Agents without owners card, and use Export to download the list ([Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-agent-365/admin/agent-registry-overview)).
+
+Check both, because neither is complete. Microsoft says publishing an agent in Copilot Studio alone "might not make it visible in the admin center" ([Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-agent-365/admin/agent-registry-overview)), and blueprints created through the Graph API may not show up in the Agent 365 registry until someone registers them ([Microsoft Learn](https://learn.microsoft.com/en-us/entra/agent-id/create-blueprint)).
+
+**5. Tell staff.** Keep it to a few sentences. Something like: "You can keep using Copilot and building simple agents with instructions only. If you want an agent that sends email, updates records or connects to another app, ask [name] first. If you already built one, tell [name] this week, and nobody's in trouble." The amnesty line is what gets you an honest inventory.
+
+Want a second set of eyes on your tenant, or help deciding which agents earn the right to take actions? Email us at [team@lirium.ai](mailto:team@lirium.ai).
