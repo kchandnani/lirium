@@ -27,3 +27,12 @@ Format: `- [ ] topic` for upcoming, `- [x] topic — published YYYY-MM-DD — <u
 - [x] QuickBooks now works inside ChatGPT: nine skills, and what to keep inside QuickBooks itself — published 2026-11-03 — https://lirium.ai/blog/quickbooks-chatgpt-plugin-what-to-keep-in-quickbooks
 - [x] Google's free Gemini just got weaker. Is it time to pay for an AI plan? — published 2026-11-05 — https://lirium.ai/blog/google-gemini-free-weaker-pay-for-ai-plan
 - [x] Census: about 1 in 4 businesses now use AI. Benchmark yourself by sector — published 2026-11-09 — https://lirium.ai/blog/census-ai-use-benchmark-small-business
+- [x] Enabled ChatGPT Enterprise dots start billing Nov 18. Set the rules before the preview ends — published 2026-11-10 — https://lirium.ai/blog/chatgpt-dots-billing-nov-18-rules
+- [ ] Gemini 4 Carbon's intro price ends Nov 30: your API bill can double on Dec 1
+- [ ] Included Copilot Chat now has fair-use limits: your team may hit a wall you can't raise
+- [ ] Claude can now keep the spreadsheet — and Asana, Canva or monday.com — in the same window
+- [ ] Zendesk wants you to pay for outcomes, not seats — but the rate isn't public
+- [ ] Adobe's Creative Agent is in the apps you already pay for (the third-party hook comes later)
+- [ ] Agentforce Coworker is included in Salesforce Starter and Pro: start with one job, keep the "yes"
+- [ ] 90% of AI-using owners in a lender survey claim a measurable payoff — start with marketing or error rate
+- [ ] Zoom can turn a meeting into assigned work — turn on guardrails before the agent sees the call
