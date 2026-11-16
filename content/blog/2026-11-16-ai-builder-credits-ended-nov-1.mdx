@@ -1,0 +1,63 @@
+---
+title: "Microsoft stopped adding AI Builder credits to renewals Nov. 1. Check your invoice-reading flow before your next one"
+description: "Since Nov. 1, new and renewed Power Platform licenses carry no seeded AI Builder credits. Find your flows, check your renewal date, price Copilot Credits."
+date: "2026-11-16"
+tags: ["SMALL BUSINESS", "AI COSTS", "MICROSOFT 365"]
+slug: "ai-builder-credits-ended-nov-1"
+---
+
+If a Power Automate flow reads your invoices or receipts with AI Builder, its fuel supply changed on Nov. 1. Starting Nov. 1, 2026, new or renewed Power Platform and Dynamics 365 licenses no longer include seeded AI Builder credits, and AI Builder capacity add-ons reached end of life the same day ([Microsoft Learn](https://learn.microsoft.com/en-us/ai-builder/endofaibcredits)).
+
+Nothing broke on Nov. 1. That's the trap. The flow keeps running on the credits you already have. When your contract ends, it stops unless Copilot Credits are there to take over. Microsoft didn't pick that date for you. Your contract did.
+
+## What actually ended on Nov. 1
+
+The headline version, "AI Builder credits ended," is wrong in a way that matters. Microsoft's timeline has three dates ([Microsoft Learn](https://learn.microsoft.com/en-us/ai-builder/endofaibcredits)):
+
+- **Nov. 1, 2025.** Customers without an active AI Builder capacity add-on could no longer buy one.
+- **Nov. 1, 2026.** Add-ons reached end of life. Credits on active add-on contracts stay usable until those contracts expire.
+- **Nov. 1, 2026.** Seeded credits stopped. Existing seeded credits "will be honored through to end of contract term," but future premium licenses won't carry any.
+
+Microsoft's Message Center notice, MC1526652, published Oct. 26, 2026, spells out the part people will miss ([MC1526652](https://mc.merill.net/message/MC1526652)). We're citing mc.merill.net, a public archive of Microsoft 365 Message Center notices, because the official Message Center sits behind an admin login.
+
+> November 1, 2026, is not a universal cutoff for existing credits. Your transition deadline depends on when your applicable contracts expire.
+
+So your real deadline is your own renewal date. If you renewed in October, you may have most of a year. If you renew in December, you have weeks.
+
+The AI Builder features themselves aren't going anywhere. Microsoft says they "continue to be supported in all contexts, using Copilot Credits" ([Microsoft Learn](https://learn.microsoft.com/en-us/ai-builder/endofaibcredits)). The model stays. The currency changes.
+
+## What happens when the credits run out
+
+Microsoft describes a fixed order. In Power Apps and Power Automate, AI Builder features spend AI Builder credits first. If those are exhausted or unavailable, the system tries Copilot Credits. "If no Copilot Credits are available, usage will be blocked" ([Microsoft Learn](https://learn.microsoft.com/en-us/ai-builder/endofaibcredits)). The notice adds that blocked runs "can interrupt apps, flows, and business processes" ([MC1526652](https://mc.merill.net/message/MC1526652)).
+
+There's no automatic conversion. Microsoft says plainly that there's "no automatic conversion of AI Builder credits to Copilot Studio Credits" and no single conversion ratio, because rates differ by capability ([Microsoft Learn](https://learn.microsoft.com/en-us/ai-builder/endofaibcredits)).
+
+Two details make the cutoff fuzzier than it sounds. Consumption resets on the first of each month, and unused credits don't roll over ([Microsoft Learn](https://learn.microsoft.com/en-us/ai-builder/administer-licensing)). And Microsoft computes AI Builder usage "ideally" daily, but it can lag "up to five (5) or more days," so a flow can coast past its allocation and then switch to Copilot Credits, or get blocked, once the math catches up ([Microsoft Learn](https://learn.microsoft.com/en-us/ai-builder/endofaibcredits)). Microsoft says that overage is never billed. It just isn't a plan.
+
+A note on scope. Microsoft's table of seeded licenses lists Power Platform and Dynamics 365 products, such as Power Automate Premium at 5,000 credits a month and Power Apps Premium at 500 ([Microsoft Learn](https://learn.microsoft.com/en-us/ai-builder/credit-management)). It doesn't list Microsoft 365 business plans. Our read: if your invoice flow runs today, its credits come from one of those licenses or an add-on, and that's the renewal date to find.
+
+## Step 1: Find the flows that use AI Builder
+
+In [Power Automate](https://make.powerautomate.com), pick the environment, select Automation Center, then AI Builder activity under Monitor. The page shows each model or prompt run, where it was used (Power Automate, Power Apps or Copilot Studio) and its consumption. It defaults to the last seven days, so widen the timeframe. Makers see only their own activity; System Administrator and System Customizer see everything in the environment ([Microsoft Learn](https://learn.microsoft.com/en-us/ai-builder/activity-monitoring)).
+
+For volume, download the AI Builder consumption report in the Power Platform admin center. Microsoft's steps: Resources > Capacity, then on the Summary tab select Download reports in the Add-ons section, select +New, choose AI Builder and select Submit. The Excel file shows credits used by date, user and environment for the 30 days before your target date ([Microsoft Learn](https://learn.microsoft.com/en-us/ai-builder/administer-consumption-report)). Other Microsoft pages label the same area Licensing > Capacity add-ons ([MC1526652](https://mc.merill.net/message/MC1526652)), so if one menu isn't there, try the other.
+
+## Step 2: Find your renewal date
+
+In the [Microsoft 365 admin center](https://admin.microsoft.com), go to Billing > Your products and select the subscription. Microsoft says you can view the expiration date on the Your products page ([Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/commerce/subscriptions/renew-your-subscription)). Check every license that seeds credits, plus any AI Builder add-on.
+
+If you have an add-on, Microsoft says to turn off auto-renew in the Microsoft 365 admin center, or have your partner do it in Partner Center ([MC1526652](https://mc.merill.net/message/MC1526652)). If you bought through a reseller, ask them for the term end date. That's the one that counts.
+
+## Step 3: Estimate the Copilot Credits
+
+Microsoft's rate table prices "receipt, invoice, identity document analysis" at 8 Copilot Credits per page, versus 32 AI Builder credits per page. Custom document processing is also 8 Copilot Credits per page, versus 100 AI Builder credits ([Microsoft Learn](https://learn.microsoft.com/en-us/ai-builder/administer-licensing)). Copilot Studio's billing page lists content processing tools at 8 Copilot Credits per page as well ([Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management)). It's per page: Microsoft's example counts a two-page document as two pages, so 16 Copilot Credits ([Microsoft Learn](https://learn.microsoft.com/en-us/ai-builder/message-management)).
+
+Fewer credits per page sounds like a discount until you price them. On pay-as-you-go, Microsoft prices 1 Copilot Credit at $0.01, which puts an invoice page at $0.08. The same table puts the AI Builder page at $0.016, based on a $500 a month add-on with 1 million credits ([Microsoft Learn](https://learn.microsoft.com/en-us/ai-builder/administer-licensing)). By Microsoft's own numbers, that's five times the cost per page. No wonder the notice warns: "Do not assume that the same number of Copilot Credits will cover your current AI Builder credit usage" ([MC1526652](https://mc.merill.net/message/MC1526652)).
+
+**Microsoft's worked example.** Microsoft's FAQ uses a business processing 32,000 receipts a month at 32 AI Builder credits each, or 1,024,000 credits, covered by one add-on plus five Power Automate Premium licenses ([Microsoft Learn](https://learn.microsoft.com/en-us/ai-builder/credit-management)). Moved to Copilot Credits at 8 per page, assuming one page per receipt as Microsoft's example does: 32,000 × 8 = 256,000 credits a month. Pay-as-you-go at $0.01 is $2,560 a month. Prepaid packs are 25,000 credits for $200 a month ([Microsoft](https://www.microsoft.com/en-us/copilot/pricing/copilot-studio)), so 256,000 ÷ 25,000 = 10.24, rounded up to 11 packs, or $2,200 a month.
+
+**A hypothetical small shop.** Say a 20-person firm with five Power Automate Premium licenses runs 350 invoices a month at an average of two pages. Until renewal, those licenses seed 5 × 5,000 = 25,000 AI Builder credits a month ([Microsoft Learn](https://learn.microsoft.com/en-us/ai-builder/credit-management)). That covers 25,000 ÷ 32 = 781 pages, and the firm's 700 pages use 700 × 32 = 22,400, so today the flow costs nothing extra. That allowance is what disappears at renewal. After it, 700 pages × 8 = 5,600 Copilot Credits a month, or $56 on pay-as-you-go at $0.01 a credit. One $200 pack covers 25,000 credits, which is overkill here.
+
+Getting the credits is the easy part. Microsoft offers prepaid packs, a pay-as-you-go meter billed through Azure, and a one-year prepurchase plan ([Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing)). Pay-as-you-go needs a billing policy that links the environment to an Azure subscription. If an open-ended meter makes you nervous, our [Copilot spending meter guide](/blog/microsoft-copilot-spending-meter-cap) covers caps.
+
+Send us your consumption report and renewal date, and we'll do the math for your flows: [team@lirium.ai](mailto:team@lirium.ai).
