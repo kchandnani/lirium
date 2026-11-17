@@ -1,0 +1,89 @@
+---
+title: "Gemini 4 Carbon's API token prices double Dec. 1. Rebuild your monthly bill before the next invoice"
+description: "Gemini 4 Carbon's intro API price ends Nov. 30. On Dec. 1 it doubles to $4 and $20 per million tokens. Rebuild your monthly cost now."
+date: "2026-11-17"
+tags: ["SMALL BUSINESS", "AI COSTS", "GOOGLE GEMINI"]
+slug: "gemini-4-carbon-price-doubles-dec-1"
+---
+
+If someone built you an agent, a support bot or a document workflow on Gemini 4 Carbon in the last week, the price they quoted you has an expiration date. Google launched Carbon on Nov. 10, 2026, at an introductory API price of $2 per million input tokens and $10 per million output tokens ([Google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/)). That price runs through Nov. 30. Starting Dec. 1, it's $4 and $20 ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing#gemini-4-carbon)).
+
+Same code, same traffic, twice the token bill. If the prototype math was done at the intro rate, your December invoice won't match it.
+
+## What Google actually said
+
+Google calls Carbon its strongest model, built for long, multi-step agent work, and says it's available through the API in Google AI Studio and Gemini for business "for all paying developers and enterprises" ([Google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/)). The launch post's footnote is the line to pin above your desk:
+
+> After the introductory period expires on November 30, 2026, the price of $4 per 1M input tokens and $20 per 1M output tokens will apply.
+
+That's from Google's [launch post](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/), which adds that it "applies to the Carbon model intended for public access only." The cybersecurity version Google offers through its Fairwind Program is a separate track.
+
+We checked the details that change the math:
+
+- **"Doubles" is exact.** Every Carbon token price on the pricing page goes up by precisely 2x on Dec. 1: input $2 to $4, output $10 to $20, cached input $0.10 to $0.20 ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing#gemini-4-carbon)). The Batch, Flex and Priority tabs double too. Grounding fees stay put.
+- **No prompt size tiers.** Some older Gemini models charge more once a prompt passes 200k tokens. Gemini 3.1 Pro Preview, for example, goes from $2 to $4 input above that line ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)). Carbon's table has one flat rate per tab.
+- **Thinking counts as output.** The output line reads "including thinking tokens," and Google says every token is billed, including thinking tokens ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing#gemini-4-carbon)).
+- **The model string is stable.** It's `gemini-4-carbon`, listed as the stable version, with no preview suffix ([Gemini API docs](https://ai.google.dev/gemini-api/docs/models/gemini-4-carbon)).
+- **No free tier.** Carbon is "not available on the Free tier" ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing#gemini-4-carbon)).
+- **These are Gemini Developer API prices.** Google's own note says prices on Gemini Enterprise Agent Platform, its enterprise platform, may differ ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)). If your build runs there, check that price list separately.
+
+One more thing from Google itself. It says Carbon uses "more tokens than Argon to explore thoroughly, reason deeply, and run extended verification loops" ([Google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/)). Google also claims Carbon tops several outside benchmarks at "more than 2X lower cost per task" than the next best external model. That's a vendor claim about frontier rivals, not about your invoice. A thorough model is a wordy model, and wordy is billed by the token.
+
+## The worked example
+
+Here's a hypothetical. A 12 person services firm runs a customer support bot on Carbon. Our assumptions:
+
+- **20,000 requests a month**
+- **6,000 input tokens per request** (system instructions, retrieved help articles, conversation history)
+- **1,500 output tokens per request**, thinking included
+
+Monthly volume first:
+
+- Input: 20,000 × 6,000 = 120,000,000 tokens, or 120 million
+- Output: 20,000 × 1,500 = 30,000,000 tokens, or 30 million
+
+**At the intro price ($2 / $10)** ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing#gemini-4-carbon)):
+
+- Input: 120 × $2 = $240
+- Output: 30 × $10 = $300
+- Total: **$540 a month**
+
+**At the Dec. 1 price ($4 / $20)** ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing#gemini-4-carbon)):
+
+- Input: 120 × $4 = $480
+- Output: 30 × $20 = $600
+- Total: **$1,080 a month**
+
+To run your own numbers: (requests × input tokens ÷ 1,000,000 × $4) + (requests × output tokens ÷ 1,000,000 × $20). Pull real token counts from your usage page, not from a guess.
+
+What the base math leaves out:
+
+- **Search grounding.** If the bot uses Grounding with Google Search, you get 5,000 free search requests a month, shared across Gemini 3 and newer models, then $14 per 1,000, with a cap of 1,500 requests a day ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing#gemini-4-carbon)). At one search per request: (20,000 - 5,000) × $14 ÷ 1,000 = $210 a month on top. Google notes one request can trigger more than one search. That fee doesn't change on Dec. 1.
+- **Caching.** Cached input drops to $0.20 per million after Dec. 1, but Carbon supports implicit caching only ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing#gemini-4-carbon)). You don't control when it kicks in, so we leave it out of the estimate. Treat it as upside.
+- **Batch.** The Batch tab is half price: $2 / $10 from Dec. 1 ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing#gemini-4-carbon)). A live support bot can't wait on a batch job. An overnight invoice extraction workflow can, and at these volumes it would cost $540 instead of $1,080.
+
+## The cheaper move
+
+Switching to Argon doesn't dodge anything. It carries the same $4 / $20 price from Dec. 1 ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing#gemini-4-argon)), though Google says it spends fewer tokens per turn than Carbon.
+
+Gemini 4 Hydrogen is listed at a flat $1.50 input and $7.50 output, with no end date attached ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing#gemini-4-hydrogen)). Same workload:
+
+- Input: 120 × $1.50 = $180
+- Output: 30 × $7.50 = $225
+- Total: **$405 a month**, versus $1,080 on Carbon
+
+For a support bot answering shipping and refund questions, test Hydrogen against your real transcripts before paying for the model Google pitches at "open-ended scientific research and discovery" ([Google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/)). Fewer tokens of thinking would also lower the output count, but we kept the assumptions identical so the comparison is clean.
+
+A warning if your freelancer suggests Gemini 3.8 Flash. It's $0.75 / $3.75 through Dec. 31, then $1.50 / $7.50 from Jan. 1, 2027 ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing#gemini-3.8-flash)). That's a teaser price too, just with a later expiration date.
+
+## What to do this week
+
+**Find what calls Carbon.** Search your code and your automation tools for the string `gemini-4-carbon`. In Google AI Studio, the [Usage page](https://aistudio.google.com/usage) groups requests by named API key in a project, and lumps unmatched ones under "(unknown keys)," including keys without a display name ([Google AI Studio docs](https://ai.google.dev/gemini-api/docs/api-key)). Name your keys so the report means something. API keys inherit billing from their project ([Gemini API billing](https://ai.google.dev/gemini-api/docs/billing)).
+
+**Check the spend.** Google's billing guide says to monitor usage in AI Studio under Dashboard > Usage. For cost, open your Cloud Billing account's Reports page, group by SKU and filter Services to Gemini API ([Gemini API billing](https://ai.google.dev/gemini-api/docs/billing)).
+
+**Set a budget alert.** In the Google Cloud console, go to Billing, then Budgets & alerts, click Create budget and choose Alerts only. Default thresholds are 50%, 90% and 100% of the amount you set ([Google Cloud](https://cloud.google.com/billing/docs/how-to/budgets)). Google warns that alerts-only budgets don't cap spending. For a hard stop, AI Studio offers an experimental project spend cap on the Spend page under Monthly spend cap > Edit spend cap, with possible overages during about 10 minutes of billing lag ([Gemini API billing](https://ai.google.dev/gemini-api/docs/billing)).
+
+**Check your tier ceiling.** A Tier 1 billing account caps Gemini API spend at $250 a month, and when the account hits its cap, service pauses for every linked project until the 1st ([Gemini API billing](https://ai.google.dev/gemini-api/docs/billing)). On a Tier 1 account, our hypothetical $1,080 bot would hit that cap in about the first week of December. Tier 2 raises the cap to $2,000 once you've paid $100 and waited 3 days, and Google takes requests for higher limits ([Gemini API billing](https://ai.google.dev/gemini-api/docs/billing)). On Prepay, a $0 balance stops every key at once ([Gemini API billing](https://ai.google.dev/gemini-api/docs/billing)). Our [surprise AI bill guide](/blog/surprise-ai-bill-small-business) covers caps across other tools, and our [earlier Gemini post](/blog/google-gemini-free-weaker-pay-for-ai-plan) covers the consumer plans.
+
+Send us your usage export and we'll rebuild the December number for your workload: [team@lirium.ai](mailto:team@lirium.ai).
