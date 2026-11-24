@@ -1,0 +1,95 @@
+---
+title: "Gemini 4 Hydrogen is $1.50 and $7.50 per million tokens. Price it against Carbon before Nov. 30"
+description: "Hydrogen is $1.50 and $7.50 per million tokens. Carbon goes to $4 and $20 on Dec. 1. Rebuild one month's bill both ways before Nov. 30."
+date: "2026-11-24"
+tags: ["SMALL BUSINESS", "AI TOOLS", "AI PRICING"]
+slug: "gemini-4-hydrogen-vs-carbon-price"
+---
+
+If anything you run still calls `gemini-4-carbon`, you have until Nov. 30 to decide whether it should. Carbon's API price is $2 per million input tokens and $10 per million output tokens through Nov. 30, then $4 and $20 starting Dec. 1 ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)). We covered that jump in our [Nov. 17 Carbon post](/blog/gemini-4-carbon-price-doubles-dec-1). This one is about a cheaper model a few rows down on the same price list.
+
+Google launched Gemini 4 Hydrogen on Nov. 12, 2026, and updated the announcement on Nov. 16. Google says Hydrogen is "priced flat across its entire 1 million-token context window at $1.50 per million input tokens and $7.50 per million output tokens" ([Google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/)). The pricing page lists the same $1.50 and $7.50 on the paid tier, with no end date attached ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)).
+
+That's cheaper than Carbon's December price, and it's also cheaper than Carbon's intro price. So the question for this week isn't "should we pay more for Carbon in December?" It's "does this job need Carbon at all?"
+
+## What Google is actually selling
+
+Google is not pitching Hydrogen as a Carbon replacement. It describes Carbon and Argon as the frontier models for "deep, long-horizon reasoning on your hardest problems," and Hydrogen as "built for rapid execution across diverse agentic workflows" ([Google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/)). For workflows that need parallel agents, Google suggests pairing them: Carbon as the coordinator, Hydrogen powering the worker and verifier agents.
+
+Google also makes some strong claims about Hydrogen on its own. Google says it scores 51 on the Artificial Analysis Intelligence Index at its default high thinking level, versus 50 for Argon, and 54 at its top xhigh setting ([Google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/)). Google says partners saw it run 2x to 2.8x faster and use 12% to 23% fewer tokens than Gemini 3.8 Flash in early testing ([Google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/)). Those are vendor numbers about benchmarks and partner workloads. They aren't measurements of your invoice parser or your support bot.
+
+Where it runs, per Google: the Gemini API and Google AI Studio, Gemini for business, Google Search and the Gemini app. Paid Google AI Pro and Ultra subscribers get it in Google Antigravity, and Gemini in Google Sheets starts with AI Pro and Ultra subscribers plus eligible business subscriptions ([Google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/)).
+
+Three pricing details matter for a small shop:
+
+- **No context tiers on either model.** Hydrogen's table has one input rate and one output rate ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)). Carbon's does too. A long prompt costs more because it has more tokens, not because it crossed a line.
+- **Thinking is output.** Both tables bill output "including thinking tokens" ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)). A model that thinks longer costs more even on the same prompt.
+- **Caching is cheaper too.** Hydrogen's cached input is $0.075 per million, versus Carbon's $0.20 from Dec. 1, and both are implicit caching only ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)).
+
+## The ratio does most of the work
+
+Here's the shortcut. Divide Hydrogen's price by Carbon's December price:
+
+- Input: $1.50 ÷ $4 = 0.375
+- Output: $7.50 ÷ $20 = 0.375
+
+Both come out to 0.375. So if Hydrogen used exactly the same tokens as Carbon on a job, its bill would be 37.5% of Carbon's December bill, a 62.5% cut, no matter how your input and output split. The real-world number moves only if Hydrogen uses more or fewer tokens than Carbon on your job, which is why you test.
+
+## A worked example
+
+**These volumes are an example, not a statistic.** Say a bookkeeping firm runs an overnight workflow that reads vendor emails and PDFs and pulls out invoice fields:
+
+- 3,000 documents a month
+- 10,000 input tokens per document (instructions plus the document)
+- 2,000 output tokens per document, thinking included
+
+Monthly volume:
+
+- Input: 3,000 × 10,000 = 30,000,000 tokens, or 30 million
+- Output: 3,000 × 2,000 = 6,000,000 tokens, or 6 million
+
+**Carbon at the Dec. 1 rate, $4 / $20** ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)):
+
+- Input: 30 × $4 = $120
+- Output: 6 × $20 = $120
+- Total: **$240 a month**
+
+**Hydrogen, $1.50 / $7.50** ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)):
+
+- Input: 30 × $1.50 = $45
+- Output: 6 × $7.50 = $45
+- Total: **$90 a month**
+
+That's $240 minus $90 = $150 a month, or $150 × 12 = $1,800 a year, and $90 ÷ $240 = 0.375, the same ratio as above. For reference, this month's Carbon intro rate ($2 / $10) puts the same job at 30 × $2 + 6 × $10 = $120. Hydrogen comes in under that too.
+
+To redo it with your own numbers: (input tokens ÷ 1,000,000 × price) + (output tokens ÷ 1,000,000 × price). Use your real November token counts from the AI Studio usage page, not a guess. Grounding with Google Search is billed the same on both models, 5,000 free requests a month shared across Gemini 3 and newer models, then $14 per 1,000 ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)), so switching doesn't change that line.
+
+## Test the job before you flip the string
+
+Cheaper is only cheaper if the output holds up. Changing one model string takes a minute. Cleaning up a month of wrong invoice totals takes a lot longer.
+
+Here's how we'd run it this week:
+
+**Pull 50 real inputs from November.** Not the easy ones. Include the ugly scans and the emails with two invoices attached.
+
+**Run them through both models with the same prompt.** Score each output against what a person would have entered. Count errors, not vibes.
+
+**Compare token counts, not just answers.** If Hydrogen needs more output tokens or more retries on your job, the 0.375 ratio drifts up. If it uses fewer, it drifts down.
+
+**Keep Carbon where it earns its price.** If one step really does need deep reasoning, route that step to Carbon and the rest to Hydrogen. That's the split Google itself describes.
+
+One more thing on the pricing page: Hydrogen also has a free API tier, but on it your content is used to improve Google's products ([Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)). Fine for a test with dummy data. Not where client invoices belong.
+
+## If you're on the free Gemini app
+
+This is the shorter point. If you stayed on the free app after Google moved free accounts to Auto or Flash-Lite, which our [Nov. 5 post](/blog/google-gemini-free-weaker-pay-for-ai-plan) dated to Oct. 9 from press reports, Hydrogen changes the math a little. Google's own footnote on the launch post:
+
+> In the Gemini app, free users will get access to Gemini 4 Hydrogen via auto model selection when it's the appropriate model for the prompt.
+
+That's from [Google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/). Note what it doesn't say. It doesn't say how often Auto picks Hydrogen. "When it's the appropriate model" is Google's call, not yours.
+
+So test it before you pay for Pro. Leave Auto on and run one real work prompt, the kind you'd actually pay to get right: a proposal rewrite, a comparison table from a messy spec sheet, a policy summary. If the answer is good enough, free may still cover you. If it's thin, you've learned that Auto isn't sending your work where you need it, and that's a real reason to upgrade.
+
+None of that touches your API bill. The app and the API are priced separately.
+
+Want us to rebuild your November usage both ways and run the side by side test on your real job? Email us at [team@lirium.ai](mailto:team@lirium.ai).
